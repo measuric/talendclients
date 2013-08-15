@@ -1,0 +1,24 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
+  <expression:EMFExpression id="null=>daily=>date" expression="row1.Date!=null &amp;&amp; row1.Date.trim().length()>0?TalendDate.parseDate(&quot;MMMMM dd, yyyy&quot;, row1.Date):null   "/>
+  <expression:EMFExpression id="null=>Var=>parse_date" expression="row1.Date!=null &amp;&amp; row1.Date.trim().length()>0?TalendDate.parseDate(&quot;MMMMM dd, yyyy&quot;, row1.Date):null   ">
+    <variables name="row1.Date" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.Search_Keywords" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.Entry_Pages" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.Products" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.Unique_Visitors" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.Revenue" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="row1.Orders" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.Date!=null &amp;&amp; row1.Date.trim().length()>0?TalendDate.parseDate(&quot;MMMMM dd, yyyy&quot;, row1.Date):null   " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>monthly=>date" expression="Var.parse_date!=null?TalendDate.getLastDayOfMonth(Var.parse_date):null">
+    <variables name="row1.Date" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.Search_Keywords" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.Entry_Pages" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.Products" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.Unique_Visitors" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.Revenue" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="row1.Orders" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.Date!=null &amp;&amp; row1.Date.trim().length()>0?TalendDate.parseDate(&quot;MMMMM dd, yyyy&quot;, row1.Date):null    " value="null" talendType="id_Date"/>
+  </expression:EMFExpression>
+</xmi:XMI>

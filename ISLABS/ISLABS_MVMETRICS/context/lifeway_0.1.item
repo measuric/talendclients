@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="DAILY_TABLE_NAME" prompt="DAILY_TABLE_NAME?" promptNeeded="false" type="id_String" value="lifeway_daily_test"/>
+    <contextParameter comment="" name="DB_DBNAME" prompt="DB_DBNAME?" promptNeeded="false" type="id_String" value="Lifeway"/>
+    <contextParameter comment="" name="DB_HOST" prompt="DB_HOST?" promptNeeded="false" type="id_String" value="islabs.lvmetrics.com"/>
+    <contextParameter comment="" name="DB_PASSWORD" prompt="DB_PASSWORD?" promptNeeded="false" type="id_String" value="TypAW$%a!"/>
+    <contextParameter comment="" name="DB_PORT" prompt="DB_PORT?" promptNeeded="false" type="id_String" value="3306"/>
+    <contextParameter comment="" name="DB_USERNAME" prompt="DB_USERNAME?" promptNeeded="false" type="id_String" value="root"/>
+    <contextParameter comment="" name="SOURCE_DIR_PATH" prompt="SOURCE_DIR_PATH?" promptNeeded="false" type="id_String" value="C:/Vikram Takkar/freelance_jobs/Elance/lifeway/source"/>
+    <contextParameter comment="" name="WEEKLY_TABLE_NAME" prompt="WEEKLY_TABLE_NAME?" promptNeeded="false" type="id_String" value="lifeway_weekly_test"/>
+    <contextParameter comment="" name="MONTHLY_TABLE_NAME" prompt="MONTHLY_TABLE_NAME?" promptNeeded="false" type="id_String" value="lifeway_monthly_test"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType confirmationNeeded="false" name="prod">
+    <contextParameter comment="" name="DAILY_TABLE_NAME" prompt="DAILY_TABLE_NAME?" promptNeeded="false" type="id_String" value="lifeway_daily_test"/>
+    <contextParameter comment="" name="DB_DBNAME" prompt="DB_DBNAME?" promptNeeded="false" type="id_String" value="Lifeway"/>
+    <contextParameter comment="" name="DB_HOST" prompt="DB_HOST?" promptNeeded="false" type="id_String" value="islabs.lvmetrics.com"/>
+    <contextParameter comment="" name="DB_PASSWORD" prompt="DB_PASSWORD?" promptNeeded="false" type="id_String" value="TypAW$%a!"/>
+    <contextParameter comment="" name="DB_PORT" prompt="DB_PORT?" promptNeeded="false" type="id_String" value="3306"/>
+    <contextParameter comment="" name="DB_USERNAME" prompt="DB_USERNAME?" promptNeeded="false" type="id_String" value="root"/>
+    <contextParameter comment="" name="SOURCE_DIR_PATH" prompt="SOURCE_DIR_PATH?" promptNeeded="false" type="id_String" value="/home/lifeway/dump/source"/>
+    <contextParameter comment="" name="WEEKLY_TABLE_NAME" prompt="WEEKLY_TABLE_NAME?" promptNeeded="false" type="id_String" value="lifeway_weekly_test"/>
+    <contextParameter comment="" name="MONTHLY_TABLE_NAME" prompt="MONTHLY_TABLE_NAME?" promptNeeded="false" type="id_String" value="lifeway_weekly_test"/>
+  </talendfile:ContextType>
+</xmi:XMI>

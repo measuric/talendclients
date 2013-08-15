@@ -1,0 +1,46 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
+  <expression:EMFExpression id="null=>asd=>date" expression="lifeway_common.lastDayOfWeek(Var.date) ">
+    <variables name="row1.newColumn" value="null" talendType="id_String" nullable="true"/>
+    <variables name="TalendDate.parseDate(&quot;yyyyMMdd&quot;, &quot;20130810&quot;)      " value="null" talendType="id_Date"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>asd=>start_date_last_week" expression="islabs_ga_common.lastWeekStartDate(Var.date)">
+    <variables name="row1.newColumn" value="null" talendType="id_String" nullable="true"/>
+    <variables name="TalendDate.parseDate(&quot;yyyyMMdd&quot;, &quot;20130810&quot;)      " value="null" talendType="id_Date"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>date" expression="TalendDate.parseDate(&quot;yyyyMMdd&quot;, &quot;20130811&quot;)           ">
+    <variables name="row1.newColumn" value="null" talendType="id_String" nullable="true"/>
+    <variables name="TalendDate.parseDate(&quot;yyyyMMdd&quot;, &quot;20130810&quot;)           " value="null" talendType="id_Date"/>
+    <variables name="TalendDate.parseDate(&quot;yyyyMMdd&quot;, &quot;20130811&quot;)          " value="null" talendType="id_Date"/>
+    <variables name="TalendDate.parseDate(&quot;yyyyMMdd&quot;, &quot;20130805&quot;)         " value="null" talendType="id_Date"/>
+    <variables name="TalendDate.parseDate(&quot;yyyyMMdd&quot;, &quot;20130806&quot;)        " value="null" talendType="id_Date"/>
+    <variables name="TalendDate.parseDate(&quot;yyyyMMdd&quot;, &quot;20130810&quot;)       " value="null" talendType="id_Date"/>
+    <variables name="TalendDate.parseDate(&quot;yyyyMMdd&quot;, &quot;20130810&quot;)      " value="null" talendType="id_Date"/>
+    <variables name="TalendDate.parseDate(&quot;yyyyMMdd&quot;, &quot;20110626&quot;)     " value="null" talendType="id_Date"/>
+    <variables name="TalendDate.parseDate(&quot;yyyyMMdd&quot;, &quot;20130626&quot;)    " value="null" talendType="id_Date"/>
+    <variables name="TalendDate.parseDate(&quot;yyyyMMdd&quot;, &quot;20130725&quot;)   " value="null" talendType="id_Date"/>
+    <variables name="TalendDate.parseDate(&quot;yyyyMMdd&quot;, &quot;20130806&quot;)  " value="null" talendType="id_Date"/>
+    <variables name="TalendDate.parseDate(&quot;yyyyMMdd&quot;, &quot;20130601&quot;) " value="null" talendType="id_Date"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>var2" expression="islabs_ga_common.cleanseData(&quot;(none)&quot;)">
+    <variables name="row1.newColumn" value="null" talendType="id_String" nullable="true"/>
+    <variables name="TalendDate.parseDate(&quot;yyyyMMdd&quot;, &quot;20130811&quot;)            " value="null" talendType="id_Date"/>
+    <variables name="islabs_ga_common.cleanseData(&quot;(direct&quot;)) " value="null" talendType="id_String"/>
+    <variables value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>var1" expression="islabs_ga_common.cleanseMediumData(&quot;(none)&quot;)       ">
+    <variables name="row1.newColumn" value="null" talendType="id_String" nullable="true"/>
+    <variables name="TalendDate.parseDate(&quot;yyyyMMdd&quot;, &quot;20130811&quot;)            " value="null" talendType="id_Date"/>
+    <variables name="islabs_ga_common.cleanseMediumData(&quot;(not set)&quot;)       " value="null" talendType="id_String"/>
+    <variables name="islabs_ga_common.cleanseData(&quot;(not set)&quot;)      " value="null" talendType="id_String"/>
+    <variables name="islabs_ga_common.cleanseData(&quot;(organics)&quot;)     " value="null" talendType="id_String"/>
+    <variables name="islabs_ga_common.cleanseData(&quot;(referrals)&quot;)    " value="null" talendType="id_String"/>
+    <variables name="islabs_ga_common.cleanseData(&quot;(direct)&quot;)   " value="null" talendType="id_String"/>
+    <variables name="islabs_ga_common.cleanseData(&quot;(none)&quot;)  " value="null" talendType="id_String"/>
+    <variables name="islabs_ga_common.cleanseData(&quot;none&quot;) " value="null" talendType="id_String"/>
+    <variables name="StringHandling.EREPLACE(&quot;(direct)&quot;,&quot;(&quot;,&quot;&quot;)   " value="null" talendType="id_String"/>
+    <variables name="islabs_ga_common.cleanseData(&quot;(none)&quot;) " value="null" talendType="id_String"/>
+    <variables name="islabs_ga_common.cleanseData(&quot;(direct)&quot;)  " value="null" talendType="id_String"/>
+    <variables name="islabs_ga_common.cleanseData(&quot;(direct&quot;)) " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+</xmi:XMI>

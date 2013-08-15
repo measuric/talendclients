@@ -1,0 +1,33 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
+  <expression:EMFExpression id="null=>Analytics=>medium" expression="Var.medium.equals(&quot;&quot;)?&quot;&quot;:islabs_ga_common.cleanseMediumData(Var.medium)  ">
+    <variables name="row2.visitorType" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.isMobile" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.medium" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.source" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.date" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.visits" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.visitors" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.goalCompletionsAll" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.goalConversionRateAll" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="row2.visitBounceRate" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="row2.avgTimeOnSite" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.pageviewsPerVisit" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.medium!=null &amp;&amp; row2.medium.trim().length()>0?StringHandling.DOWNCASE(row2.medium):&quot;&quot; " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>medium" expression="row2.medium!=null &amp;&amp; row2.medium.trim().length()>0?StringHandling.DOWNCASE(row2.medium):&quot;&quot; ">
+    <variables name="row2.visitorType" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.isMobile" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.medium" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.source" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.date" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.visits" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.visitors" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.goalCompletionsAll" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.goalConversionRateAll" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="row2.visitBounceRate" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="row2.avgTimeOnSite" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.pageviewsPerVisit" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.medium!=null &amp;&amp; row2.medium.trim().length()>0?StringHandling.DOWNCASE(row2.medium):&quot;&quot; " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+</xmi:XMI>

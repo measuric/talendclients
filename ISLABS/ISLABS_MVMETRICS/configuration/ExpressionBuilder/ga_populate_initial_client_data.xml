@@ -1,0 +1,62 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
+  <expression:EMFExpression id="null=>out=>date" expression="TalendDate.parseDate(&quot;yyyyMMdd&quot;,row1.date )">
+    <variables name="row1.visitorType" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.isMobile" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.medium" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.source" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.date" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.visits" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.visitors" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.goalCompletionsAll" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.goalConversionRateAll" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="row1.visitBounceRate" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="row1.avgTimeOnSite" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.pageviewsPerVisit" value="null" talendType="id_Integer" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>medium" expression="islabs_ga_common.IfNull(row1.medium)!=null?row1.medium:&quot;&quot;">
+    <variables name="row1.visitorType" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.isMobile" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.medium" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.source" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.date" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.visits" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.visitors" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.goalCompletionsAll" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.goalConversionRateAll" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="row1.visitBounceRate" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="row1.avgTimeOnSite" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.pageviewsPerVisit" value="null" talendType="id_Integer" nullable="true"/>
+    <variables value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>out=>source" expression="row1.source">
+    <variables name="row1.visitorType" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.isMobile" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.medium" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.source" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.date" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.visits" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.visitors" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.goalCompletionsAll" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.goalConversionRateAll" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="row1.visitBounceRate" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="row1.avgTimeOnSite" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.pageviewsPerVisit" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="islabs_ga_common.IfNull(row1.medium)!=null?row1.medium:&quot;&quot; " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>out=>medium" expression="islabs_ga_common.cleanseMediumData(StringHandling.DOWNCASE(Var.medium))     ">
+    <variables name="row1.visitorType" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.isMobile" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.medium" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.source" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.date" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.visits" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.visitors" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.goalCompletionsAll" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.goalConversionRateAll" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="row1.visitBounceRate" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="row1.avgTimeOnSite" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row1.pageviewsPerVisit" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="islabs_ga_common.IfNull(row1.medium)!=null?row1.medium:&quot;&quot; " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+</xmi:XMI>
