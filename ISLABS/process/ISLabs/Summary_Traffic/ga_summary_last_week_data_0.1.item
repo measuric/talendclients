@@ -440,7 +440,7 @@
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="MOMENT"/>
@@ -574,7 +574,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  `clientdata_ga_raw1`.`profileid`, &#xA;  `clientdata_ga_raw`.`visitorType`, &#xA;  `clientdata_ga_raw`.`isMobile`, &#xA;  `clientdata_ga_raw`.`medium`, &#xA;  `clientdata_ga_raw`.`source`, &#xA;  `clientdata_ga_raw`.`date`, &#xA;  `clientdata_ga_raw`.`visits`, &#xA;  `clientdata_ga_raw`.`visitors`, &#xA;  `clientdata_ga_raw`.`goalCompletionsAll`, &#xA;  `clientdata_ga_raw`.`goalConversionRateAll`, &#xA;  `clientdata_ga_raw`.`visitBounceRate`, &#xA;  `clientdata_ga_raw`.`avgTimeOnSite`, &#xA;  `clientdata_ga_raw`.`pageviewsPerVisit`&#xA;FROM `clientdata_ga_raw`  WHERE DATE BETWEEN '&quot;+context.START_DATE+ &quot;' and '&quot;+context.END_DATE+&quot;'&quot;+&#xD;&#xA;&quot;ORDER BY date,visitorType,medium,source&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  `clientdata_ga_raw`.`profileid`, &#xA;  `clientdata_ga_raw`.`visitorType`, &#xA;  `clientdata_ga_raw`.`isMobile`, &#xA;  `clientdata_ga_raw`.`medium`, &#xA;  `clientdata_ga_raw`.`source`, &#xA;  `clientdata_ga_raw`.`date`, &#xA;  `clientdata_ga_raw`.`visits`, &#xA;  `clientdata_ga_raw`.`visitors`, &#xA;  `clientdata_ga_raw`.`goalCompletionsAll`, &#xA;  `clientdata_ga_raw`.`goalConversionRateAll`, &#xA;  `clientdata_ga_raw`.`visitBounceRate`, &#xA;  `clientdata_ga_raw`.`avgTimeOnSite`, &#xA;  `clientdata_ga_raw`.`pageviewsPerVisit`&#xA;FROM `clientdata_ga_raw`  WHERE DATE BETWEEN '&quot;+context.START_DATE+ &quot;' and '&quot;+context.END_DATE+&quot;'&quot;+&#xD;&#xA;&quot;ORDER BY date,visitorType,medium,source&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
