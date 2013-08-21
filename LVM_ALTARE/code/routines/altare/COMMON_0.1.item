@@ -1,0 +1,25 @@
+package routines;
+
+import java.util.HashMap;
+
+public class COMMON {
+
+	public static HashMap<String, String> response = new HashMap<String, String>();
+	
+	public static void addAttribute(String key,String value)
+	{
+		response.put(key,value);
+	}
+	
+	public static String getAttribute(String key)
+	{
+		String var_value="";
+		if(key != null) 
+			{
+			 String var_temp = response.get(key);
+			 var_value = Relational.ISNULL(var_temp)?"":var_temp;
+			 
+			}
+		return var_value;
+	}
+}
