@@ -61,4 +61,9 @@
     <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
     <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
   </expression:EMFExpression>
+  <expression:EMFExpression id="null=>raw=>order_total" expression="Float.valueOf(COMMON.getAttribute(&quot;order_total&quot;)) ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
 </xmi:XMI>

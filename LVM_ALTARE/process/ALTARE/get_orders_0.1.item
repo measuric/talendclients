@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
-  <context confirmationNeeded="false" name="Default">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="dev">
+  <context confirmationNeeded="false" name="dev">
     <contextParameter comment="" name="RESPONSE_STATUS" prompt="RESPONSE_STATUS?" promptNeeded="false" type="id_String" value="null"/>
     <contextParameter comment="" name="TOTAL_ORDERS" prompt="TOTAL_ORDERS?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="ORDER_ID" prompt="ORDER_ID?" promptNeeded="false" type="id_String" value="&quot;424843&quot;"/>
+    <contextParameter comment="" name="ORDER_ID" prompt="ORDER_ID?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="TEMP_DIR_PATH" prompt="TEMP_DIR_PATH?" promptNeeded="false" type="id_String" value="C:\Vikram Takkar\freelance_jobs\Elance\limelight\temp"/>
+    <contextParameter comment="" name="DB_DBNAME" prompt="DB_DBNAME?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="altare"/>
+    <contextParameter comment="" name="DB_USERNAME" prompt="DB_USERNAME?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="root"/>
+    <contextParameter comment="" name="DB_ADDITIONAL_PARAMS" prompt="DB_ADDITIONAL_PARAMS?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="DB_PORT" prompt="DB_PORT?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="3306"/>
+    <contextParameter comment="" name="DB_SCHEMA" prompt="DB_SCHEMA?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="null"/>
+    <contextParameter comment="" name="DB_PASSWORD" prompt="DB_PASSWORD?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="Hty%yeIk!qw"/>
+    <contextParameter comment="" name="DB_HOST" prompt="DB_HOST?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="islabs-dev.lvmetrics.com"/>
+    <contextParameter comment="" name="CUSTOMERS_TABLE_NAME" prompt="CUSTOMERS_TABLE_NAME?" promptNeeded="false" type="id_String" value="ltv_rr_customers_test"/>
+    <contextParameter comment="" name="ORDERS_TABLE_NAME" prompt="ORDERS_TABLE_NAME?" promptNeeded="false" type="id_String" value="ltv_rr_order_details_raw"/>
+    <contextParameter comment="" name="START_DATE" prompt="START_DATE?" promptNeeded="false" type="id_String" value="05/01/2013"/>
+    <contextParameter comment="" name="END_DATE" prompt="END_DATE?" promptNeeded="false" type="id_String" value="08/21/2013"/>
+  </context>
+  <context confirmationNeeded="false" name="test">
+    <contextParameter comment="" name="RESPONSE_STATUS" prompt="RESPONSE_STATUS?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="TOTAL_ORDERS" prompt="TOTAL_ORDERS?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="ORDER_ID" prompt="ORDER_ID?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="TEMP_DIR_PATH" prompt="TEMP_DIR_PATH?" promptNeeded="false" type="id_String" value="C:\Vikram Takkar\freelance_jobs\Elance\limelight\temp"/>
+    <contextParameter comment="" name="DB_DBNAME" prompt="DB_DBNAME?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="altare"/>
+    <contextParameter comment="" name="DB_USERNAME" prompt="DB_USERNAME?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="root"/>
+    <contextParameter comment="" name="DB_ADDITIONAL_PARAMS" prompt="DB_ADDITIONAL_PARAMS?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="DB_PORT" prompt="DB_PORT?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="3306"/>
+    <contextParameter comment="" name="DB_SCHEMA" prompt="DB_SCHEMA?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="null"/>
+    <contextParameter comment="" name="DB_PASSWORD" prompt="DB_PASSWORD?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="Hty%yeIk!qw"/>
+    <contextParameter comment="" name="DB_HOST" prompt="DB_HOST?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="islabs.lvmetrics.com"/>
+    <contextParameter comment="" name="CUSTOMERS_TABLE_NAME" prompt="CUSTOMERS_TABLE_NAME?" promptNeeded="false" type="id_String" value="ltv_rr_customers"/>
+    <contextParameter comment="" name="ORDERS_TABLE_NAME" prompt="ORDERS_TABLE_NAME?" promptNeeded="false" type="id_String" value="ltv_rr_order_details_raw"/>
+    <contextParameter comment="" name="START_DATE" prompt="START_DATE?" promptNeeded="false" type="id_String" value="05/01/2013"/>
+    <contextParameter comment="" name="END_DATE" prompt="END_DATE?" promptNeeded="false" type="id_String" value="08/21/2013"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
     <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="32"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
     <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
     <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
@@ -357,7 +386,7 @@
     <routinesParameter id="_zSqqcIcTEeKWY7lPUbVziA" name="google_adwords"/>
     <routinesParameter id="_e_kw8I1DEeKZxq5uSFSY-w" name="string_to_date"/>
   </parameters>
-  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="64">
+  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_1"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
@@ -415,7 +444,7 @@
       <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="64">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
@@ -451,7 +480,6 @@
   </node>
   <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_2"/>
-    <elementParameter field="CHECK" name="START" value="true"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
     <elementParameter field="TEXT" name="URL" value="&quot;https://s.dicarlocoaching.com/admin/membership.php&quot;"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;&quot;"/>
@@ -468,9 +496,9 @@
       <elementValue elementRef="NAME" value="&quot;campaign_id&quot;"/>
       <elementValue elementRef="VALUE" value="&quot;9&quot;"/>
       <elementValue elementRef="NAME" value="&quot;start_date&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;08/01/2013&quot;"/>
+      <elementValue elementRef="VALUE" value="context.START_DATE"/>
       <elementValue elementRef="NAME" value="&quot;end_date&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;08/01/2013&quot;"/>
+      <elementValue elementRef="VALUE" value="context.END_DATE"/>
       <elementValue elementRef="NAME" value="&quot;criteria&quot;"/>
       <elementValue elementRef="VALUE" value="&quot;all&quot;"/>
     </elementParameter>
@@ -607,15 +635,40 @@
       <column comment="" key="false" name="order_ids" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tBufferOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tBufferOutput_1"/>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_1"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
-    <elementParameter field="TEXT" name="LABEL" value="OrderIds"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" value="outputStream"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.TEMP_DIR_PATH+&quot;/order_ids.csv&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" value="true"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="false"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" value="1000"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="1"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
     <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
-    <metadata connector="FLOW" name="tBufferOutput_1">
+    <metadata connector="FLOW" name="tFileOutputDelimited_1">
       <column comment="" key="false" name="order_ids" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -1000,23 +1053,87 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tBufferInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tBufferInput_1"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
-    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
-    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
-    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
+  <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
+    <elementParameter field="TEXT" name="HOST" value="context.DB_HOST"/>
+    <elementParameter field="TEXT" name="TYPE" value="MYSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="context.DB_PORT"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.DB_DBNAME"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.DB_ADDITIONAL_PARAMS"/>
+    <elementParameter field="TEXT" name="USER" value="context.DB_USERNAME"/>
+    <elementParameter field="TEXT" name="PASS" value="context.DB_PASSWORD"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="true"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="&quot;SHARED_ALTARE_DB&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="altare_windows"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
     <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
-    <metadata connector="FLOW" name="tBufferInput_1">
+  </node>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+    <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.TEMP_DIR_PATH+&quot;/order_ids.csv&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HEADER" value="0"/>
+    <elementParameter field="TEXT" name="FOOTER" value="0"/>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="true"/>
+    <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="DIRECTORY" name="TEMP_DIR" value="&quot;C:/Users/Vikram Takkar/Documents/GitHub/talendclients&quot;"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="RANDOM" value="false"/>
+    <elementParameter field="TEXT" name="NB_RANDOM" value="10"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="false"/>
+    <elementParameter field="TABLE" name="TRIMSELECT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="order_ids"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="SPLITRECORD" value="false"/>
+    <elementParameter field="TEXT" name="DESTINATION" value=""/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tFileInputDelimited_1">
       <column comment="" key="false" name="order_ids" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" name="order_ids" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="320">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1"/>
     <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
@@ -1024,10 +1141,10 @@
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="get_order_details"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_E3f2YAoqEeOyjbF8knMeXw"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="dev"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="ORDER_ID"/>
@@ -1088,7 +1205,7 @@
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRESTClient_2" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_2" target="tBufferInput_1">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRESTClient_2" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_2" target="tFileInputDelimited_1">
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1"/>
   </connection>
@@ -1167,7 +1284,7 @@
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3"/>
   </connection>
-  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tNormalize_1" offsetLabelX="0" offsetLabelY="0" source="tNormalize_1" target="tBufferOutput_1">
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tNormalize_1" offsetLabelX="0" offsetLabelY="0" source="tNormalize_1" target="tFileOutputDelimited_1">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
       <elementValue elementRef="TRACE_COLUMN" value="order_ids"/>
@@ -1305,7 +1422,15 @@
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="out"/>
   </connection>
-  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tBufferInput_1" offsetLabelX="0" offsetLabelY="0" source="tBufferInput_1" target="tRunJob_1">
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMysqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlConnection_1" target="tRESTClient_2">
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tMysqlConnection_1">
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tRunJob_1">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
       <elementValue elementRef="TRACE_COLUMN" value="order_ids"/>
@@ -1341,7 +1466,18 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tBufferInput_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
   </subjob>
