@@ -3,13 +3,13 @@
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="RESPONSE_STATUS" prompt="RESPONSE_STATUS?" promptNeeded="false" type="id_String" value="null"/>
     <contextParameter comment="" name="TOTAL_ORDERS" prompt="TOTAL_ORDERS?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="ORDER_ID" prompt="ORDER_ID?" promptNeeded="false" type="id_String" value="&quot;426103&quot;"/>
+    <contextParameter comment="" name="ORDER_ID" prompt="ORDER_ID?" promptNeeded="false" type="id_String" value="&quot;426113&quot;"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
     <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="32"/>
     <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
     <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
     <elementParameter field="TEXT" name="HADOOP_APP_PATH" value=""/>
@@ -38,7 +38,7 @@
     <routinesParameter id="_iaWOEAobEeORa-XGJxIL0A" name="TalendString"/>
     <routinesParameter id="_fp6iQAolEeOyjbF8knMeXw" name="COMMON"/>
   </parameters>
-  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="224">
+  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_3"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
     <elementParameter field="TEXT" name="URL" value="&quot;https://s.dicarlocoaching.com/admin/membership.php&quot;"/>
@@ -97,13 +97,12 @@
       <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="224">
+  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaFlex_1"/>
     <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_START" value="String key=&quot;&quot;;&#xA;String value=&quot;&quot;;&#xA;String token=&quot;&quot;;&#xA;&#xA;&#xA;COMMON.response.clear();&#xA;&#x9;&#xA;&#x9;    "/>
-    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="StringTokenizer str_name=new StringTokenizer(row7.string,&quot;&amp;&quot;);&#xA;&#xA;for (;str_name.hasMoreTokens();)&#xA;{&#xA;&#x9;&#xA;token=str_name.nextToken();&#xA;key=token.split(&quot;=&quot;)[0];&#xA;value=token.split(&quot;=&quot;).length>1?token.split(&quot;=&quot;)[1]:&quot;&quot;;&#xA;value=java.net.URLDecoder.decode(value,&quot;UTF-8&quot;);&#xA;&#xA;COMMON.addAttribute(key,value );&#xA;&#x9;&#xA;//row9.key=key;&#xA;//row9.value=value;&#xA;&#xA;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="String key=&quot;&quot;;&#xA;String value=&quot;&quot;;&#xA;String token=&quot;&quot;;&#xA;&#xA;Integer count_sys_notes=0;&#xA;Integer count_emp_notes=0;&#xA;&#xA;&#xA;COMMON.response.clear();&#xA;&#x9;&#xA;&#x9;    "/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="StringTokenizer str_name=new StringTokenizer(row7.string,&quot;&amp;&quot;);&#xA;&#xA;for (;str_name.hasMoreTokens();)&#xA;{&#xA;&#x9;&#xA;token=str_name.nextToken();&#xA;key=token.split(&quot;=&quot;)[0];&#xA;value=token.split(&quot;=&quot;).length>1?token.split(&quot;=&quot;)[1]:&quot;&quot;;&#xA;value=java.net.URLDecoder.decode(value,&quot;UTF-8&quot;);&#xA;&#xA;COMMON.addAttribute(key,value );&#xA;&#xA;// Populate NotesArrayList&#xA;if(key.matches(&quot;systemNotes\\[[0-9]+\\]&quot;))&#xA;{&#xA;  //System.out.println(value);&#xA;  count_sys_notes=count_sys_notes+1;&#xA;  ((List)globalMap.get(&quot;sysNotes&quot;)).add(value);&#xA;}&#xA;if(key.matches(&quot;employeeNotes\\[[0-9]+\\]&quot;))&#xA;{&#xA;  //System.out.println(value);&#xA;  count_emp_notes=count_emp_notes+1;&#xA;  ((List)globalMap.get(&quot;empNotes&quot;)).add(value);&#xA;}&#x9;&#xA;//row9.key=key;&#xA;//row9.value=value;&#xA;&#xA;"/>
     <elementParameter field="MEMO_JAVA" name="CODE_END" value="&#x9;//((List)globalMap.get(&quot;response&quot;)).add(row);&#xA;}   &#xA;&#xA;&#xA;"/>
     <elementParameter field="CHECK" name="Version_V2_0" value="false"/>
     <elementParameter field="CHECK" name="Version_V3_2" value="false"/>
@@ -118,7 +117,7 @@
       <column comment="" key="false" name="value" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="1" offsetLabelY="2" posX="384" posY="64">
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="1" offsetLabelY="2" posX="128" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1"/>
     <elementParameter field="CHECK" name="START" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -126,10 +125,14 @@
     <elementParameter field="MEMO" name="COMMENT" value=""/>
     <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
   </node>
-  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="64">
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1"/>
     <elementParameter field="TABLE" name="VARIABLES">
       <elementValue elementRef="KEY" value="&quot;response&quot;"/>
+      <elementValue elementRef="VALUE" value="new java.util.ArrayList()"/>
+      <elementValue elementRef="KEY" value="&quot;sysNotes&quot;"/>
+      <elementValue elementRef="VALUE" value="new java.util.ArrayList()"/>
+      <elementValue elementRef="KEY" value="&quot;empNotes&quot;"/>
       <elementValue elementRef="VALUE" value="new java.util.ArrayList()"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -138,7 +141,7 @@
     <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
     <metadata connector="FLOW" name="tSetGlobalVar_1"/>
   </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="480">
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
@@ -162,7 +165,7 @@
       <column comment="" key="false" name="line" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="384" posY="480">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="352" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
@@ -254,7 +257,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="time_stamp" expression="COMMON.getAttribute(&quot;time_stamp&quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="order_confirmed_date" expression="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " type="id_String" nullable="true"/>
@@ -291,7 +294,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="480">
+  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_2"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
@@ -620,7 +623,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="224">
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2"/>
     <elementParameter field="CHECK" name="START" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;Order ID - &quot;+context.ORDER_ID);"/>
@@ -631,136 +634,10 @@
     <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
     <metadata connector="FLOW" name="tJava_2"/>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="224">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_2"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" value="true"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
-    <elementParameter field="TEXT" name="STREAMNAME" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Vikram Takkar/freelance_jobs/Elance/limelight/temp/orders_view.csv&quot;"/>
-    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
-    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" value="true"/>
-    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
-    <elementParameter field="CHECK" name="APPEND" value="false"/>
-    <elementParameter field="CHECK" name="INCLUDEHEADER" value="false"/>
-    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
-    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
-    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;"/>
-    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;"/>
-    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
-    <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;&quot;&quot;"/>
-    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;"/>
-    <elementParameter field="CHECK" name="CREATE" value="true"/>
-    <elementParameter field="CHECK" name="SPLIT" value="false"/>
-    <elementParameter field="TEXT" name="SPLIT_EVERY" value="1000"/>
-    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
-    <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="1"/>
-    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
-    <elementParameter field="MEMO" name="COMMENT" value=""/>
-    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
-    <metadata connector="FLOW" name="tFileOutputDelimited_2">
-      <column key="false" length="4048" name="key" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="value" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="768" posY="224">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" value="true"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_E3f2YAoqEeOyjbF8knMeXw-tMap_2-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
-    <elementParameter field="MEMO" name="COMMENT" value=""/>
-    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
-    <metadata connector="FLOW" label="out" name="copyOfout">
-      <column comment="" key="false" name="orderId" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="customer_id" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="order_status" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="is_recurring" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="first_name" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="last_name" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="shipping_first_name" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="shipping_last_name" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="shipping_street_address" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="shipping_street_address2" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="shipping_city" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="shipping_state" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="shipping_state_id" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="shipping_postcode" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="shipping_country" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="billing_first_name" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="billing_last_name" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="billing_street_address" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="billing_street_address2" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="billing_city" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="billing_state" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="billing_state_id" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="billing_postcode" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="billing_country" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="customers_telephone" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="time_stamp" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="recurring_date" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="main_product_id" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="main_product_quantity" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="transaction_id" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" name="email_address" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <nodeData xsi:type="MapperData">
-      <uiProperties/>
-      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="copyOfout">
-        <mapperTableEntries name="orderId" expression="context.ORDER_ID" type="id_String" nullable="true"/>
-        <mapperTableEntries name="customer_id" expression="COMMON.getAttribute(&quot;customer_id&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="order_status" expression="COMMON.getAttribute(&quot;order_status&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="is_recurring" expression="COMMON.getAttribute(&quot;is_recurring&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="first_name" expression="COMMON.getAttribute(&quot;first_name&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="last_name" expression="COMMON.getAttribute(&quot;last_name&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="shipping_first_name" expression="COMMON.getAttribute(&quot;shipping_first_name&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="shipping_last_name" expression="COMMON.getAttribute(&quot;shipping_last_name&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="shipping_street_address" expression="COMMON.getAttribute(&quot;shipping_street_address&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="shipping_street_address2" expression="COMMON.getAttribute(&quot;shipping_street_address2&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="shipping_city" expression="COMMON.getAttribute(&quot;shipping_city&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="shipping_state" expression="COMMON.getAttribute(&quot;shipping_state&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="shipping_state_id" expression="COMMON.getAttribute(&quot;shipping_state_id&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="shipping_postcode" expression="COMMON.getAttribute(&quot;shipping_postcode&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="shipping_country" expression="COMMON.getAttribute(&quot;shipping_country&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="billing_first_name" expression="COMMON.getAttribute(&quot;billing_first_name&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="billing_last_name" expression="COMMON.getAttribute(&quot;billing_last_name&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="billing_street_address" expression="COMMON.getAttribute(&quot;billing_street_address&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="billing_street_address2" expression="COMMON.getAttribute(&quot;billing_street_address2&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="billing_city" expression="COMMON.getAttribute(&quot;billing_city&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="billing_state" expression="COMMON.getAttribute(&quot;billing_state&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="billing_state_id" expression="COMMON.getAttribute(&quot;billing_state_id&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="billing_postcode" expression="COMMON.getAttribute(&quot;billing_postcode&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="billing_country" expression="COMMON.getAttribute(&quot;billing_country&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="customers_telephone" expression="COMMON.getAttribute(&quot;customers_telephone&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="time_stamp" expression="COMMON.getAttribute(&quot;time_stamp&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="recurring_date" expression="COMMON.getAttribute(&quot;recurring_date&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="main_product_id" expression="COMMON.getAttribute(&quot;main_product_id&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="main_product_quantity" expression="COMMON.getAttribute(&quot;main_product_quantity&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="transaction_id" expression="COMMON.getAttribute(&quot;transaction_id&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="email_address" expression="COMMON.getAttribute(&quot;email_address&quot;)" type="id_String" nullable="true"/>
-      </outputTables>
-    </nodeData>
-  </node>
-  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="352">
+  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_2"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="URL" value="&quot;https://s.dicarlocoaching.com/admin/membership.php&quot;"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;&quot;"/>
     <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
@@ -817,8 +694,9 @@
       <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tExtractDelimitedFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="352">
+  <node componentName="tExtractDelimitedFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractDelimitedFields_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="PREV_COLUMN_LIST" name="FIELD" value="string"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&amp;&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
@@ -845,8 +723,9 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="352">
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="String order_count=&quot;&quot;;&#xA;String key=&quot;&quot;;&#xA;String value=&quot;&quot;;&#xA;String token=&quot;&quot;;&#xA;&#xA;StringTokenizer cust_name=new StringTokenizer(input_row.string,&quot;&amp;&quot;);&#xA;&#xA;for (;cust_name.hasMoreTokens();)&#xA;{&#xA;&#x9;&#xA;token=cust_name.nextToken();&#xA;key=token.split(&quot;=&quot;)[0];&#xA;value=token.split(&quot;=&quot;).length>1?token.split(&quot;=&quot;)[1]:&quot;&quot;;&#xA;value=java.net.URLDecoder.decode(value,&quot;UTF-8&quot;);&#xA;&#xA;if(key.equals(&quot;order_count&quot;))&#xA;{&#xA;order_count=value;&#xA;}&#xA;}&#xA;&#xA;System.out.println(order_count);&#xA;output_row.order_id=Integer.parseInt(context.ORDER_ID);&#xA;output_row.customer_id=Integer.parseInt(COMMON.getAttribute(&quot;customer_id&quot;));&#xA;output_row.is_new=Integer.parseInt(order_count)==1?true:false;&#xA;output_row.time_stamp=COMMON.getAttribute(&quot;time_stamp&quot;)!=null?TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, COMMON.getAttribute(&quot;time_stamp&quot;) ):null;&#xA;output_row.orders_count=Integer.parseInt(order_count);&#xA;&#xA;&#xA;&#xA;&#xD;&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -867,9 +746,9 @@
       <column comment="" key="false" name="orders_count" nullable="true" pattern="" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="352">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -912,9 +791,8 @@
       <column comment="" key="false" name="orders_count" nullable="true" pattern="" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="64">
+  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="832" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_1"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" value="true"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -931,8 +809,6 @@
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;ltv_rr_customers&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:SCHEMA_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:REPOSITORY_SCHEMA_TYPE" value="_ViCd0ArqEeO_2OxhMc01vA - ltv_rr_customers"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;"/>
@@ -965,6 +841,16 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="time_stamp"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="orders_count"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="HINT_OPTIONS"/>
@@ -977,7 +863,7 @@
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
     <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
-    <metadata connector="FLOW" label="ltv_rr_customers" name="tMysqlOutput_1">
+    <metadata connector="FLOW" name="tMysqlOutput_1">
       <column comment="" key="false" length="10" name="customer_id" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -987,8 +873,10 @@
       <column comment="" key="false" length="0" name="is_new" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" name="time_stamp" nullable="true" pattern="&quot;dd-MM-yyyy HH:mm:ss&quot;" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" name="orders_count" nullable="true" pattern="" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
-    <metadata connector="REJECT" label="ltv_rr_customers" name="REJECT">
+    <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="10" name="customer_id" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -998,8 +886,52 @@
       <column comment="" key="false" length="0" name="is_new" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" name="time_stamp" nullable="true" pattern="&quot;dd-MM-yyyy HH:mm:ss&quot;" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" name="orders_count" nullable="true" pattern="" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaFlex_2"/>
+    <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#xA; int i=0;&#xA; &#xA; &#xA; &#xA; &#xA;&#xA; "/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="System.out.println(&quot;Printing System Notes\n\n\n&quot;);&#xA; for(i=0;i&lt;((List)globalMap.get(&quot;sysNotes&quot;)).size();i++)&#xA; {&#xA;System.out.println((String)(((List)globalMap.get(&quot;sysNotes&quot;)).get(i)));&#xA;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_END" value="}// end of the component, outside/closing the loop&#xA;      "/>
+    <elementParameter field="CHECK" name="Version_V2_0" value="false"/>
+    <elementParameter field="CHECK" name="Version_V3_2" value="false"/>
+    <elementParameter field="CHECK" name="Version_V4.0" value="true"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="System Notes"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tJavaFlex_2">
+      <column comment="" key="false" name="order_id" nullable="true" pattern="" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" name="note_type" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="note_text" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaFlex_3"/>
+    <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#xA; int i=0;&#xA; &#xA; &#xA; &#xA; &#xA;&#xA; "/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="System.out.println(&quot;Printing System Notes\n\n\n&quot;);&#xA;&#xA; for(i=0;i&lt;((List)globalMap.get(&quot;empNotes&quot;)).size();i++)&#xA; {&#xA;System.out.println((String)(((List)globalMap.get(&quot;empNotes&quot;)).get(i)));"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_END" value="}// end of the component, outside/closing the loop&#xA;      "/>
+    <elementParameter field="CHECK" name="Version_V2_0" value="false"/>
+    <elementParameter field="CHECK" name="Version_V3_2" value="false"/>
+    <elementParameter field="CHECK" name="Version_V4.0" value="true"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="Employee Notes"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tJavaFlex_3">
+      <column comment="" key="false" name="order_id" nullable="true" pattern="" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" name="note_type" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="note_text" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="RESPONSE" label="row7" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_3" target="tJavaFlex_1">
@@ -1024,29 +956,23 @@
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7"/>
   </connection>
-  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tRESTClient_3" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_3" target="tRESTClient_2">
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tRESTClient_3" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRESTClient_3" target="tRESTClient_2">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="COMMON.getAttribute(&quot;response_code&quot;).equals(&quot;100&quot;)"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1"/>
   </connection>
-  <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tJavaFlex_1" offsetLabelX="0" offsetLabelY="0" source="tJavaFlex_1" target="tFileOutputDelimited_2">
-    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
-      <elementValue elementRef="TRACE_COLUMN" value="key"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="value"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
-    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
-    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
-    <elementParameter field="TABLE" name="THRESHLODS"/>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tRESTClient_3" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tRESTClient_3" target="tFixedFlowInput_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="COMMON.getAttribute(&quot;response_code&quot;).equals(&quot;100&quot;)"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If2"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaFlex_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tJavaFlex_1" target="tJavaFlex_2">
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaFlex_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tJavaFlex_1" target="tJavaFlex_3">
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tSetGlobalVar_1">
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
@@ -1179,7 +1105,7 @@
     <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
     <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
     <elementParameter field="TABLE" name="THRESHLODS"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tExtractDelimitedFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractDelimitedFields_1" target="tJavaRow_1">
@@ -1201,7 +1127,7 @@
     <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
     <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
     <elementParameter field="TABLE" name="THRESHLODS"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tLogRow_1">
@@ -1232,8 +1158,36 @@
     <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
     <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
     <elementParameter field="TABLE" name="THRESHLODS"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tMysqlOutput_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="customer_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="order_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="is_new"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="time_stamp"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="orders_count"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4"/>
   </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
@@ -1254,7 +1208,9 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
   </subjob>
   <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Populate Order Raw Data"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
   </subjob>
@@ -1266,16 +1222,6 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_2"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
-  </subjob>
-  <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_2"/>
     <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Get Customer Info"/>
@@ -1283,7 +1229,12 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaFlex_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaFlex_3"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
   </subjob>
