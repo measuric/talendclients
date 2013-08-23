@@ -51,11 +51,6 @@
     <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
     <variables name="" value="null" talendType="id_String"/>
   </expression:EMFExpression>
-  <expression:EMFExpression id="null=>raw=>customer_id" expression="Integer.parseInt(COMMON.getAttribute(&quot;customer_id&quot;)) ">
-    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
-    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
-    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
-  </expression:EMFExpression>
   <expression:EMFExpression id="null=>raw=>time_stamp" expression="Var.time_stamp!=null &amp;&amp; Var.time_stamp.trim().length()>0?TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, Var.time_stamp):null       ">
     <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
     <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
@@ -84,5 +79,15 @@
     <variables name="java.net.URLEncoder.encode(row5.password,&quot;UTF-8&quot;)" value="null" talendType="id_String"/>
     <variables name="java.net.URLEncoder.encode(row5.method,&quot;UTF-8&quot;) " value="null" talendType="id_String"/>
     <variables name="context.ORDER_ID" value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>raw=>customer_id" expression="COMMON.getAttribute(&quot;customer_id&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;customer_id&quot;).trim().length()>0?Integer.parseInt(COMMON.getAttribute(&quot;customer_id&quot;)):&quot;&quot;">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>raw=>order_status" expression="COMMON.getAttribute(&quot;order_status&quot;) !=null &amp;&amp; COMMON.getAttribute(&quot;order_status&quot;).trim().">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
   </expression:EMFExpression>
 </xmi:XMI>
