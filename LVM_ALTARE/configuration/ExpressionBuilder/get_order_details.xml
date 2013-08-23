@@ -66,4 +66,23 @@
     <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
     <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
   </expression:EMFExpression>
+  <expression:EMFExpression id="null=>raw=>afid" expression="COMMON.getAttribute(&quot;affiliate_id&quot;)">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>raw=>affid" expression="COMMON.getAttribute(&quot;sub_affiliate_id&quot;) ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>qry=>value" expression="&quot;username=&quot;+Var.username+&quot;&amp;password=&quot;+Var.password+&quot;&amp;method=&quot;+Var.method+&quot;&amp;order_id=&quot;+Var.order_id  ">
+    <variables name="row5.username" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.password" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.method" value="null" talendType="id_String" nullable="true"/>
+    <variables name="java.net.URLEncoder.encode(row5.username,&quot;UTF-8&quot;)" value="null" talendType="id_String"/>
+    <variables name="java.net.URLEncoder.encode(row5.password,&quot;UTF-8&quot;)" value="null" talendType="id_String"/>
+    <variables name="java.net.URLEncoder.encode(row5.method,&quot;UTF-8&quot;) " value="null" talendType="id_String"/>
+    <variables name="context.ORDER_ID" value="null" talendType="id_String"/>
+  </expression:EMFExpression>
 </xmi:XMI>
