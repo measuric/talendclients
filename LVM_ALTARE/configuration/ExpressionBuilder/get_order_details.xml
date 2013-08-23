@@ -1,27 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
-  <expression:EMFExpression id="null=>raw=>order_id" expression="Integer.parseInt(context.ORDER_ID)">
-    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
-  </expression:EMFExpression>
-  <expression:EMFExpression id="null=>raw=>campaign_id" expression="Integer.parseInt(COMMON.getAttribute(&quot;campaign_id&quot;))">
-    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
-  </expression:EMFExpression>
   <expression:EMFExpression id="null=>raw=>is_reccuring" expression="Boolean.valueOf(COMMON.getAttribute(&quot;is_recurring&quot;))">
-    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
-  </expression:EMFExpression>
-  <expression:EMFExpression id="null=>raw=>main_product_id" expression="COMMON.getAttribute(&quot;main_product_id&quot;)!=null?Integer.parseInt(COMMON.getAttribute(&quot;main_product_id&quot;)):null ">
-    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
-  </expression:EMFExpression>
-  <expression:EMFExpression id="null=>raw=>amount_refunded_to_date" expression="Float.valueOf(COMMON.getAttribute(&quot;amount_refunded_to_date&quot;))">
-    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
-  </expression:EMFExpression>
-  <expression:EMFExpression id="null=>raw=>is_rma" expression="Byte.parseByte(COMMON.getAttribute(&quot;is_rma&quot;))">
-    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
-  </expression:EMFExpression>
-  <expression:EMFExpression id="null=>raw=>is_fraud" expression="Byte.parseByte(COMMON.getAttribute(&quot;is_fraud&quot;))">
-    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
-  </expression:EMFExpression>
-  <expression:EMFExpression id="null=>raw=>is_chargeback" expression="Byte.parseByte(COMMON.getAttribute(&quot;is_chargeback&quot;))">
     <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
   </expression:EMFExpression>
   <expression:EMFExpression id="null=>raw=>product_id" expression="COMMON.getAttribute(&quot;products[0][product_id]&quot;)">
@@ -30,43 +9,10 @@
   <expression:EMFExpression id="null=>raw=>product_sku" expression="COMMON.getAttribute(&quot;products[0][sku]&quot;)">
     <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
   </expression:EMFExpression>
-  <expression:EMFExpression id="null=>raw=>product_price" expression="Float.valueOf(COMMON.getAttribute(&quot;products[0][price]&quot;))  ">
-    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
-  </expression:EMFExpression>
   <expression:EMFExpression id="null=>raw=>product_name" expression="COMMON.getAttribute(&quot;products[0][name]&quot;)">
     <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
   </expression:EMFExpression>
-  <expression:EMFExpression id="null=>Var=>time_stamp" expression="COMMON.getAttribute(&quot;time_stamp&quot;)">
-    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
-    <variables value="null" talendType="id_String"/>
-  </expression:EMFExpression>
-  <expression:EMFExpression id="null=>Var=>order_confirmed_date" expression="COMMON.getAttribute(&quot;order_confirmed_date&quot;)">
-    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
-    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
-    <variables name="" value="null" talendType="id_String"/>
-  </expression:EMFExpression>
-  <expression:EMFExpression id="null=>raw=>order_confirmed_date" expression="Var.order_confirmed_date!=null &amp;&amp; Var.order_confirmed_date.trim().length()>0?TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, Var.order_confirmed_date):null   ">
-    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
-    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
-    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
-    <variables name="" value="null" talendType="id_String"/>
-  </expression:EMFExpression>
-  <expression:EMFExpression id="null=>raw=>time_stamp" expression="Var.time_stamp!=null &amp;&amp; Var.time_stamp.trim().length()>0?TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, Var.time_stamp):null       ">
-    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
-    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
-    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
-  </expression:EMFExpression>
-  <expression:EMFExpression id="null=>raw=>order_total" expression="Float.valueOf(COMMON.getAttribute(&quot;order_total&quot;)) ">
-    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
-    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
-    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
-  </expression:EMFExpression>
   <expression:EMFExpression id="null=>raw=>afid" expression="COMMON.getAttribute(&quot;affiliate_id&quot;)">
-    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
-    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
-    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
-  </expression:EMFExpression>
-  <expression:EMFExpression id="null=>raw=>affid" expression="COMMON.getAttribute(&quot;sub_affiliate_id&quot;) ">
     <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
     <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
     <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
@@ -80,12 +26,87 @@
     <variables name="java.net.URLEncoder.encode(row5.method,&quot;UTF-8&quot;) " value="null" talendType="id_String"/>
     <variables name="context.ORDER_ID" value="null" talendType="id_String"/>
   </expression:EMFExpression>
-  <expression:EMFExpression id="null=>raw=>customer_id" expression="COMMON.getAttribute(&quot;customer_id&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;customer_id&quot;).trim().length()>0?Integer.parseInt(COMMON.getAttribute(&quot;customer_id&quot;)):&quot;&quot;">
+  <expression:EMFExpression id="null=>raw=>is_chargeback" expression="Byte.parseByte(COMMON.getAttribute(&quot;is_chargeback&quot;)) ">
     <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
     <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
     <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
   </expression:EMFExpression>
-  <expression:EMFExpression id="null=>raw=>order_status" expression="COMMON.getAttribute(&quot;order_status&quot;) !=null &amp;&amp; COMMON.getAttribute(&quot;order_status&quot;).trim().">
+  <expression:EMFExpression id="null=>raw=>affid" expression="COMMON.getAttribute(&quot;sub_affiliate&quot;)  ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>raw=>order_confirmed_date" expression="Var.order_confirmed_date!=null &amp;&amp; Var.order_confirmed_date.trim().length()>0?TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, Var.order_confirmed_date):null    ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="" value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>raw=>product_price" expression="COMMON.getAttribute(&quot;products[0][price]&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;products[0][price]&quot;).trim().length()>0?Float.valueOf(COMMON.getAttribute(&quot;products[0][price]&quot;)):null     ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>raw=>order_status" expression="COMMON.getAttribute(&quot;order_status&quot;) !=null &amp;&amp; COMMON.getAttribute(&quot;order_status&quot;).trim().length()>0?Integer.parseInt(COMMON.getAttribute(&quot;order_status&quot;)):null  ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>raw=>campaign_id" expression="COMMON.getAttribute(&quot;campaign_id&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;campaign_id&quot;).trim().length()>0?Integer.parseInt(COMMON.getAttribute(&quot;campaign_id&quot;)):null  ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>raw=>amount_refunded_to_date" expression="COMMON.getAttribute(&quot;amount_refunded_to_date&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;amount_refunded_to_date&quot;).trim().length()>0?Float.valueOf(COMMON.getAttribute(&quot;amount_refunded_to_date&quot;)):null ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>raw=>order_total" expression="COMMON.getAttribute(&quot;order_total&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;order_total&quot;).trim().length()>0?Float.valueOf(COMMON.getAttribute(&quot;order_total&quot;)) :null  ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>raw=>main_product_id" expression="COMMON.getAttribute(&quot;main_product_id&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;main_product_id&quot;).trim().length()>0?Integer.parseInt(COMMON.getAttribute(&quot;main_product_id&quot;)):null   ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>raw=>customer_id" expression="COMMON.getAttribute(&quot;customer_id&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;customer_id&quot;).trim().length()>0?Integer.parseInt(COMMON.getAttribute(&quot;customer_id&quot;)):null  ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>time_stamp" expression="COMMON.getAttribute(&quot;time_stamp&quot;) ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>order_confirmed_date" expression="COMMON.getAttribute(&quot;order_confirmed_date&quot;) ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;)  " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="" value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>raw=>time_stamp" expression="Var.time_stamp!=null &amp;&amp; Var.time_stamp.trim().length()>0?TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, Var.time_stamp):null        ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;)  " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;)  " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>raw=>is_rma" expression="COMMON.getAttribute(&quot;is_rma&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;is_rma&quot;).trim().length()>0?Byte.parseByte(COMMON.getAttribute(&quot;is_rma&quot;)):null">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>raw=>order_id" expression="context.ORDER_ID!=null &amp;&amp; context.ORDER_ID.trim().length()>0?Integer.parseInt(context.ORDER_ID):Integer.parseInt(&quot;0&quot;)   ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>raw=>is_fraud" expression="COMMON.getAttribute(&quot;is_fraud&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;is_fraud&quot;).trim().length()>0?Byte.parseByte(COMMON.getAttribute(&quot;is_fraud&quot;)):null   ">
     <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
     <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
     <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>

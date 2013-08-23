@@ -3,7 +3,7 @@
   <context confirmationNeeded="false" name="dev">
     <contextParameter comment="" name="RESPONSE_STATUS" prompt="RESPONSE_STATUS?" promptNeeded="false" type="id_String" value="null"/>
     <contextParameter comment="" name="TOTAL_ORDERS" prompt="TOTAL_ORDERS?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="ORDER_ID" prompt="ORDER_ID?" promptNeeded="false" type="id_String" value="&quot;427204&quot;"/>
+    <contextParameter comment="" name="ORDER_ID" prompt="ORDER_ID?" promptNeeded="false" type="id_String" value="&quot;441401&quot;"/>
     <contextParameter comment="" name="DB_HOST" prompt="DB_HOST?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="islabs-dev.lvmetrics.com"/>
     <contextParameter comment="" name="DB_USERNAME" prompt="DB_USERNAME?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="root"/>
     <contextParameter comment="" name="DB_PORT" prompt="DB_PORT?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="3306"/>
@@ -23,7 +23,7 @@
     <contextParameter comment="" name="ORDER_ID" prompt="ORDER_ID?" promptNeeded="false" type="id_String" value="&quot;426113&quot;"/>
     <contextParameter comment="" name="DB_ADDITIONAL_PARAMS" prompt="DB_ADDITIONAL_PARAMS?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="DB_DBNAME" prompt="DB_DBNAME?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="altare"/>
-    <contextParameter comment="" name="DB_HOST" prompt="DB_HOST?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="islabs.lvmetrics.com"/>
+    <contextParameter comment="" name="DB_HOST" prompt="DB_HOST?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="islabs-dev.lvmetrics.com"/>
     <contextParameter comment="" name="DB_PASSWORD" prompt="DB_PASSWORD?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="Hty%yeIk!qw"/>
     <contextParameter comment="" name="DB_PORT" prompt="DB_PORT?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="3306"/>
     <contextParameter comment="" name="DB_USERNAME" prompt="DB_USERNAME?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="root"/>
@@ -114,7 +114,7 @@
       <column comment="" key="false" name="line" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="384">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -209,48 +209,48 @@
       <column comment="" key="false" name="order_status" nullable="true" pattern="" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="time_stamp" expression="COMMON.getAttribute(&quot;time_stamp&quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="order_confirmed_date" expression="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " type="id_String" nullable="true"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="raw">
-        <mapperTableEntries name="order_id" expression="Integer.parseInt(context.ORDER_ID) " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="customer_id" expression="COMMON.getAttribute(&quot;customer_id&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;customer_id&quot;).trim().length()>0?Integer.parseInt(COMMON.getAttribute(&quot;customer_id&quot;)):&quot;&quot; " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="order_id" expression="context.ORDER_ID!=null &amp;&amp; context.ORDER_ID.trim().length()>0?Integer.parseInt(context.ORDER_ID):Integer.parseInt(&quot;0&quot;)    " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="customer_id" expression="COMMON.getAttribute(&quot;customer_id&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;customer_id&quot;).trim().length()>0?Integer.parseInt(COMMON.getAttribute(&quot;customer_id&quot;)):null  " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="is_reccuring" expression="Boolean.valueOf(COMMON.getAttribute(&quot;is_recurring&quot;)) " type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="time_stamp" expression="Var.time_stamp!=null &amp;&amp; Var.time_stamp.trim().length()>0?TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, Var.time_stamp):null        " type="id_Date" nullable="true"/>
-        <mapperTableEntries name="main_product_id" expression="COMMON.getAttribute(&quot;main_product_id&quot;)!=null?Integer.parseInt(COMMON.getAttribute(&quot;main_product_id&quot;)):null  " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="main_product_id" expression="COMMON.getAttribute(&quot;main_product_id&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;main_product_id&quot;).trim().length()>0?Integer.parseInt(COMMON.getAttribute(&quot;main_product_id&quot;)):null    " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="upsell_product_id" expression="COMMON.getAttribute(&quot;upsell_product_id&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="order_total" expression="Float.valueOf(COMMON.getAttribute(&quot;order_total&quot;))  " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="amount_refunded_to_date" expression="Float.valueOf(COMMON.getAttribute(&quot;amount_refunded_to_date&quot;)) " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="order_total" expression="COMMON.getAttribute(&quot;order_total&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;order_total&quot;).trim().length()>0?Float.valueOf(COMMON.getAttribute(&quot;order_total&quot;)) :null   " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="amount_refunded_to_date" expression="COMMON.getAttribute(&quot;amount_refunded_to_date&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;amount_refunded_to_date&quot;).trim().length()>0?Float.valueOf(COMMON.getAttribute(&quot;amount_refunded_to_date&quot;)):null  " type="id_Float" nullable="true"/>
         <mapperTableEntries name="order_confirmed" expression="COMMON.getAttribute(&quot;order_confirmed&quot;)" type="id_String" nullable="true"/>
         <mapperTableEntries name="order_confirmed_date" expression="Var.order_confirmed_date!=null &amp;&amp; Var.order_confirmed_date.trim().length()>0?TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, Var.order_confirmed_date):null    " type="id_Date" nullable="true"/>
-        <mapperTableEntries name="is_chargeback" expression="Byte.parseByte(COMMON.getAttribute(&quot;is_chargeback&quot;)) " type="id_Byte" nullable="true"/>
-        <mapperTableEntries name="is_fraud" expression="Byte.parseByte(COMMON.getAttribute(&quot;is_fraud&quot;)) " type="id_Byte" nullable="true"/>
-        <mapperTableEntries name="is_rma" expression="Byte.parseByte(COMMON.getAttribute(&quot;is_rma&quot;)) " type="id_Byte" nullable="true"/>
+        <mapperTableEntries name="is_chargeback" expression="Byte.parseByte(COMMON.getAttribute(&quot;is_chargeback&quot;))  " type="id_Byte" nullable="true"/>
+        <mapperTableEntries name="is_fraud" expression="COMMON.getAttribute(&quot;is_fraud&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;is_fraud&quot;).trim().length()>0?Byte.parseByte(COMMON.getAttribute(&quot;is_fraud&quot;)):null    " type="id_Byte" nullable="true"/>
+        <mapperTableEntries name="is_rma" expression="COMMON.getAttribute(&quot;is_rma&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;is_rma&quot;).trim().length()>0?Byte.parseByte(COMMON.getAttribute(&quot;is_rma&quot;)):null " type="id_Byte" nullable="true"/>
         <mapperTableEntries name="rma_number" expression="COMMON.getAttribute(&quot;rma_number&quot;)" type="id_String" nullable="true"/>
         <mapperTableEntries name="rma_reason" expression="COMMON.getAttribute(&quot;rma_reason&quot;)" type="id_String" nullable="true"/>
         <mapperTableEntries name="ip_address" expression="COMMON.getAttribute(&quot;ip_address&quot;)" type="id_String" nullable="true"/>
         <mapperTableEntries name="decline_reason" expression="COMMON.getAttribute(&quot;decline_reason&quot;)" type="id_String" nullable="true"/>
-        <mapperTableEntries name="campaign_id" expression="Integer.parseInt(COMMON.getAttribute(&quot;campaign_id&quot;)) " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="campaign_id" expression="COMMON.getAttribute(&quot;campaign_id&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;campaign_id&quot;).trim().length()>0?Integer.parseInt(COMMON.getAttribute(&quot;campaign_id&quot;)):null   " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="click_id" expression="COMMON.getAttribute(&quot;click_id&quot;)" type="id_String" nullable="true"/>
         <mapperTableEntries name="email_address" expression="COMMON.getAttribute(&quot;email_address&quot;)" type="id_String" nullable="true"/>
         <mapperTableEntries name="product_id" expression="COMMON.getAttribute(&quot;products[0][product_id]&quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="product_name" expression="COMMON.getAttribute(&quot;products[0][name]&quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="product_sku" expression="COMMON.getAttribute(&quot;products[0][sku]&quot;) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="product_price" expression="Float.valueOf(COMMON.getAttribute(&quot;products[0][price]&quot;))   " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="product_price" expression="COMMON.getAttribute(&quot;products[0][price]&quot;)!=null &amp;&amp; COMMON.getAttribute(&quot;products[0][price]&quot;).trim().length()>0?Float.valueOf(COMMON.getAttribute(&quot;products[0][price]&quot;)):null      " type="id_Float" nullable="true"/>
         <mapperTableEntries name="billing_state" expression="COMMON.getAttribute(&quot;billing_state&quot;)" type="id_String" nullable="true"/>
         <mapperTableEntries name="billing_country" expression="COMMON.getAttribute(&quot;billing_country&quot;)" type="id_String" nullable="true"/>
         <mapperTableEntries name="afid" expression="COMMON.getAttribute(&quot;affiliate&quot;) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="affid" expression="COMMON.getAttribute(&quot;sub_affiliate&quot;)  " type="id_String" nullable="true"/>
-        <mapperTableEntries name="order_status" expression="COMMON.getAttribute(&quot;order_status&quot;) !=null &amp;&amp; COMMON.getAttribute(&quot;order_status&quot;).trim(). " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="affid" expression="COMMON.getAttribute(&quot;sub_affiliate&quot;)   " type="id_String" nullable="true"/>
+        <mapperTableEntries name="order_status" expression="COMMON.getAttribute(&quot;order_status&quot;) !=null &amp;&amp; COMMON.getAttribute(&quot;order_status&quot;).trim().length()>0?Integer.parseInt(COMMON.getAttribute(&quot;order_status&quot;)):null   " type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row8" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="line" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="384">
+  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_2"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
@@ -606,7 +606,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="32">
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(&quot;Order ID - &quot;+context.ORDER_ID);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
@@ -918,7 +918,7 @@
       <column comment="" key="false" name="note_text" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="32">
+  <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlConnection_1"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
     <elementParameter field="TEXT" name="HOST" value="context.DB_HOST"/>
@@ -1095,7 +1095,7 @@
     <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value="String key=&quot;&quot;;&#xA;String value=&quot;&quot;;&#xA;String token=&quot;&quot;;&#xA;&#xA;Integer count_sys_notes=0;&#xA;Integer count_emp_notes=0;&#xA;&#xA;&#xA;COMMON.response.clear();&#xA;&#x9;&#xA;&#x9;    "/>
-    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="StringTokenizer str_name=new StringTokenizer(row7.ResponseContent,&quot;&amp;&quot;);&#xA;&#xA;for (;str_name.hasMoreTokens();)&#xA;{&#xA;&#x9;&#xA;token=str_name.nextToken();&#xA;key=token.split(&quot;=&quot;)[0];&#xA;value=token.split(&quot;=&quot;).length>1?token.split(&quot;=&quot;)[1]:&quot;&quot;;&#xA;value=java.net.URLDecoder.decode(value,&quot;UTF-8&quot;);&#xA;&#xA;System.out.println(token);&#xA;&#xA;COMMON.addAttribute(key,value );&#xA;&#xA;/*&#xA;// Populate NotesArrayList&#xA;if(key.matches(&quot;systemNotes\\[[0-9]+\\]&quot;))&#xA;{&#xA;  //System.out.println(value);&#xA;  count_sys_notes=count_sys_notes+1;&#xA;  ((List)globalMap.get(&quot;sysNotes&quot;)).add(value);&#xA;}&#xA;if(key.matches(&quot;employeeNotes\\[[0-9]+\\]&quot;))&#xA;{&#xA;  //System.out.println(value);&#xA;  count_emp_notes=count_emp_notes+1;&#xA;  ((List)globalMap.get(&quot;empNotes&quot;)).add(value);&#xA;}&#x9;&#xA;//row9.key=key;&#xA;//row9.value=value;&#xA;*/&#xA;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="StringTokenizer str_name=new StringTokenizer(row7.ResponseContent,&quot;&amp;&quot;);&#xA;&#xA;for (;str_name.hasMoreTokens();)&#xA;{&#xA;&#x9;&#xA;token=str_name.nextToken();&#xA;key=token.split(&quot;=&quot;)[0];&#xA;value=token.split(&quot;=&quot;).length>1?token.split(&quot;=&quot;)[1]:&quot;&quot;;&#xA;value=java.net.URLDecoder.decode(value,&quot;UTF-8&quot;);&#xA;&#xA;//System.out.println(token);&#xA;&#xA;COMMON.addAttribute(key,value );&#xA;&#xA;/*&#xA;// Populate NotesArrayList&#xA;if(key.matches(&quot;systemNotes\\[[0-9]+\\]&quot;))&#xA;{&#xA;  //System.out.println(value);&#xA;  count_sys_notes=count_sys_notes+1;&#xA;  ((List)globalMap.get(&quot;sysNotes&quot;)).add(value);&#xA;}&#xA;if(key.matches(&quot;employeeNotes\\[[0-9]+\\]&quot;))&#xA;{&#xA;  //System.out.println(value);&#xA;  count_emp_notes=count_emp_notes+1;&#xA;  ((List)globalMap.get(&quot;empNotes&quot;)).add(value);&#xA;}&#x9;&#xA;//row9.key=key;&#xA;//row9.value=value;&#xA;*/&#xA;"/>
     <elementParameter field="MEMO_JAVA" name="CODE_END" value="&#x9;//((List)globalMap.get(&quot;response&quot;)).add(row);&#xA;}   &#xA;&#xA;&#xA;"/>
     <elementParameter field="CHECK" name="Version_V2_0" value="false"/>
     <elementParameter field="CHECK" name="Version_V3_2" value="false"/>
@@ -1114,7 +1114,7 @@
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="tMysqlConnection_1">
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="tJava_2">
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4"/>
   </connection>
@@ -1153,6 +1153,9 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="upsell_product_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="order_total"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="amount_refunded_to_date"/>
@@ -1212,13 +1215,10 @@
       <elementValue elementRef="TRACE_COLUMN" value="billing_country"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="order_total"/>
+      <elementValue elementRef="TRACE_COLUMN" value="afid"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="affid"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="afid"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="order_status"/>
@@ -1233,6 +1233,10 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="raw"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_2" offsetLabelX="0" offsetLabelY="0" source="tJava_2" target="tMysqlConnection_1">
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk5"/>
   </connection>
   <connection connectorName="RESPONSE" label="row1" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_2" target="tExtractDelimitedFields_1">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
@@ -1336,10 +1340,6 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4"/>
-  </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMysqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlConnection_1" target="tJava_2">
-    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk5"/>
   </connection>
   <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tFixedFlowInput_2" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_2" target="tMap_2">
     <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>

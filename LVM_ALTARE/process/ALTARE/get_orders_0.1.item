@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="dev">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="test">
   <context confirmationNeeded="false" name="dev">
     <contextParameter comment="" name="RESPONSE_STATUS" prompt="RESPONSE_STATUS?" promptNeeded="false" type="id_String" value="null"/>
     <contextParameter comment="" name="TOTAL_ORDERS" prompt="TOTAL_ORDERS?" promptNeeded="false" type="id_String" value="null"/>
@@ -14,8 +14,8 @@
     <contextParameter comment="" name="DB_HOST" prompt="DB_HOST?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="islabs-dev.lvmetrics.com"/>
     <contextParameter comment="" name="CUSTOMERS_TABLE_NAME" prompt="CUSTOMERS_TABLE_NAME?" promptNeeded="false" type="id_String" value="ltv_rr_customers_test"/>
     <contextParameter comment="" name="ORDERS_TABLE_NAME" prompt="ORDERS_TABLE_NAME?" promptNeeded="false" type="id_String" value="ltv_rr_order_details_raw_test"/>
-    <contextParameter comment="" name="START_DATE" prompt="START_DATE?" promptNeeded="false" type="id_String" value="&quot;08/21/2013&quot;"/>
-    <contextParameter comment="" name="END_DATE" prompt="END_DATE?" promptNeeded="false" type="id_String" value="&quot;08/22/2013&quot;"/>
+    <contextParameter comment="" name="START_DATE" prompt="START_DATE?" promptNeeded="false" type="id_String" value="&quot;06/01/2013&quot;"/>
+    <contextParameter comment="" name="END_DATE" prompt="END_DATE?" promptNeeded="false" type="id_String" value="&quot;06/22/2013&quot;"/>
     <contextParameter comment="" name="USERNAME" prompt="USERNAME?" promptNeeded="false" type="id_String" value="&quot;tracking.altarepublishing&quot;"/>
     <contextParameter comment="" name="PASSWORD" prompt="PASSWORD?" promptNeeded="false" type="id_String" value="&quot;JhRbd4SZg8KfNw&quot;"/>
     <contextParameter comment="" name="queryStr" prompt="queryStr?" promptNeeded="false" type="id_String" value="null"/>
@@ -24,18 +24,18 @@
     <contextParameter comment="" name="RESPONSE_STATUS" prompt="RESPONSE_STATUS?" promptNeeded="false" type="id_String" value="null"/>
     <contextParameter comment="" name="TOTAL_ORDERS" prompt="TOTAL_ORDERS?" promptNeeded="false" type="id_String" value="null"/>
     <contextParameter comment="" name="ORDER_ID" prompt="ORDER_ID?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="TEMP_DIR_PATH" prompt="TEMP_DIR_PATH?" promptNeeded="false" type="id_String" value="C:\Vikram Takkar\freelance_jobs\Elance\limelight\temp"/>
+    <contextParameter comment="" name="TEMP_DIR_PATH" prompt="TEMP_DIR_PATH?" promptNeeded="false" type="id_String" value="/home/konecht/altare/temp"/>
     <contextParameter comment="" name="DB_DBNAME" prompt="DB_DBNAME?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="altare"/>
     <contextParameter comment="" name="DB_USERNAME" prompt="DB_USERNAME?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="root"/>
     <contextParameter comment="" name="DB_ADDITIONAL_PARAMS" prompt="DB_ADDITIONAL_PARAMS?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="DB_PORT" prompt="DB_PORT?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="3306"/>
     <contextParameter comment="" name="DB_SCHEMA" prompt="DB_SCHEMA?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="null"/>
     <contextParameter comment="" name="DB_PASSWORD" prompt="DB_PASSWORD?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="Hty%yeIk!qw"/>
-    <contextParameter comment="" name="DB_HOST" prompt="DB_HOST?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="islabs.lvmetrics.com"/>
-    <contextParameter comment="" name="CUSTOMERS_TABLE_NAME" prompt="CUSTOMERS_TABLE_NAME?" promptNeeded="false" type="id_String" value="ltv_rr_customers"/>
-    <contextParameter comment="" name="ORDERS_TABLE_NAME" prompt="ORDERS_TABLE_NAME?" promptNeeded="false" type="id_String" value="ltv_rr_order_details_raw"/>
-    <contextParameter comment="" name="START_DATE" prompt="START_DATE?" promptNeeded="false" type="id_String" value="05/01/2013"/>
-    <contextParameter comment="" name="END_DATE" prompt="END_DATE?" promptNeeded="false" type="id_String" value="08/21/2013"/>
+    <contextParameter comment="" name="DB_HOST" prompt="DB_HOST?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="islabs-dev.lvmetrics.com"/>
+    <contextParameter comment="" name="CUSTOMERS_TABLE_NAME" prompt="CUSTOMERS_TABLE_NAME?" promptNeeded="false" type="id_String" value="ltv_rr_customers_test"/>
+    <contextParameter comment="" name="ORDERS_TABLE_NAME" prompt="ORDERS_TABLE_NAME?" promptNeeded="false" type="id_String" value="ltv_rr_order_details_raw_test"/>
+    <contextParameter comment="" name="START_DATE" prompt="START_DATE?" promptNeeded="false" type="id_String" value="08/01/2013"/>
+    <contextParameter comment="" name="END_DATE" prompt="END_DATE?" promptNeeded="false" type="id_String" value="08/22/2013"/>
     <contextParameter comment="" name="USERNAME" prompt="USERNAME?" promptNeeded="false" type="id_String" value="&quot;tracking.altarepublishing&quot;"/>
     <contextParameter comment="" name="PASSWORD" prompt="PASSWORD?" promptNeeded="false" type="id_String" value="&quot;JhRbd4SZg8KfNw&quot;"/>
     <contextParameter comment="" name="queryStr" prompt="queryStr?" promptNeeded="false" type="id_String" value="null"/>
@@ -392,163 +392,6 @@
     <routinesParameter id="_zSqqcIcTEeKWY7lPUbVziA" name="google_adwords"/>
     <routinesParameter id="_e_kw8I1DEeKZxq5uSFSY-w" name="string_to_date"/>
   </parameters>
-  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_1"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TEXT" name="URL" value="&quot;https://s.dicarlocoaching.com/admin/membership.php&quot;"/>
-    <elementParameter field="TEXT" name="PATH" value="&quot;&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
-    <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" value="application/x-www-form-urlencoded"/>
-    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="*/*"/>
-    <elementParameter field="TABLE" name="QUERY">
-      <elementValue elementRef="NAME" value="&quot;username&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;tracking.altarepublishing&quot;"/>
-      <elementValue elementRef="NAME" value="&quot;password&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;JhRbd4SZg8KfNw&quot;"/>
-      <elementValue elementRef="NAME" value="&quot;method&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;validate_credentials&quot;"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="BASIC"/>
-    <elementParameter field="TEXT" name="AUTH_USERNAME" value="&quot;username&quot;"/>
-    <elementParameter field="TEXT" name="AUTH_PASSWORD" value="&quot;password&quot;"/>
-    <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
-    <elementParameter field="TEXT" name="SERVICE_NAMESPACE" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="SERVICE_NAME" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
-    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="30"/>
-    <elementParameter field="TEXT" name="RECEIVE_TIMEOUT" value="60"/>
-    <elementParameter field="CHECK" name="LOG_MESSAGES" value="false"/>
-    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" value="true"/>
-    <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" value="false"/>
-    <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" value="true"/>
-    <elementParameter field="TABLE" name="HEADERS"/>
-    <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES"/>
-    <elementParameter field="TABLE" name="SERVICE_ACTIVITY_MONITOR_CUSTOM_PROPERTIES"/>
-    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
-    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;61.163.92.4&quot;"/>
-    <elementParameter field="TEXT" name="PROXY_PORT" value="8080"/>
-    <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PROXY_PASSWORD" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
-    <elementParameter field="MEMO" name="COMMENT" value=""/>
-    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
-    <metadata connector="FLOW" name="tRESTClient_1">
-      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="RESPONSE" name="RESPONSE">
-      <column defaultValue="" key="false" length="0" name="statusCode" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="FAULT" name="FAULT">
-      <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
-    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true"/>
-    <elementParameter field="RADIO" name="PRINT_LABEL" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
-    <elementParameter field="TABLE" name="LENGTHS">
-      <elementValue elementRef="SCHEMA_COLUMN" value="statusCode"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="body"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="string"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
-    <elementParameter field="MEMO" name="COMMENT" value=""/>
-    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
-    <metadata connector="FLOW" name="tLogRow_1">
-      <column defaultValue="" key="false" length="0" name="statusCode" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="480">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TEXT" name="URL" value="&quot;https://s.dicarlocoaching.com/admin/membership.php&quot;"/>
-    <elementParameter field="TEXT" name="PATH" value="&quot;&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
-    <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" value="application/x-www-form-urlencoded"/>
-    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="*/*"/>
-    <elementParameter field="TABLE" name="QUERY">
-      <elementValue elementRef="NAME" value="&quot;username&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;tracking.altarepublishing&quot;"/>
-      <elementValue elementRef="NAME" value="&quot;password&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;JhRbd4SZg8KfNw&quot;"/>
-      <elementValue elementRef="NAME" value="&quot;method&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;order_find&quot;"/>
-      <elementValue elementRef="NAME" value="&quot;campaign_id&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;9&quot;"/>
-      <elementValue elementRef="NAME" value="&quot;start_date&quot;"/>
-      <elementValue elementRef="VALUE" value="context.START_DATE"/>
-      <elementValue elementRef="NAME" value="&quot;end_date&quot;"/>
-      <elementValue elementRef="VALUE" value="context.END_DATE"/>
-      <elementValue elementRef="NAME" value="&quot;criteria&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;all&quot;"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="BASIC"/>
-    <elementParameter field="TEXT" name="AUTH_USERNAME" value="&quot;username&quot;"/>
-    <elementParameter field="TEXT" name="AUTH_PASSWORD" value="&quot;password&quot;"/>
-    <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
-    <elementParameter field="TEXT" name="SERVICE_NAMESPACE" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="SERVICE_NAME" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
-    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="30"/>
-    <elementParameter field="TEXT" name="RECEIVE_TIMEOUT" value="60"/>
-    <elementParameter field="CHECK" name="LOG_MESSAGES" value="false"/>
-    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" value="true"/>
-    <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" value="false"/>
-    <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" value="true"/>
-    <elementParameter field="TABLE" name="HEADERS"/>
-    <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES"/>
-    <elementParameter field="TABLE" name="SERVICE_ACTIVITY_MONITOR_CUSTOM_PROPERTIES"/>
-    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
-    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;61.163.92.4&quot;"/>
-    <elementParameter field="TEXT" name="PROXY_PORT" value="8080"/>
-    <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PROXY_PASSWORD" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
-    <elementParameter field="MEMO" name="COMMENT" value=""/>
-    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
-    <metadata connector="FLOW" name="tRESTClient_2">
-      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="RESPONSE" name="RESPONSE">
-      <column defaultValue="" key="false" length="0" name="statusCode" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
-      <column key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="FAULT" name="FAULT">
-      <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
   <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlConnection_1"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
@@ -901,28 +744,6 @@
     <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
     <metadata connector="FLOW" name="tJava_1"/>
   </node>
-  <connection connectorName="RESPONSE" label="row1" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_1" target="tLogRow_1">
-    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
-      <elementValue elementRef="TRACE_COLUMN" value="statusCode"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="body"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="string"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
-    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
-    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
-    <elementParameter field="TABLE" name="THRESHLODS"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
-  </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMysqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlConnection_1" target="tFixedFlowInput_1">
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2"/>
@@ -1107,20 +928,6 @@
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5"/>
   </connection>
-  <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_1"/>
-    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Validate Credentials"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_2"/>
-    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Find Order Ids for date range"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
-  </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlConnection_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
