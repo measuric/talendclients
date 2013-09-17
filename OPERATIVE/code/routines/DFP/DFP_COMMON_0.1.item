@@ -1,0 +1,62 @@
+package routines;
+
+
+import com.google.api.ads.common.lib.auth.OfflineCredentials;
+import com.google.api.ads.common.lib.auth.OfflineCredentials.Api;
+import com.google.api.ads.dfp.axis.factory.DfpServices;
+import com.google.api.ads.dfp.axis.v201306.Network;
+import com.google.api.ads.dfp.axis.v201306.NetworkServiceInterface;
+import com.google.api.ads.dfp.lib.client.DfpSession;
+import com.google.api.client.auth.oauth2.Credential;
+import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
+import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
+import com.google.api.client.http.javanet.NetHttpTransport;
+import com.google.api.client.json.JsonFactory;
+import com.google.api.client.json.gson.GsonFactory;
+import java.util.*;
+import java.io.*;
+
+
+public class DFP_COMMON {
+	
+
+public static void runExample(DfpServices dfpServices, DfpSession session) throws Exception {
+    // Get the NetworkService.
+    NetworkServiceInterface networkService =
+        dfpServices.get(session, NetworkServiceInterface.class);
+
+    // Get all networks that you have access to with the current authentication
+    // credentials.
+    Network[] networks = networkService.getAllNetworks();
+
+    int i = 0;
+    for (Network network : networks) {
+      System.out.printf(
+          "%d) Network with network code \"%s\" and display name \"%s\" was found.\n",
+          i++, network.getNetworkCode(), network.getDisplayName());
+    }
+
+    System.out.printf("Number of networks found: %d\n", networks.length);
+  }
+
+public static Credential getOAuth2Credential() throws Exception {
+	String[] scope = {"https://www.google.com/apis/ads/publisher"};
+	List list = Arrays.asList(scope); 
+	  // Service account credential.
+	  GoogleCredential credential = new GoogleCredential.Builder().setTransport(
+	      new NetHttpTransport())
+	      .setJsonFactory(new GsonFactory())
+	      .setServiceAccountId(
+	          "521392361473-5ba7pbjspg671hc7rvaqrm4ta1vj1a11@developer.gserviceaccount.com")
+	      .setServiceAccountScopes(list)
+	      .setServiceAccountPrivateKeyFromP12File(new File("C:/Vikram Takkar/freelance_jobs/Elance/Google DFP/key/793c311828b4f6ef733d483b19ba5a8a6f40ecbf-privatekey.p12"))
+	      // Set the user you are impersonating (this can be yourself).
+	      .setServiceAccountUser("dinomathieus@measuric.com")
+	      .build();
+
+	  credential.refreshToken();
+	  return credential;
+	}
+}
+
+
