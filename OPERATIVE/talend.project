@@ -188,17 +188,72 @@
         <elementParameter xmi:id="_l_M8vB-XEeOjjaxtnd6iUg" field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value="" contextMode="false"/>
       </parameters>
     </implicitContextSettings>
-    <ItemsRelations xmi:id="_TTcwwB-uEeOjjaxtnd6iUg">
-      <baseItem xmi:id="_TTcwwR-uEeOjjaxtnd6iUg" id="_3nsdYB-XEeOjjaxtnd6iUg" version="0.1" type="job"/>
-      <relatedItems xmi:id="_TTcwwh-uEeOjjaxtnd6iUg" id="DFP_COMMON" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_TTcwwx-uEeOjjaxtnd6iUg" id="DataOperation" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_TTcwxB-uEeOjjaxtnd6iUg" id="Relational" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_TTcwxR-uEeOjjaxtnd6iUg" id="StringHandling" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_TTcwxh-uEeOjjaxtnd6iUg" id="Numeric" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_TTcwxx-uEeOjjaxtnd6iUg" id="Mathematical" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_TTcwyB-uEeOjjaxtnd6iUg" id="TalendString" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_TTcwyR-uEeOjjaxtnd6iUg" id="TalendDate" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_TTcwyh-uEeOjjaxtnd6iUg" id="TalendDataGenerator" version="Latest" type="routine"/>
+    <ItemsRelations xmi:id="_emq2YCA7EeOFlP9gk_bnEA">
+      <baseItem xmi:id="_emq2YSA7EeOFlP9gk_bnEA" id="_3nsdYB-XEeOjjaxtnd6iUg" version="0.1" type="job"/>
+      <relatedItems xmi:id="_emq2YiA7EeOFlP9gk_bnEA" id="DFP_COMMON" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2YyA7EeOFlP9gk_bnEA" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2ZCA7EeOFlP9gk_bnEA" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2ZSA7EeOFlP9gk_bnEA" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2ZiA7EeOFlP9gk_bnEA" id="Mathematical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2ZyA7EeOFlP9gk_bnEA" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2aCA7EeOFlP9gk_bnEA" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2aSA7EeOFlP9gk_bnEA" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2aiA7EeOFlP9gk_bnEA" id="TalendDate" version="Latest" type="routine"/>
+    </ItemsRelations>
+    <ItemsRelations xmi:id="_emq2ayA7EeOFlP9gk_bnEA">
+      <baseItem xmi:id="_emq2bCA7EeOFlP9gk_bnEA" id="_bFWeACA2EeOFlP9gk_bnEA" version="0.1" type="job"/>
+      <relatedItems xmi:id="_emq2bSA7EeOFlP9gk_bnEA" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2biA7EeOFlP9gk_bnEA" id="Network" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2byA7EeOFlP9gk_bnEA" id="ParseErrorReason" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2cCA7EeOFlP9gk_bnEA" id="ApiException" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2cSA7EeOFlP9gk_bnEA" id="RequiredError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2ciA7EeOFlP9gk_bnEA" id="NetworkServiceInterface" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2cyA7EeOFlP9gk_bnEA" id="ApiError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2dCA7EeOFlP9gk_bnEA" id="PermissionError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2dSA7EeOFlP9gk_bnEA" id="NetworkService" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2diA7EeOFlP9gk_bnEA" id="PublisherQueryLanguageContextErrorReason" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2dyA7EeOFlP9gk_bnEA" id="PublisherQueryLanguageContextError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2eCA7EeOFlP9gk_bnEA" id="InternalApiErrorReason" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2eSA7EeOFlP9gk_bnEA" id="StringLengthError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2eiA7EeOFlP9gk_bnEA" id="InternalApiError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2eyA7EeOFlP9gk_bnEA" id="DFP_COMMON" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2fCA7EeOFlP9gk_bnEA" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2fSA7EeOFlP9gk_bnEA" id="ApiVersionErrorReason" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2fiA7EeOFlP9gk_bnEA" id="NotNullError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2fyA7EeOFlP9gk_bnEA" id="ParseError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2gCA7EeOFlP9gk_bnEA" id="ApiVersionError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2gSA7EeOFlP9gk_bnEA" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2giA7EeOFlP9gk_bnEA" id="PublisherQueryLanguageSyntaxError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2gyA7EeOFlP9gk_bnEA" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emq2hCA7EeOFlP9gk_bnEA" id="CommonErrorReason" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdcCA7EeOFlP9gk_bnEA" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdcSA7EeOFlP9gk_bnEA" id="ServerError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdciA7EeOFlP9gk_bnEA" id="StatementError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdcyA7EeOFlP9gk_bnEA" id="RequiredNumberError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrddCA7EeOFlP9gk_bnEA" id="ServerErrorReason" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrddSA7EeOFlP9gk_bnEA" id="QuotaErrorReason" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrddiA7EeOFlP9gk_bnEA" id="PublisherQueryLanguageSyntaxErrorReason" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrddyA7EeOFlP9gk_bnEA" id="RequiredErrorReason" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdeCA7EeOFlP9gk_bnEA" id="NetworkServiceLocator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdeSA7EeOFlP9gk_bnEA" id="InvalidEmailErrorReason" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdeiA7EeOFlP9gk_bnEA" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdeyA7EeOFlP9gk_bnEA" id="NetworkError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdfCA7EeOFlP9gk_bnEA" id="InvalidEmailError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdfSA7EeOFlP9gk_bnEA" id="TypeError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdfiA7EeOFlP9gk_bnEA" id="CommonError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdfyA7EeOFlP9gk_bnEA" id="AuthenticationError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdgCA7EeOFlP9gk_bnEA" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdgSA7EeOFlP9gk_bnEA" id="NetworkServiceSoapBindingStub" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdgiA7EeOFlP9gk_bnEA" id="QuotaError" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdgyA7EeOFlP9gk_bnEA" id="NotNullErrorReason" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdhCA7EeOFlP9gk_bnEA" id="RequiredNumberErrorReason" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdhSA7EeOFlP9gk_bnEA" id="PermissionErrorReason" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdhiA7EeOFlP9gk_bnEA" id="StatementErrorReason" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdhyA7EeOFlP9gk_bnEA" id="ApplicationException" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdiCA7EeOFlP9gk_bnEA" id="Mathematical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdiSA7EeOFlP9gk_bnEA" id="NetworkErrorReason" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdiiA7EeOFlP9gk_bnEA" id="AuthenticationErrorReason" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_emrdiyA7EeOFlP9gk_bnEA" id="StringLengthErrorReason" version="Latest" type="routine"/>
     </ItemsRelations>
     <migrationTask xmi:id="_jrRLMB-XEeOjjaxtnd6iUg" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
     <migrationTask xmi:id="_jrRLMR-XEeOjjaxtnd6iUg" id="org.talend.designer.core.ui.preferences.migration.ChangeOracleVersionForProjectSetting" breaks="5.2.0" version="5.2.1" status="ok"/>
