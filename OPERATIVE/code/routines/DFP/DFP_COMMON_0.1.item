@@ -16,7 +16,12 @@ import com.google.api.client.json.gson.GsonFactory;
 import java.util.*;
 import java.io.*;
 
-
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.net.URL;
 public class DFP_COMMON {
 	
 
@@ -57,6 +62,33 @@ public static Credential getOAuth2Credential() throws Exception {
 	  credential.refreshToken();
 	  return credential;
 	}
+
+/**
+ * Writes the contents of the URL to the file path.
+ *
+ * @param url the URL locating the report XML
+ * @param filePath the file path to write to
+ * @throws IOException if an I/O error occurs
+ */
+public static void downloadFile(String url, String filePath) throws IOException {
+  BufferedInputStream inputStream = new BufferedInputStream(new URL(url).openStream());
+  BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(filePath));
+
+  try {
+    int i = 0;
+    while ((i = inputStream.read()) != -1) {
+      bos.write(i);
+    }
+  } finally {
+    if (inputStream != null) {
+      inputStream.close();
+    }
+
+    if (bos != null) {
+      bos.close();
+    }
+  }
+}
 }
 
 
