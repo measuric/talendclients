@@ -90,6 +90,11 @@ public static void downloadFile(String url, String filePath) throws IOException 
     }
   }
 }
+
+	public static void print(String str)
+	{
+	System.out.println(str);
+	}
 }
 
 
