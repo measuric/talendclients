@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
+  <contextParameter comment="&quot;yyyy-MM-dd&quot;" name="END_DATE" prompt="END_DATE?" promptNeeded="false" type="id_String" value="&quot;2013-09-18&quot;"/>
+  <contextParameter comment="" name="LOG_DIR_PATH" prompt="LOG_DIR_PATH?" promptNeeded="false" type="id_String" value="&quot;C:/dfpout/log&quot;"/>
+  <contextParameter comment="" name="NETWORK_ID" prompt="NETWORK_ID?" promptNeeded="false" type="id_String" value="&quot;299043&quot;"/>
+  <contextParameter comment="" name="OUT_DIR_PATH" prompt="OUT_DIR_PATH?" promptNeeded="false" type="id_String" value="&quot;C:/dfpout/out&quot;"/>
+  <contextParameter comment="" name="PASSWORD" prompt="PASSWORD?" promptNeeded="false" type="id_Password" value="vyaimwidZyH6xtilBbB5+A=="/>
+  <contextParameter comment="&quot;yyyy-MM-dd&quot;" name="START_DATE" prompt="START_DATE?" promptNeeded="false" type="id_String" value="&quot;2013-09-15&quot;"/>
+  <contextParameter comment="" name="TEMP_DIR_PATH" prompt="TEMP_DIR_PATH?" promptNeeded="false" type="id_String" value="&quot;C:/dfpout/out/temp&quot;"/>
+  <contextParameter comment="" name="USERNAME" prompt="USERNAME?" promptNeeded="false" type="id_String" value="&quot;kcollins@operative.com&quot;"/>
+</talendfile:ContextType>
