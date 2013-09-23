@@ -8,4 +8,5 @@
   <contextParameter comment="&quot;yyyy-MM-dd&quot;" name="START_DATE" prompt="START_DATE?" promptNeeded="false" type="id_String" value="&quot;2013-09-16&quot;"/>
   <contextParameter comment="" name="TEMP_DIR_PATH" prompt="TEMP_DIR_PATH?" promptNeeded="false" type="id_String" value="&quot;C:/dfpout/out/temp&quot;"/>
   <contextParameter comment="" name="USERNAME" prompt="USERNAME?" promptNeeded="false" type="id_String" value="&quot;kcollins@operative.com&quot;"/>
+  <contextParameter comment="" name="NETWORK_NAME" prompt="NETWORK_NAME?" promptNeeded="false" type="id_String" value="null"/>
 </talendfile:ContextType>
