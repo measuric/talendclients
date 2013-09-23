@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="TEMP_DIR_PATH" prompt="TEMP_DIR_PATH?" promptNeeded="false" repositoryContextId="_sLrVcCDpEeObTL_5Cg6jUw" type="id_String" value="&quot;C:/dfpout/out/temp&quot;"/>
-    <contextParameter comment="" name="OUT_DIR_PATH" prompt="OUT_DIR_PATH?" promptNeeded="false" repositoryContextId="_sLrVcCDpEeObTL_5Cg6jUw" type="id_String" value="&quot;C:/dfpout/out&quot;"/>
-    <contextParameter comment="&quot;yyyy-MM-dd&quot;" name="START_DATE" prompt="START_DATE?" promptNeeded="false" repositoryContextId="_sLrVcCDpEeObTL_5Cg6jUw" type="id_String" value="&quot;2013-09-16&quot;"/>
     <contextParameter comment="&quot;yyyy-MM-dd&quot;" name="END_DATE" prompt="END_DATE?" promptNeeded="false" repositoryContextId="_sLrVcCDpEeObTL_5Cg6jUw" type="id_String" value="&quot;2013-09-16&quot;"/>
-    <contextParameter comment="" name="USERNAME" prompt="USERNAME?" promptNeeded="false" repositoryContextId="_sLrVcCDpEeObTL_5Cg6jUw" type="id_String" value="&quot;kcollins@operative.com&quot;"/>
-    <contextParameter comment="" name="PASSWORD" prompt="PASSWORD?" promptNeeded="false" repositoryContextId="_sLrVcCDpEeObTL_5Cg6jUw" type="id_Password" value="vyaimwidZyH6xtilBbB5+A=="/>
-    <contextParameter comment="" name="NETWORK_ID" prompt="NETWORK_ID?" promptNeeded="false" repositoryContextId="_sLrVcCDpEeObTL_5Cg6jUw" type="id_String" value="&quot;299043&quot;"/>
     <contextParameter comment="" name="LOG_DIR_PATH" prompt="LOG_DIR_PATH?" promptNeeded="false" repositoryContextId="_sLrVcCDpEeObTL_5Cg6jUw" type="id_String" value="&quot;C:/dfpout/log&quot;"/>
+    <contextParameter comment="" name="NETWORK_ID" prompt="NETWORK_ID?" promptNeeded="false" repositoryContextId="_sLrVcCDpEeObTL_5Cg6jUw" type="id_String" value="&quot;299043&quot;"/>
+    <contextParameter comment="" name="NETWORK_NAME" prompt="NETWORK_NAME?" promptNeeded="false" repositoryContextId="_sLrVcCDpEeObTL_5Cg6jUw" type="id_String" value="null"/>
+    <contextParameter comment="" name="OUT_DIR_PATH" prompt="OUT_DIR_PATH?" promptNeeded="false" repositoryContextId="_sLrVcCDpEeObTL_5Cg6jUw" type="id_String" value="&quot;C:/dfpout/out&quot;"/>
+    <contextParameter comment="" name="PASSWORD" prompt="PASSWORD?" promptNeeded="false" repositoryContextId="_sLrVcCDpEeObTL_5Cg6jUw" type="id_Password" value="vyaimwidZyH6xtilBbB5+A=="/>
+    <contextParameter comment="&quot;yyyy-MM-dd&quot;" name="START_DATE" prompt="START_DATE?" promptNeeded="false" repositoryContextId="_sLrVcCDpEeObTL_5Cg6jUw" type="id_String" value="&quot;2013-09-16&quot;"/>
+    <contextParameter comment="" name="TEMP_DIR_PATH" prompt="TEMP_DIR_PATH?" promptNeeded="false" repositoryContextId="_sLrVcCDpEeObTL_5Cg6jUw" type="id_String" value="&quot;C:/dfpout/out/temp&quot;"/>
+    <contextParameter comment="" name="USERNAME" prompt="USERNAME?" promptNeeded="false" repositoryContextId="_sLrVcCDpEeObTL_5Cg6jUw" type="id_String" value="&quot;kcollins@operative.com&quot;"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
@@ -269,7 +270,7 @@
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="redirect" activateExpressionFilter="true">
         <mapperTableEntries name="Network_Id" expression="context.NETWORK_ID " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Network_Name" expression=" " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Network_Name" expression="context.NETWORK_NAME" type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="moment" type="id_Date" nullable="true"/>
@@ -292,7 +293,7 @@
     <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.LOG_DIR_PATH+&quot;/&quot;+TalendDate.formatDate(&quot;yyyyMMdd&quot;,TalendDate.getCurrentDate())+&quot;_dfp.exceptions&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.LOG_DIR_PATH+&quot;/&quot;+TalendDate.formatDate(&quot;yyyyMMdd&quot;,TalendDate.getCurrentDate())+&quot;_dfp.exceptions.csv&quot;"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" value="true"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
@@ -362,10 +363,10 @@
   <node componentName="tFileOutputExcel" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="640">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputExcel_1"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
-    <elementParameter field="CHECK" name="VERSION_2007" value="false"/>
+    <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.LOG_DIR_PATH+&quot;/&quot;+TalendDate.formatDate(&quot;yyyyMMdd&quot;,TalendDate.getCurrentDate())+&quot;_api.exceptions&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.LOG_DIR_PATH+&quot;/&quot;+TalendDate.formatDate(&quot;yyyyMMdd&quot;,TalendDate.getCurrentDate())+&quot;_api.exceptions.xlsx&quot;"/>
     <elementParameter field="TEXT" name="SHEETNAME" value="&quot;Sheet1&quot;"/>
     <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
     <elementParameter field="CHECK" name="APPEND_FILE" value="true"/>

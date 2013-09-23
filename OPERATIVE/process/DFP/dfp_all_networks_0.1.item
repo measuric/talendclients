@@ -219,6 +219,8 @@
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="NETWORK_ID"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="((String)globalMap.get(&quot;row2.network_id&quot;))"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="NETWORK_NAME"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="((String)globalMap.get(&quot;row2.network_name&quot;))"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true"/>
