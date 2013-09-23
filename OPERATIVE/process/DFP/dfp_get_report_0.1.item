@@ -133,7 +133,7 @@
     <elementParameter field="CHECK" name="Version_V2_0" value="false"/>
     <elementParameter field="CHECK" name="Version_V3_2" value="false"/>
     <elementParameter field="CHECK" name="Version_V4.0" value="true"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import com.google.api.ads.dfp.lib.DfpService;&#xA;import com.google.api.ads.dfp.lib.DfpServiceLogger;&#xA;import com.google.api.ads.dfp.lib.DfpUser;&#xA;import org.apache.axis.client.Stub;&#xA;import com.google.api.ads.dfp.lib.utils.v201306.StatementBuilder;&#xA;import com.google.api.ads.dfp.v201306.BaseCustomFieldValue;&#xA;import com.google.api.ads.dfp.axis.utils.v201306.DateTimes;&#xA;import com.google.api.ads.dfp.v201306.Column;&#xA;import com.google.api.ads.dfp.v201306.DateRangeType;&#xA;import com.google.api.ads.dfp.v201306.Dimension;&#xA;import com.google.api.ads.dfp.v201306.LineItem;&#xA;import com.google.api.ads.dfp.v201306.LineItemPage;&#xA;import com.google.api.ads.dfp.v201306.LineItemServiceInterface;&#xA;import com.google.api.ads.dfp.v201306.ReportJob;&#xA;import com.google.api.ads.dfp.v201306.ReportJobStatus;&#xA;import com.google.api.ads.dfp.v201306.ReportQuery;&#xA;import com.google.api.ads.dfp.v201306.ReportServiceInterface;&#xA;import com.google.api.ads.dfp.v201306.Statement;&#xA;import com.google.api.ads.dfp.v201306.ExportFormat;&#xA;import org.apache.commons.lang.ArrayUtils;&#xA;import java.net.URL;&#xA;import java.util.HashSet;&#xA;import java.util.Set;&#xA;import java.io.File;&#xA;import org.joda.time.DateTime;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import com.google.api.ads.dfp.lib.DfpService;&#xA;import com.google.api.ads.dfp.lib.DfpServiceLogger;&#xA;import com.google.api.ads.dfp.lib.DfpUser;&#xA;import org.apache.axis.client.Stub;&#xA;import com.google.api.ads.dfp.lib.utils.v201306.StatementBuilder;&#xA;import com.google.api.ads.dfp.v201306.BaseCustomFieldValue;&#xA;import com.google.api.ads.dfp.v201306.Column;&#xA;import com.google.api.ads.dfp.v201306.DateRangeType;&#xA;import com.google.api.ads.dfp.v201306.Dimension;&#xA;import com.google.api.ads.dfp.v201306.LineItem;&#xA;import com.google.api.ads.dfp.v201306.LineItemPage;&#xA;import com.google.api.ads.dfp.v201306.LineItemServiceInterface;&#xA;import com.google.api.ads.dfp.v201306.ReportJob;&#xA;import com.google.api.ads.dfp.v201306.ReportJobStatus;&#xA;import com.google.api.ads.dfp.v201306.ReportQuery;&#xA;import com.google.api.ads.dfp.v201306.ReportServiceInterface;&#xA;import com.google.api.ads.dfp.v201306.Statement;&#xA;import com.google.api.ads.dfp.v201306.ExportFormat;&#xA;import org.apache.commons.lang.ArrayUtils;&#xA;import java.net.URL;&#xA;import java.util.HashSet;&#xA;import java.util.Set;&#xA;import java.io.File;"/>
     <elementParameter field="TEXT" name="LABEL" value="Run Report"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
@@ -259,7 +259,7 @@
       <column comment="" key="false" name="Network_Name" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var"/>
       <outputTables sizeState="INTERMEDIATE" name="out">
         <mapperTableEntries name="network_id" expression="context.NETWORK_ID" type="id_String" nullable="true"/>
@@ -405,7 +405,7 @@
   </node>
   <node componentName="tLibraryLoad" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLibraryLoad_1"/>
-    <elementParameter field="MODULE_LIST" name="LIBRARY" value="&quot;ads-lib-axis-1.18.1.jar&quot;"/>
+    <elementParameter field="MODULE_LIST" name="LIBRARY" value="&quot;dfp-api-2.17.0.jar&quot;"/>
     <elementParameter field="TABLE" name="HOTLIBS"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
