@@ -19,7 +19,7 @@
     <contextParameter comment="" name="USERNAME" prompt="USERNAME?" promptNeeded="false" type="id_String" value="&quot;tracking.altarepublishing&quot;"/>
     <contextParameter comment="" name="PASSWORD" prompt="PASSWORD?" promptNeeded="false" type="id_String" value="&quot;JhRbd4SZg8KfNw&quot;"/>
     <contextParameter comment="" name="queryStr" prompt="queryStr?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="CAMPAIGNID" prompt="CAMPAIGNID?" promptNeeded="false" type="id_String" value="1"/>
+    <contextParameter comment="" name="CAMPAIGNID" prompt="CAMPAIGNID?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <context confirmationNeeded="false" name="test">
     <contextParameter comment="" name="RESPONSE_STATUS" prompt="RESPONSE_STATUS?" promptNeeded="false" type="id_String" value="null"/>
@@ -40,7 +40,7 @@
     <contextParameter comment="" name="USERNAME" prompt="USERNAME?" promptNeeded="false" type="id_String" value="&quot;tracking.altarepublishing&quot;"/>
     <contextParameter comment="" name="PASSWORD" prompt="PASSWORD?" promptNeeded="false" type="id_String" value="&quot;JhRbd4SZg8KfNw&quot;"/>
     <contextParameter comment="" name="queryStr" prompt="queryStr?" promptNeeded="false" type="id_String" value="null"/>
-    <contextParameter comment="" name="CAMPAIGNID" prompt="CAMPAIGNID?" promptNeeded="false" type="id_String" value="1"/>
+    <contextParameter comment="" name="CAMPAIGNID" prompt="CAMPAIGNID?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
@@ -555,7 +555,7 @@
       <column key="false" length="255" name="value" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="username" expression="java.net.URLEncoder.encode(row8.username,&quot;UTF-8&quot;)" type="id_String"/>
         <mapperTableEntries name="password" expression="java.net.URLEncoder.encode(row8.password,&quot;UTF-8&quot;)" type="id_String"/>

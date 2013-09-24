@@ -6,6 +6,8 @@
     <contextParameter comment="" name="queryStr" prompt="queryStr?" promptNeeded="false" type="id_String" value="null"/>
     <contextParameter comment="" name="client_url" prompt="client_url?" promptNeeded="true" type="id_String" value="&quot;s.dicarlocoaching.com&quot;"/>
     <contextParameter comment="" name="TEMP_DIR_PATH" prompt="TEMP_DIR_PATH?" promptNeeded="false" type="id_String" value="/home/konecht/altare/temp"/>
+    <contextParameter comment="" name="STARTDATE" prompt="STARTDATE?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="ENDDATE" prompt="ENDDATE?" promptNeeded="false" type="id_String" value="null"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
@@ -335,7 +337,7 @@
       <column comment="" key="false" name="campaign_id" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="campaign">
         <mapperTableEntries name="campaign_id" expression="row7.campaign_id" type="id_String" nullable="true"/>
@@ -362,6 +364,10 @@
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="CAMPAIGNID"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="campaign.campaign_id"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="START_DATE"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.STARTDATE"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="END_DATE"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="contest.context.ENDDATE"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true"/>
