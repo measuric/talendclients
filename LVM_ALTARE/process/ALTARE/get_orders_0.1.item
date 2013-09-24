@@ -5,40 +5,42 @@
     <contextParameter comment="" name="TOTAL_ORDERS" prompt="TOTAL_ORDERS?" promptNeeded="false" type="id_String" value="null"/>
     <contextParameter comment="" name="ORDER_ID" prompt="ORDER_ID?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="TEMP_DIR_PATH" prompt="TEMP_DIR_PATH?" promptNeeded="false" type="id_String" value="C:\Vikram Takkar\freelance_jobs\Elance\limelight\temp"/>
-    <contextParameter comment="" name="DB_DBNAME" prompt="DB_DBNAME?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="altare"/>
+    <contextParameter comment="" name="DB_DBNAME" prompt="DB_DBNAME?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="altare1"/>
     <contextParameter comment="" name="DB_USERNAME" prompt="DB_USERNAME?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="root"/>
     <contextParameter comment="" name="DB_ADDITIONAL_PARAMS" prompt="DB_ADDITIONAL_PARAMS?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="DB_PORT" prompt="DB_PORT?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="3306"/>
     <contextParameter comment="" name="DB_SCHEMA" prompt="DB_SCHEMA?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="null"/>
-    <contextParameter comment="" name="DB_PASSWORD" prompt="DB_PASSWORD?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="Hty%yeIk!qw"/>
+    <contextParameter comment="" name="DB_PASSWORD" prompt="DB_PASSWORD?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="Hrd!Rqw1Q"/>
     <contextParameter comment="" name="DB_HOST" prompt="DB_HOST?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="islabs-dev.lvmetrics.com"/>
     <contextParameter comment="" name="CUSTOMERS_TABLE_NAME" prompt="CUSTOMERS_TABLE_NAME?" promptNeeded="false" type="id_String" value="ltv_rr_customers_test"/>
-    <contextParameter comment="" name="ORDERS_TABLE_NAME" prompt="ORDERS_TABLE_NAME?" promptNeeded="false" type="id_String" value="ltv_rr_order_details_raw_test"/>
+    <contextParameter comment="" name="ORDERS_TABLE_NAME" prompt="ORDERS_TABLE_NAME?" promptNeeded="false" type="id_String" value="orders_all"/>
     <contextParameter comment="" name="START_DATE" prompt="START_DATE?" promptNeeded="false" type="id_String" value="&quot;06/01/2013&quot;"/>
     <contextParameter comment="" name="END_DATE" prompt="END_DATE?" promptNeeded="false" type="id_String" value="&quot;06/22/2013&quot;"/>
     <contextParameter comment="" name="USERNAME" prompt="USERNAME?" promptNeeded="false" type="id_String" value="&quot;tracking.altarepublishing&quot;"/>
     <contextParameter comment="" name="PASSWORD" prompt="PASSWORD?" promptNeeded="false" type="id_String" value="&quot;JhRbd4SZg8KfNw&quot;"/>
     <contextParameter comment="" name="queryStr" prompt="queryStr?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="CAMPAIGNID" prompt="CAMPAIGNID?" promptNeeded="false" type="id_String" value="1"/>
   </context>
   <context confirmationNeeded="false" name="test">
     <contextParameter comment="" name="RESPONSE_STATUS" prompt="RESPONSE_STATUS?" promptNeeded="false" type="id_String" value="null"/>
     <contextParameter comment="" name="TOTAL_ORDERS" prompt="TOTAL_ORDERS?" promptNeeded="false" type="id_String" value="null"/>
     <contextParameter comment="" name="ORDER_ID" prompt="ORDER_ID?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="TEMP_DIR_PATH" prompt="TEMP_DIR_PATH?" promptNeeded="false" type="id_String" value="/home/konecht/altare/temp"/>
-    <contextParameter comment="" name="DB_DBNAME" prompt="DB_DBNAME?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="altare"/>
+    <contextParameter comment="" name="DB_DBNAME" prompt="DB_DBNAME?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="altare1"/>
     <contextParameter comment="" name="DB_USERNAME" prompt="DB_USERNAME?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="root"/>
     <contextParameter comment="" name="DB_ADDITIONAL_PARAMS" prompt="DB_ADDITIONAL_PARAMS?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="DB_PORT" prompt="DB_PORT?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="3306"/>
     <contextParameter comment="" name="DB_SCHEMA" prompt="DB_SCHEMA?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="null"/>
-    <contextParameter comment="" name="DB_PASSWORD" prompt="DB_PASSWORD?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="Hty%yeIk!qw"/>
+    <contextParameter comment="" name="DB_PASSWORD" prompt="DB_PASSWORD?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="Hrd!Rqw1Q"/>
     <contextParameter comment="" name="DB_HOST" prompt="DB_HOST?" promptNeeded="false" repositoryContextId="_pIHdAAsgEeOJRrZ6MUlXFA" type="id_String" value="islabs-dev.lvmetrics.com"/>
     <contextParameter comment="" name="CUSTOMERS_TABLE_NAME" prompt="CUSTOMERS_TABLE_NAME?" promptNeeded="false" type="id_String" value="ltv_rr_customers_test"/>
-    <contextParameter comment="" name="ORDERS_TABLE_NAME" prompt="ORDERS_TABLE_NAME?" promptNeeded="false" type="id_String" value="ltv_rr_order_details_raw_test"/>
-    <contextParameter comment="" name="START_DATE" prompt="START_DATE?" promptNeeded="false" type="id_String" value="08/01/2013"/>
-    <contextParameter comment="" name="END_DATE" prompt="END_DATE?" promptNeeded="false" type="id_String" value="08/22/2013"/>
+    <contextParameter comment="" name="ORDERS_TABLE_NAME" prompt="ORDERS_TABLE_NAME?" promptNeeded="false" type="id_String" value="orders_all"/>
+    <contextParameter comment="" name="START_DATE" prompt="START_DATE?" promptNeeded="false" type="id_String" value="09/23/2013"/>
+    <contextParameter comment="" name="END_DATE" prompt="END_DATE?" promptNeeded="false" type="id_String" value="09/23/2013"/>
     <contextParameter comment="" name="USERNAME" prompt="USERNAME?" promptNeeded="false" type="id_String" value="&quot;tracking.altarepublishing&quot;"/>
     <contextParameter comment="" name="PASSWORD" prompt="PASSWORD?" promptNeeded="false" type="id_String" value="&quot;JhRbd4SZg8KfNw&quot;"/>
     <contextParameter comment="" name="queryStr" prompt="queryStr?" promptNeeded="false" type="id_String" value="null"/>
+    <contextParameter comment="" name="CAMPAIGNID" prompt="CAMPAIGNID?" promptNeeded="false" type="id_String" value="1"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
@@ -488,6 +490,8 @@
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="ORDER_ID"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="row7.order_ids"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="CAMPAIGN_ID"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.CAMPAIGNID"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true"/>
@@ -551,12 +555,12 @@
       <column key="false" length="255" name="value" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="username" expression="java.net.URLEncoder.encode(row8.username,&quot;UTF-8&quot;)" type="id_String"/>
         <mapperTableEntries name="password" expression="java.net.URLEncoder.encode(row8.password,&quot;UTF-8&quot;)" type="id_String"/>
         <mapperTableEntries name="method" expression="java.net.URLEncoder.encode(row8.method,&quot;UTF-8&quot;) " type="id_String"/>
-        <mapperTableEntries name="campaign_id" expression="&quot;9&quot;" type="id_String"/>
+        <mapperTableEntries name="campaign_id" expression="context.CAMPAIGNID" type="id_String"/>
         <mapperTableEntries name="start_date" expression="java.net.URLEncoder.encode(context.START_DATE,&quot;UTF-8&quot;) " type="id_String"/>
         <mapperTableEntries name="end_date" expression="java.net.URLEncoder.encode(context.END_DATE,&quot;UTF-8&quot;) " type="id_String"/>
         <mapperTableEntries name="criteria" expression="&quot;all&quot;" type="id_String"/>
@@ -613,8 +617,6 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CHECK" name="DUMMY" value="true"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
     <elementParameter field="RADIO" name="VERTICAL" value="true"/>
@@ -669,7 +671,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#xD;&#xA;output_row.order_ids = input_row.order_ids.replaceAll(&quot;order_ids=&quot;,&quot;&quot;);&#xA;&#xA;context.RESPONSE_STATUS=input_row.response_code.replaceAll(&quot;response_code=&quot;,&quot;&quot;);&#xA;context.TOTAL_ORDERS=input_row.total_orders.replaceAll(&quot;total_orders=&quot;,&quot;&quot;);&#xA;&#xA;System.out.println(&quot;Response Code = &quot;+context.RESPONSE_STATUS);&#xA;System.out.println(&quot;Total Orders = &quot;+context.TOTAL_ORDERS);&#xD;&#xA;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#xD;&#xA;output_row.order_ids = input_row.order_ids.replaceAll(&quot;order_ids=&quot;,&quot;&quot;);&#xA;&#xA;context.RESPONSE_STATUS=input_row.response_code.replaceAll(&quot;response_code=&quot;,&quot;&quot;);&#xA;context.TOTAL_ORDERS=input_row.total_orders.replaceAll(&quot;total_orders=&quot;,&quot;&quot;);&#xA;&#xA;//System.out.println(&quot;Response Code = &quot;+context.RESPONSE_STATUS);&#xA;//System.out.println(&quot;Total Orders = &quot;+context.TOTAL_ORDERS);&#xD;&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>

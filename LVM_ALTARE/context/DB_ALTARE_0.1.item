@@ -2,18 +2,18 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
   <talendfile:ContextType confirmationNeeded="false" name="dev">
     <contextParameter comment="" name="DB_ADDITIONAL_PARAMS" prompt="DB_ADDITIONAL_PARAMS?" promptNeeded="false" type="id_String" value="noDatetimeStringSync=true"/>
-    <contextParameter comment="" name="DB_DBNAME" prompt="DB_DBNAME?" promptNeeded="false" type="id_String" value="altare"/>
+    <contextParameter comment="" name="DB_DBNAME" prompt="DB_DBNAME?" promptNeeded="false" type="id_String" value="altare1"/>
     <contextParameter comment="" name="DB_HOST" prompt="DB_HOST?" promptNeeded="false" type="id_String" value="islabs-dev.lvmetrics.com"/>
-    <contextParameter comment="" name="DB_PASSWORD" prompt="DB_PASSWORD?" promptNeeded="false" type="id_String" value="Hty%yeIk!qw"/>
+    <contextParameter comment="" name="DB_PASSWORD" prompt="DB_PASSWORD?" promptNeeded="false" type="id_String" value="Hrd!Rqw1Q"/>
     <contextParameter comment="" name="DB_PORT" prompt="DB_PORT?" promptNeeded="false" type="id_String" value="3306"/>
     <contextParameter comment="" name="DB_USERNAME" prompt="DB_USERNAME?" promptNeeded="false" type="id_String" value="root"/>
     <contextParameter comment="" name="DB_SCHEMA" prompt="DB_SCHEMA?" promptNeeded="false" type="id_String" value="null"/>
   </talendfile:ContextType>
   <talendfile:ContextType confirmationNeeded="false" name="test">
     <contextParameter comment="" name="DB_ADDITIONAL_PARAMS" prompt="DB_ADDITIONAL_PARAMS?" promptNeeded="false" type="id_String" value="noDatetimeStringSync=true"/>
-    <contextParameter comment="" name="DB_DBNAME" prompt="DB_DBNAME?" promptNeeded="false" type="id_String" value="altare"/>
+    <contextParameter comment="" name="DB_DBNAME" prompt="DB_DBNAME?" promptNeeded="false" type="id_String" value="altare1"/>
     <contextParameter comment="" name="DB_HOST" prompt="DB_HOST?" promptNeeded="false" type="id_String" value="islabs-dev.lvmetrics.com"/>
-    <contextParameter comment="" name="DB_PASSWORD" prompt="DB_PASSWORD?" promptNeeded="false" type="id_String" value="Hty%yeIk!qw"/>
+    <contextParameter comment="" name="DB_PASSWORD" prompt="DB_PASSWORD?" promptNeeded="false" type="id_String" value="Hrd!Rqw1Q"/>
     <contextParameter comment="" name="DB_PORT" prompt="DB_PORT?" promptNeeded="false" type="id_String" value="3306"/>
     <contextParameter comment="" name="DB_USERNAME" prompt="DB_USERNAME?" promptNeeded="false" type="id_String" value="root"/>
     <contextParameter comment="" name="DB_SCHEMA" prompt="DB_SCHEMA?" promptNeeded="false" type="id_String" value="null"/>
