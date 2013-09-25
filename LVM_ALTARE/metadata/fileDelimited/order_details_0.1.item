@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_4pQCgCWhEeOVOPzHRMfOFQ" name="order_details" dataPackage="_4pQCgSWhEeOVOPzHRMfOFQ" Server="Localhost 127.0.0.1" FilePath="E:/MyProjects/ALTARE/export514_23_Sep_13_03_04_28.csv" Encoding="US-ASCII" FieldSeparatorValue="&quot;,&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true" FieldSeparatorType="Comma"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_4pQCgSWhEeOVOPzHRMfOFQ" name="default" dataManager="_4pQCgCWhEeOVOPzHRMfOFQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_4pQCgiWhEeOVOPzHRMfOFQ" name="metadata" id="_na-_sCWhEeOVOPzHRMfOFQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCgyWhEeOVOPzHRMfOFQ" name="Order_Id" label="Order_Id" length="6" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQChCWhEeOVOPzHRMfOFQ" name="Created_By" label="Created_By" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQChSWhEeOVOPzHRMfOFQ" name="Bill_First" label="Bill_First" length="11" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQChiWhEeOVOPzHRMfOFQ" name="Bill_Last" label="Bill_Last" length="11" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQChyWhEeOVOPzHRMfOFQ" name="Bill_Address1" label="Bill_Address1" length="29" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCiCWhEeOVOPzHRMfOFQ" name="Bill_Address2" label="Bill_Address2" length="14" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCiSWhEeOVOPzHRMfOFQ" name="Bill_City" label="Bill_City" length="20" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCiiWhEeOVOPzHRMfOFQ" name="Bill_State" label="Bill_State" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCiyWhEeOVOPzHRMfOFQ" name="Bill_Zip" label="Bill_Zip" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCjCWhEeOVOPzHRMfOFQ" name="Bill_Country" label="Bill_Country" length="14" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCjSWhEeOVOPzHRMfOFQ" name="Bill_Phone" label="Bill_Phone" length="18" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCjiWhEeOVOPzHRMfOFQ" name="Bill_Email" label="Bill_Email" length="28" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCjyWhEeOVOPzHRMfOFQ" name="Ship_First" label="Ship_First" length="11" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCkCWhEeOVOPzHRMfOFQ" name="Ship_Last" label="Ship_Last" length="11" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCkSWhEeOVOPzHRMfOFQ" name="Ship_Address1" label="Ship_Address1" length="29" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCkiWhEeOVOPzHRMfOFQ" name="Ship_Address2" label="Ship_Address2" length="13" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCkyWhEeOVOPzHRMfOFQ" name="Ship_City" label="Ship_City" length="19" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQClCWhEeOVOPzHRMfOFQ" name="Ship_State" label="Ship_State" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQClSWhEeOVOPzHRMfOFQ" name="Ship_Zip" label="Ship_Zip" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCliWhEeOVOPzHRMfOFQ" name="Ship_Country" label="Ship_Country" length="13" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQClyWhEeOVOPzHRMfOFQ" name="Ship_Phone" label="Ship_Phone" length="18" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCmCWhEeOVOPzHRMfOFQ" name="Ship_Email" label="Ship_Email" length="28" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCmSWhEeOVOPzHRMfOFQ" name="Ship_Method_Name" label="Ship_Method_Name" length="17" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCmiWhEeOVOPzHRMfOFQ" name="Ship_Method_Description" label="Ship_Method_Description" length="10" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCmyWhEeOVOPzHRMfOFQ" name="Ship_Group_Name" label="Ship_Group_Name" length="13" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCnCWhEeOVOPzHRMfOFQ" name="Ship_Group_Code" label="Ship_Group_Code" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCnSWhEeOVOPzHRMfOFQ" name="Ship_Price" label="Ship_Price" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCniWhEeOVOPzHRMfOFQ" name="Weight" label="Weight" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCnyWhEeOVOPzHRMfOFQ" name="Delivery_Confirmation" label="Delivery_Confirmation" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCoCWhEeOVOPzHRMfOFQ" name="Signature_Confirmation" label="Signature_Confirmation" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCoSWhEeOVOPzHRMfOFQ" name="Non_Taxable_Total" label="Non_Taxable_Total" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCoiWhEeOVOPzHRMfOFQ" name="Taxable_Total" label="Taxable_Total" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCoyWhEeOVOPzHRMfOFQ" name="Sub_Total" label="Sub_Total" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCpCWhEeOVOPzHRMfOFQ" name="Sales_Tax_Percent" label="Sales_Tax_Percent" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCpSWhEeOVOPzHRMfOFQ" name="Sales_Tax_Factor" label="Sales_Tax_Factor" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCpiWhEeOVOPzHRMfOFQ" name="Order_Total" label="Order_Total" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCpyWhEeOVOPzHRMfOFQ" name="Date_of_Sale" label="Date_of_Sale" length="10" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCqCWhEeOVOPzHRMfOFQ" name="Time_of_Sale" label="Time_of_Sale" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCqSWhEeOVOPzHRMfOFQ" name="Tracking_Number" label="Tracking_Number" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCqiWhEeOVOPzHRMfOFQ" name="Payment" label="Payment" length="10" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCqyWhEeOVOPzHRMfOFQ" name="Campaign_Id" label="Campaign_Id" length="2" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCrCWhEeOVOPzHRMfOFQ" name="Customer_Number" label="Customer_Number" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCrSWhEeOVOPzHRMfOFQ" name="Prospect_Number" label="Prospect_Number" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCriWhEeOVOPzHRMfOFQ" name="CNPJ_or_CPF_ID" label="CNPJ_or_CPF_ID" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCryWhEeOVOPzHRMfOFQ" name="Credit_Card_Number" label="Credit_Card_Number" length="16" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCsCWhEeOVOPzHRMfOFQ" name="Credit_Card_Expiration" label="Credit_Card_Expiration" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCsSWhEeOVOPzHRMfOFQ" name="Prepaid_Match" label="Prepaid_Match" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCsiWhEeOVOPzHRMfOFQ" name="Gateway_Id" label="Gateway_Id" length="2" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCsyWhEeOVOPzHRMfOFQ" name="Gateway_Alias" label="Gateway_Alias" length="33" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCtCWhEeOVOPzHRMfOFQ" name="Gateway_Processing_Percent" label="Gateway_Processing_Percent" length="3" precision="2" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCtSWhEeOVOPzHRMfOFQ" name="Gateway_Reserve_Percent" label="Gateway_Reserve_Percent" length="2" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCtiWhEeOVOPzHRMfOFQ" name="Gateway_Transaction_Fee" label="Gateway_Transaction_Fee" length="4" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCtyWhEeOVOPzHRMfOFQ" name="Gateway_Chargeback_Fee" label="Gateway_Chargeback_Fee" length="2" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCuCWhEeOVOPzHRMfOFQ" name="Gateway_Descriptor" label="Gateway_Descriptor" length="21" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCuSWhEeOVOPzHRMfOFQ" name="Gateway_Customer_Service_Number" label="Gateway_Customer_Service_Number" length="15" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCuiWhEeOVOPzHRMfOFQ" name="Processor_Id" label="Processor_Id" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCuyWhEeOVOPzHRMfOFQ" name="IP_Address" label="IP_Address" length="15" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCvCWhEeOVOPzHRMfOFQ" name="IP_Address_Lookup" label="IP_Address_Lookup" length="39" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCvSWhEeOVOPzHRMfOFQ" name="Order_Status" label="Order_Status" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCviWhEeOVOPzHRMfOFQ" name="Decline_Reason" label="Decline_Reason" length="162" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCvyWhEeOVOPzHRMfOFQ" name="Shipped_Date" label="Shipped_Date" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCwCWhEeOVOPzHRMfOFQ" name="Is_Fraud" label="Is_Fraud" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCwSWhEeOVOPzHRMfOFQ" name="Fraud_Date" label="Fraud_Date" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCwiWhEeOVOPzHRMfOFQ" name="Is_Chargeback" label="Is_Chargeback" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCwyWhEeOVOPzHRMfOFQ" name="Chargeback_Date" label="Chargeback_Date" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCxCWhEeOVOPzHRMfOFQ" name="Chargeback_By" label="Chargeback_By" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCxSWhEeOVOPzHRMfOFQ" name="Is_RMA" label="Is_RMA" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCxiWhEeOVOPzHRMfOFQ" name="RMA_Number" label="RMA_Number" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCxyWhEeOVOPzHRMfOFQ" name="RMA_Reason" label="RMA_Reason" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCyCWhEeOVOPzHRMfOFQ" name="RMA_Date" label="RMA_Date" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCySWhEeOVOPzHRMfOFQ" name="RMA_Created_By" label="RMA_Created_By" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQCyiWhEeOVOPzHRMfOFQ" name="Return" label="Return" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpkCWhEeOVOPzHRMfOFQ" name="Return_Reason" label="Return_Reason" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpkSWhEeOVOPzHRMfOFQ" name="Is_Recurring" label="Is_Recurring" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpkiWhEeOVOPzHRMfOFQ" name="Recurring_Date" label="Recurring_Date" length="10" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpkyWhEeOVOPzHRMfOFQ" name="Retry_Date" label="Retry_Date" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQplCWhEeOVOPzHRMfOFQ" name="Total_Installments" label="Total_Installments" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQplSWhEeOVOPzHRMfOFQ" name="Transaction_Number" label="Transaction_Number" length="10" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpliWhEeOVOPzHRMfOFQ" name="Auth_Number" label="Auth_Number" length="6" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQplyWhEeOVOPzHRMfOFQ" name="Retrying" label="Retrying" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpmCWhEeOVOPzHRMfOFQ" name="Retries_Left" label="Retries_Left" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpmSWhEeOVOPzHRMfOFQ" name="Hold_Date" label="Hold_Date" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpmiWhEeOVOPzHRMfOFQ" name="Is_Void" label="Is_Void" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpmyWhEeOVOPzHRMfOFQ" name="Void_Amount" label="Void_Amount" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpnCWhEeOVOPzHRMfOFQ" name="Void_Date" label="Void_Date" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpnSWhEeOVOPzHRMfOFQ" name="Voided_By" label="Voided_By" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpniWhEeOVOPzHRMfOFQ" name="Is_Refund" label="Is_Refund" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpnyWhEeOVOPzHRMfOFQ" name="Refund_Amount" label="Refund_Amount" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpoCWhEeOVOPzHRMfOFQ" name="Refund_Date" label="Refund_Date" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpoSWhEeOVOPzHRMfOFQ" name="Refunded_By" label="Refunded_By" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpoiWhEeOVOPzHRMfOFQ" name="AFID" label="AFID" length="9" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpoyWhEeOVOPzHRMfOFQ" name="SID" label="SID" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQppCWhEeOVOPzHRMfOFQ" name="AFFID" label="AFFID" length="18" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQppSWhEeOVOPzHRMfOFQ" name="C1" label="C1" length="28" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQppiWhEeOVOPzHRMfOFQ" name="C2" label="C2" length="18" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQppyWhEeOVOPzHRMfOFQ" name="C3" label="C3" length="93" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpqCWhEeOVOPzHRMfOFQ" name="BID" label="BID" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpqSWhEeOVOPzHRMfOFQ" name="AID" label="AID" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpqiWhEeOVOPzHRMfOFQ" name="OPT" label="OPT" length="113" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpqyWhEeOVOPzHRMfOFQ" name="Rebill_Discount" label="Rebill_Discount" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQprCWhEeOVOPzHRMfOFQ" name="Billing_Cycle" label="Billing_Cycle" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQprSWhEeOVOPzHRMfOFQ" name="Parent_Order_Id" label="Parent_Order_Id" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpriWhEeOVOPzHRMfOFQ" name="Product_Id" label="Product_Id" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpryWhEeOVOPzHRMfOFQ" name="Product_Name" label="Product_Name" length="37" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpsCWhEeOVOPzHRMfOFQ" name="Product_Attributes" label="Product_Attributes" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpsSWhEeOVOPzHRMfOFQ" name="Is_Product_Shippable" label="Is_Product_Shippable" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpsiWhEeOVOPzHRMfOFQ" name="Product_Price" label="Product_Price" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpsyWhEeOVOPzHRMfOFQ" name="Product_Sku__" label="Product_Sku__" length="9" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQptCWhEeOVOPzHRMfOFQ" name="Product_Category" label="Product_Category" length="29" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQptSWhEeOVOPzHRMfOFQ" name="Description" label="Description" length="47" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQptiWhEeOVOPzHRMfOFQ" name="Quantity" label="Quantity" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQptyWhEeOVOPzHRMfOFQ" name="Confirmation" label="Confirmation" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpuCWhEeOVOPzHRMfOFQ" name="Confirmation_Date_Time" label="Confirmation_Date_Time" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpuSWhEeOVOPzHRMfOFQ" name="Next_Recurring_Product" label="Next_Recurring_Product" length="39" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpuiWhEeOVOPzHRMfOFQ" name="Next_Recurring_Product_Id" label="Next_Recurring_Product_Id" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpuyWhEeOVOPzHRMfOFQ" name="Acquisition_Date" label="Acquisition_Date" length="18" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpvCWhEeOVOPzHRMfOFQ" name="Blacklisted" label="Blacklisted" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpvSWhEeOVOPzHRMfOFQ" name="Ancestor_Order_Id" label="Ancestor_Order_Id" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpviWhEeOVOPzHRMfOFQ" name="Upsell_Product_Id__1" label="Upsell_Product_Id__1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpvyWhEeOVOPzHRMfOFQ" name="Upsell_Product_Name__1" label="Upsell_Product_Name__1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpwCWhEeOVOPzHRMfOFQ" name="Upsell_Product_Attributes__1" label="Upsell_Product_Attributes__1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpwSWhEeOVOPzHRMfOFQ" name="Is_Recurring_Upsell__1" label="Is_Recurring_Upsell__1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpwiWhEeOVOPzHRMfOFQ" name="Upsell_Recurring_Date__1" label="Upsell_Recurring_Date__1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpwyWhEeOVOPzHRMfOFQ" name="Upsell_Retry_Date__1" label="Upsell_Retry_Date__1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpxCWhEeOVOPzHRMfOFQ" name="Upsell_Hold_Date__1" label="Upsell_Hold_Date__1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpxSWhEeOVOPzHRMfOFQ" name="Upsell_Retrying__1" label="Upsell_Retrying__1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpxiWhEeOVOPzHRMfOFQ" name="Is_Upsell_Shippable__1" label="Is_Upsell_Shippable__1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpxyWhEeOVOPzHRMfOFQ" name="Upsell_Product_Price__1" label="Upsell_Product_Price__1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpyCWhEeOVOPzHRMfOFQ" name="Upsell_Product_Sku__1" label="Upsell_Product_Sku__1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpySWhEeOVOPzHRMfOFQ" name="Upsell_Product_Category__1" label="Upsell_Product_Category__1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpyiWhEeOVOPzHRMfOFQ" name="Upsell_Description__1" label="Upsell_Description__1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpyyWhEeOVOPzHRMfOFQ" name="Upsell_Quantity__1" label="Upsell_Quantity__1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpzCWhEeOVOPzHRMfOFQ" name="Upsell_Next_Recurring_Product__1" label="Upsell_Next_Recurring_Product__1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpzSWhEeOVOPzHRMfOFQ" name="Upsell_Next_Recurring_Product_Id__1" label="Upsell_Next_Recurring_Product_Id__1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpziWhEeOVOPzHRMfOFQ" name="Upsell_Product_Id__2" label="Upsell_Product_Id__2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQpzyWhEeOVOPzHRMfOFQ" name="Upsell_Product_Name__2" label="Upsell_Product_Name__2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQp0CWhEeOVOPzHRMfOFQ" name="Upsell_Product_Attributes__2" label="Upsell_Product_Attributes__2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQp0SWhEeOVOPzHRMfOFQ" name="Is_Recurring_Upsell__2" label="Is_Recurring_Upsell__2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQp0iWhEeOVOPzHRMfOFQ" name="Upsell_Recurring_Date__2" label="Upsell_Recurring_Date__2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQp0yWhEeOVOPzHRMfOFQ" name="Upsell_Retry_Date__2" label="Upsell_Retry_Date__2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQp1CWhEeOVOPzHRMfOFQ" name="Upsell_Hold_Date__2" label="Upsell_Hold_Date__2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQp1SWhEeOVOPzHRMfOFQ" name="Upsell_Retrying__2" label="Upsell_Retrying__2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQp1iWhEeOVOPzHRMfOFQ" name="Is_Upsell_Shippable__2" label="Is_Upsell_Shippable__2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQp1yWhEeOVOPzHRMfOFQ" name="Upsell_Product_Price__2" label="Upsell_Product_Price__2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQp2CWhEeOVOPzHRMfOFQ" name="Upsell_Product_Sku__2" label="Upsell_Product_Sku__2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQp2SWhEeOVOPzHRMfOFQ" name="Upsell_Product_Category__2" label="Upsell_Product_Category__2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQp2iWhEeOVOPzHRMfOFQ" name="Upsell_Description__2" label="Upsell_Description__2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQp2yWhEeOVOPzHRMfOFQ" name="Upsell_Quantity__2" label="Upsell_Quantity__2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQp3CWhEeOVOPzHRMfOFQ" name="Upsell_Next_Recurring_Product__2" label="Upsell_Next_Recurring_Product__2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQp3SWhEeOVOPzHRMfOFQ" name="Upsell_Next_Recurring_Product_Id__2" label="Upsell_Next_Recurring_Product_Id__2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_4pQp3iWhEeOVOPzHRMfOFQ" name="Notes" label="Notes" length="178" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

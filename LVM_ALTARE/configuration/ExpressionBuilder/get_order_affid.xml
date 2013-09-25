@@ -1,0 +1,88 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
+  <expression:EMFExpression id="null=>Var=>var1" expression="Var.AFID.substring(1, Var.AFID.indexOf(&quot;*&quot;)) &#xA; ">
+    <variables name="row3.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row3.OPT.substring(1, row3.OPT.indexOf(&quot;-&quot;)) " value="null" talendType="id_String"/>
+    <variables name="Var.AFID " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>AFFID" expression="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(row3.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;      ">
+    <variables name="row3.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(1, row3.OPT.indexOf(&quot;-&quot;)):null " value="null" talendType="id_String"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(row3.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;      " value="null" talendType="id_String"/>
+    <variables name="" value="null" talendType="id_String"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(row3.OPT.indexOf(&quot;*&quot;)):null&#xD;&#xD;&#xA;     " value="null" talendType="id_String"/>
+    <variables name="row3.OPT.substring(row3.OPT.indexOf(&quot;*&quot;)) &#xD;&#xA;    " value="null" talendType="id_String"/>
+    <variables name="row3.OPT.substring(1, row3.OPT.indexOf(&quot;-&quot;)) " value="null" talendType="id_String"/>
+    <variables name="Var.AFID.substring(Var.AFID.indexOf(&quot;*&quot;)) &#xD;&#xA;   " value="null" talendType="id_String"/>
+    <variables name="Var.AFID.substring(1, Var.AFID.indexOf(&quot;*&quot;)) &#xD;&#xA;  " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>AFFID1=>AFFID" expression="(Var.AFFID).indexOf(&quot;*&quot;)>0?&#xD;&#xA;(Var.AFFID).substring(0,(Var.AFFID).indexOf(&quot;*&quot;)):null&#xD;&#xD;&#xA;  ">
+    <variables name="row3.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(1, row3.OPT.indexOf(&quot;-&quot;)):null " value="null" talendType="id_String"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(row3.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;      " value="null" talendType="id_String"/>
+    <variables name="" value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>AFFID1=>cookieid" expression=" ">
+    <variables name="row3.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(1, row3.OPT.indexOf(&quot;-&quot;)):null " value="null" talendType="id_String"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(row3.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;       " value="null" talendType="id_String"/>
+    <variables name="" value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>timestamp" expression="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null  ">
+    <variables name="row3.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(1, row3.OPT.indexOf(&quot;-&quot;)):null " value="null" talendType="id_String"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(row3.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;       " value="null" talendType="id_String"/>
+    <variables name="" value="null" talendType="id_String"/>
+    <variables name="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(row3.OPT.indexOf(&quot;|&quot;)+1):null  " value="null" talendType="id_String"/>
+    <variables name="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(row3.OPT.indexOf(&quot;*&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="row3.OPT.substring(1, row3.OPT.indexOf(&quot;-&quot;)) " value="null" talendType="id_String"/>
+    <variables name="Var.AFID.substring(1, Var.AFID.indexOf(&quot;*&quot;)) &#xD;&#xA;  " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>AFFID1=>timestamp" expression="(Var.timestamp).indexOf(&quot;|&quot;)>0?&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null&#xA;&#xA;   ">
+    <variables name="row3.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(1, row3.OPT.indexOf(&quot;-&quot;)):null " value="null" talendType="id_String"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(row3.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;       " value="null" talendType="id_String"/>
+    <variables name="" value="null" talendType="id_String"/>
+    <variables name="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(row3.OPT.indexOf(&quot;*&quot;)+1):null " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>cookieid" expression="Var.timestamp.length()>0?&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null">
+    <variables name="row3.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(1, row3.OPT.indexOf(&quot;-&quot;)):null " value="null" talendType="id_String"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(row3.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;       " value="null" talendType="id_String"/>
+    <variables name="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="" value="null" talendType="id_String"/>
+    <variables name="Var.timestamp.length()>0?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="Var.AFFID. " value="null" talendType="id_String"/>
+    <variables name="Var.AFFID " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>time" expression="(Var.timestamp).indexOf(&quot;|&quot;)>0?&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null">
+    <variables name="row3.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(1, row3.OPT.indexOf(&quot;-&quot;)):null " value="null" talendType="id_String"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(row3.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;       " value="null" talendType="id_String"/>
+    <variables name="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="Var.timestamp.length()>0?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>" expression="&#xD;&#xA;&#xD;&#xA;    ">
+    <variables name="row3.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(1, row3.OPT.indexOf(&quot;-&quot;)):null " value="null" talendType="id_String"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(row3.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;       " value="null" talendType="id_String"/>
+    <variables name="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="Var.timestamp.length()>0?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables value="null" talendType="id_String"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(row3.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;      " value="null" talendType="id_String"/>
+    <variables name="" value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>AFID" expression="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(0, row3.OPT.indexOf(&quot;-&quot;)):null ">
+    <variables name="row3.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(1, row3.OPT.indexOf(&quot;-&quot;)):null " value="null" talendType="id_String"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(row3.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;       " value="null" talendType="id_String"/>
+    <variables name="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="Var.timestamp.length()>0?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp).indexOf(&quot;|&quot;)>0?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null " value="null" talendType="id_String"/>
+    <variables name="row3.OPT.substring(1, row3.OPT.indexOf(&quot;-&quot;)) " value="null" talendType="id_String"/>
+    <variables name="row3.OPT.substring(row3.OPT.indexOf(&quot;*&quot;)) &#xD;&#xA;    " value="null" talendType="id_String"/>
+    <variables name="" value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+</xmi:XMI>
