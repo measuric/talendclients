@@ -10,16 +10,6 @@
     <variables name="Var.timestamp.length()>0?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null " value="null" talendType="id_String"/>
     <variables name="(Var.timestamp).indexOf(&quot;|&quot;)>0?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
   </expression:EMFExpression>
-  <expression:EMFExpression id="null=>" expression="Var.time != null ? &#xA;TalendDate.parseDate(&quot;dd.MM.yyyy.HH.mm&quot;,Var.time) : &quot;&quot;   ">
-    <variables name="row2.Order_Id" value="null" talendType="id_Integer" nullable="true"/>
-    <variables name="row2.OPT" value="null" talendType="id_String" nullable="true"/>
-    <variables name="StringHandling.TRIM(&quot;row2.OPT&quot;) " value="null" talendType="id_String"/>
-    <variables name="(row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null          " value="null" talendType="id_String"/>
-    <variables name="row2.OPT.length()>0?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;         " value="ll&quot; " talendType="id_String"/>
-    <variables name="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null   " value="null" talendType="id_String"/>
-    <variables name="Var.timestamp.length()>0?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null  " value="null" talendType="id_String"/>
-    <variables name="(Var.timestamp).indexOf(&quot;|&quot;)>0?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null   " value="null" talendType="id_String"/>
-  </expression:EMFExpression>
   <expression:EMFExpression id="null=>Attribute=>Timestamp" expression="Var.time != null ? &#xD;&#xA;TalendDate.parseDate(&quot;dd.MM.yyyy.HH.mm&quot;,Var.time) :  TalendDate.parseDate(&quot;dd.MM.yyyy.HH.mm&quot;,&quot;01.01.1999.00.00&quot;)   ">
     <variables name="row2.Order_Id" value="null" talendType="id_Integer" nullable="true"/>
     <variables name="row2.OPT" value="null" talendType="id_String" nullable="true"/>
@@ -36,7 +26,59 @@
     <variables name="Var.timestamp.length()>0?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null " value="null" talendType="id_String"/>
     <variables name="(Var.timestamp).indexOf(&quot;|&quot;)>0?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
   </expression:EMFExpression>
-  <expression:EMFExpression id="null=>Var=>AFID" expression="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null          ">
+  <expression:EMFExpression id="null=>AFFID1=>AFFID" expression="(Var.AFFID!=null(Var.AFFID).indexOf(&quot;*&quot;)>0)?&#xA;(Var.AFFID).substring(0,(Var.AFFID).indexOf(&quot;*&quot;)):null">
+    <variables name="row3.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(0, row3.OPT.indexOf(&quot;-&quot;)):null  " value="null" talendType="id_String"/>
+    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(row3.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;       " value="null" talendType="id_String"/>
+    <variables name="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="Var.timestamp.length()>0?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp).indexOf(&quot;|&quot;)>0?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>timestamp" expression="(Var.AFFID!=null &amp;&amp; Var.AFFID.length()>0 &amp;&amp; Var.AFFID.indexOf(&quot;*&quot;)>0 )?&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null">
+    <variables name="ession=&quot;(row4" value="l &amp;a" talendType="OPT.length" nullable="true"/>
+    <variables name="row2.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null           " value="null" talendType="id_String"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables value="null" talendType="id_String"/>
+    <variables name="StringHandling.TRIM(&quot;row2.OPT&quot;) " value="null" talendType="id_String"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0)?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;          " value="null" talendType="id_String"/>
+    <variables name="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="Var.timestamp.length()>0?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null  " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp).indexOf(&quot;|&quot;)>0?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null   " value="null" talendType="id_String"/>
+    <variables name="(row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null           " value="null" talendType="id_String"/>
+    <variables name="row2.OPT.length()>0?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;         " value="null" talendType="id_String"/>
+    <variables name="Var.OPT.length()>0? Var.OPT.substring(0,Var.OPT.indexOf(&quot;-&quot;)):null        " value="null" talendType="id_String"/>
+    <variables name="Var.OPT.length()>0?&#xD;&#xA;Var.OPT.substring(Var.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;        " value="null" talendType="id_String"/>
+    <variables name="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null  " value="null" talendType="id_String"/>
+    <variables name="Var.timestamp.length()>0?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp).indexOf(&quot;|&quot;)>0?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>cookieid" expression="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null  ">
+    <variables name="OPT.substring" value="T.in" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null           " value="null" talendType="id_String"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.AFFID!=null &amp;&amp; Var.AFFID.length()>0 &amp;&amp; Var.AFFID.indexOf(&quot;*&quot;)>0 )?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0 &amp;&amp; Var.timestamp.length()>0)?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null  " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0 &amp;&amp; Var.timestamp.length()>0)>0?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0 &amp;&amp; Var.timestamp.length()>0)?" value="null" talendType="id_String"/>
+    <variables name="StringHandling.TRIM(&quot;row2.OPT&quot;) " value="null" talendType="id_String"/>
+    <variables name="Var.OPT.length()>0? Var.OPT.substring(0,Var.OPT.indexOf(&quot;-&quot;)):null        " value="null" talendType="id_String"/>
+    <variables name="Var.OPT.length()>0?&#xD;&#xA;Var.OPT.substring(Var.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;        " value="null" talendType="id_String"/>
+    <variables name="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="Var.timestamp.length()>0?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp).indexOf(&quot;|&quot;)>0?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id=">&#xD;&#xA;    &lt;variabl" expression="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)? row4.OPT.substring(0,row4.OPT.indexOf(&quot;-&quot;)):null           ">
+    <variables name="row4.ORDER_ID" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row4.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_status" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_total" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null           " value="null" talendType="id_String"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.AFFID!=null &amp;&amp; Var.AFFID.length()>0 &amp;&amp; Var.AFFID.indexOf(&quot;*&quot;)>0 )?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
     <variables name="row2.Order_Id" value="null" talendType="id_Integer" nullable="true"/>
     <variables name="rue&quot;/>&#xD;&#xA;" value=";) &quot;" talendType="&quot;null&quot; ta" nullable="true"/>
     <variables name="StringHandling.TRIM(&quot;row2.OPT&quot;) " value="null" talendType="id_String"/>
@@ -57,14 +99,23 @@
     <variables name="(Var.timestamp).indexOf(&quot;|&quot;)>0?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
     <variables name="Var.OPT.length() != 0? Var.OPT.substring(0,Var.OPT.indexOf(&quot;-&quot;)):null     " value="null" talendType="id_String"/>
     <variables name="Var.OPT != null? Var.OPT.substring(0,Var.OPT.indexOf(&quot;-&quot;)):null    " value="null" talendType="id_String"/>
-    <variables name="Var.OPT != null?&#xD;&#xA;Var.OPT.substring(Var.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;    " value="null" talendType="id_String"/>
+    <variables name="Var.OPT != null?&#xD;&#xA;Var.OPT.substring(Var.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;    " value="ame=" talendType="id_String"/>
     <variables name="Var.OPT. != null? Var.OPT.substring(0,Var.OPT.indexOf(&quot;-&quot;)):null   " value="null" talendType="id_String"/>
     <variables name="Var.OPT != null?&#xD;&#xA;Var.OPT.substring(Var.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;   " value="null" talendType="id_String"/>
     <variables name="Var.OPT.length()>0?&#xD;&#xA;Var.OPT.substring(0,Var.OPT.indexOf(&quot;-&quot;)):null  " value="null" talendType="id_String"/>
     <variables name="Var.OPT.length()>0?&#xD;&#xA;Var.OPT.substring(Var.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;  " value="null" talendType="id_String"/>
     <variables name="Var.OPT.length()>0?&#xD;&#xA;Var.OPT.substring(0,Var.OPT.indexOf(&quot;-&quot;)):null   " value="null" talendType="id_String"/>
   </expression:EMFExpression>
-  <expression:EMFExpression id="null=>Var=>AFFID" expression="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0)?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;         ">
+  <expression:EMFExpression id="null=>Var=>AFFID" expression="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row4.OPT.substring(row4.OPT.indexOf(&quot;-&quot;)+1):null ">
+    <variables name="row4.ORDER_ID" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row4.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_status" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_total" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)? row4.OPT.substring(0,row4.OPT.indexOf(&quot;-&quot;)):null            " value="null" talendType="id_String"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.AFFID!=null &amp;&amp; Var.AFFID.length()>0 &amp;&amp; Var.AFFID.indexOf(&quot;*&quot;)>0 )?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
     <variables name="row2.Order_Id" value="null" talendType="id_Integer" nullable="true"/>
     <variables name="row2.OPT" value="null" talendType="id_String" nullable="true"/>
     <variables name="StringHandling.TRIM(&quot;row2.OPT&quot;) " value="null" talendType="id_String"/>
@@ -83,74 +134,123 @@
     <variables name="Var.OPT.length() != 0? Var.OPT.substring(0,Var.OPT.indexOf(&quot;-&quot;)):null     " value="null" talendType="id_String"/>
     <variables name="Var.OPT.length()!= 0?&#xD;&#xA;Var.OPT.substring(Var.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;      " value="null" talendType="id_String"/>
     <variables name="Var.OPT.length()!= 0?&#xD;&#xA;Var.OPT.substring(Var.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;     " value="null" talendType="id_String"/>
-    <variables name="Var.OPT != null?&#xD;&#xA;Var.OPT.substring(Var.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;    " value="null" talendType="id_String"/>
+    <variables name="Var.OPT != null?&#xD;&#xA;Var.OPT.substring(Var.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;    " value="t;|&amp;" talendType="id_String"/>
     <variables name="Var.OPT != null? Var.OPT.substring(0,Var.OPT.indexOf(&quot;-&quot;)):null    " value="expr" talendType="id_String"/>
     <variables name="Var.OPT != null?&#xD;&#xA;Var.OPT.substring(Var.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;   " value="null" talendType="id_String"/>
     <variables name="Var.OPT. != null? Var.OPT.substring(0,Var.OPT.indexOf(&quot;-&quot;)):null   " value="null" talendType="id_String"/>
     <variables name="Var.OPT.length()>0?&#xD;&#xA;Var.OPT.substring(Var.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;  " value="null" talendType="id_String"/>
   </expression:EMFExpression>
-  <expression:EMFExpression id="null=>Var=>var1" expression="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)?&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null">
-    <variables name="row2.Order_Id" value="null" talendType="id_Integer" nullable="true"/>
-    <variables name="row2.OPT" value="null" talendType="id_String" nullable="true"/>
-    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null           " value="null" talendType="id_String"/>
+  <expression:EMFExpression id="null=>copyOfAttribute=>AFID" expression="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;OR&quot;:&#xD;&#xA;Var.AFID  ">
+    <variables name="row4.ORDER_ID" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row4.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_status" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_total" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)? row4.OPT.substring(0,row4.OPT.indexOf(&quot;-&quot;)):null            " value="null" talendType="id_String"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row4.OPT.substring(row4.OPT.indexOf(&quot;-&quot;)+1):null  " value="null" talendType="id_String"/>
+    <variables name="(Var.AFFID!=null &amp;&amp; Var.AFFID.length()>0 &amp;&amp; Var.AFFID.indexOf(&quot;*&quot;)>0 )?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>" expression="">
+    <variables name="row4.ORDER_ID" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="   &lt;vari" value="ue=&quot;" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_status" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_total" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)? row4.OPT.substring(0,row4.OPT.indexOf(&quot;-&quot;)):null            " value="null" talendType="id_String"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row4.OPT.substring(row4.OPT.indexOf(&quot;-&quot;)+1):null  " value="null" talendType="id_String"/>
+    <variables name="(Var.AFFID!=null &amp;&amp; Var.AFFID.length()>0 &amp;&amp; Var.AFFID.indexOf(&quot;*&quot;)>0 )?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
     <variables value="null" talendType="id_String"/>
-  </expression:EMFExpression>
-  <expression:EMFExpression id="null=>AFFID1=>AFFID" expression="(Var.AFFID!=null(Var.AFFID).indexOf(&quot;*&quot;)>0)?&#xA;(Var.AFFID).substring(0,(Var.AFFID).indexOf(&quot;*&quot;)):null">
-    <variables name="row3.OPT" value="null" talendType="id_String" nullable="true"/>
-    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(0, row3.OPT.indexOf(&quot;-&quot;)):null  " value="null" talendType="id_String"/>
-    <variables name="row3.OPT.length()>0?&#xD;&#xA;row3.OPT.substring(row3.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;       " value="null" talendType="id_String"/>
-    <variables name="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null   " value="null" talendType="id_String"/>
-    <variables name="Var.timestamp.length()>0?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null " value="null" talendType="id_String"/>
-    <variables name="(Var.timestamp).indexOf(&quot;|&quot;)>0?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null " value="null" talendType="id_String"/>
-  </expression:EMFExpression>
-  <expression:EMFExpression id="null=>Attribute=>AFFID" expression="(Var.AFFID!=null &amp;&amp; (Var.AFFID).indexOf(&quot;*&quot;)>0)?&#xA;(Var.AFFID).substring(0,(Var.AFFID).indexOf(&quot;*&quot;)):null">
     <variables name="row2.Order_Id" value="null" talendType="id_Integer" nullable="true"/>
     <variables name="row2.OPT" value="null" talendType="id_String" nullable="true"/>
-    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null           " value="null" talendType="id_String"/>
-    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null " value="null" talendType="id_String"/>
-  </expression:EMFExpression>
-  <expression:EMFExpression id="null=>Var=>timestamp" expression="(Var.AFFID!=null &amp;&amp; Var.AFFID.length()>0 &amp;&amp; Var.AFFID.indexOf(&quot;*&quot;)>0 )?&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null">
-    <variables name="row2.Order_Id" value="null" talendType="id_Integer" nullable="true"/>
-    <variables name="row2.OPT" value="null" talendType="id_String" nullable="true"/>
-    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null           " value="null" talendType="id_String"/>
-    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null " value="null" talendType="id_String"/>
-    <variables value="null" talendType="id_String"/>
     <variables name="StringHandling.TRIM(&quot;row2.OPT&quot;) " value="null" talendType="id_String"/>
-    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0)?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;          " value="null" talendType="id_String"/>
+    <variables name="(row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null          " value="null" talendType="id_String"/>
+    <variables name="row2.OPT.length()>0?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;         " value="ll&quot; " talendType="id_String"/>
     <variables name="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null   " value="null" talendType="id_String"/>
     <variables name="Var.timestamp.length()>0?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null  " value="null" talendType="id_String"/>
     <variables name="(Var.timestamp).indexOf(&quot;|&quot;)>0?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null   " value="null" talendType="id_String"/>
-    <variables name="(row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null           " value="null" talendType="id_String"/>
-    <variables name="row2.OPT.length()>0?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;         " value="null" talendType="id_String"/>
-    <variables name="Var.OPT.length()>0? Var.OPT.substring(0,Var.OPT.indexOf(&quot;-&quot;)):null        " value="null" talendType="id_String"/>
-    <variables name="Var.OPT.length()>0?&#xD;&#xA;Var.OPT.substring(Var.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;        " value="null" talendType="id_String"/>
-    <variables name="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null  " value="null" talendType="id_String"/>
-    <variables name="Var.timestamp.length()>0?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null " value="null" talendType="id_String"/>
-    <variables name="(Var.timestamp).indexOf(&quot;|&quot;)>0?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
   </expression:EMFExpression>
-  <expression:EMFExpression id="null=>Var=>cookieid" expression="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null  ">
-    <variables name="row2.Order_Id" value="null" talendType="id_Integer" nullable="true"/>
-    <variables name="row2.OPT" value="null" talendType="id_String" nullable="true"/>
-    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null           " value="null" talendType="id_String"/>
-    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null " value="null" talendType="id_String"/>
+  <expression:EMFExpression id="null=>copyOfAttribute=>AFFID" expression="   ">
+    <variables name="row4.ORDER_ID" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row4.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_status" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_total" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)? row4.OPT.substring(0,row4.OPT.indexOf(&quot;-&quot;)):null            " value="null" talendType="id_String"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row4.OPT.substring(row4.OPT.indexOf(&quot;-&quot;)+1):null  " value="null" talendType="id_String"/>
     <variables name="(Var.AFFID!=null &amp;&amp; Var.AFFID.length()>0 &amp;&amp; Var.AFFID.indexOf(&quot;*&quot;)>0 )?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null " value="null" talendType="id_String"/>
-    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0 &amp;&amp; Var.timestamp.length()>0)?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null  " value="null" talendType="id_String"/>
-    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0 &amp;&amp; Var.timestamp.length()>0)>0?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null " value="null" talendType="id_String"/>
-    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0 &amp;&amp; Var.timestamp.length()>0)?" value="null" talendType="id_String"/>
-    <variables name="StringHandling.TRIM(&quot;row2.OPT&quot;) " value="null" talendType="id_String"/>
-    <variables name="Var.OPT.length()>0? Var.OPT.substring(0,Var.OPT.indexOf(&quot;-&quot;)):null        " value="null" talendType="id_String"/>
-    <variables name="Var.OPT.length()>0?&#xD;&#xA;Var.OPT.substring(Var.OPT.indexOf(&quot;-&quot;)+1):null&#xD;&#xD;&#xA;        " value="null" talendType="id_String"/>
-    <variables name="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null   " value="null" talendType="id_String"/>
-    <variables name="Var.timestamp.length()>0?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null " value="null" talendType="id_String"/>
-    <variables name="(Var.timestamp).indexOf(&quot;|&quot;)>0?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;OR&quot;:&#xD;&#xA;Var.AFID " value="null" talendType="id_String"/>
+    <variables value="null" talendType="id_String"/>
   </expression:EMFExpression>
-  <expression:EMFExpression id="null=>Var=>time" expression="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null ">
+  <expression:EMFExpression id="null=>Attribute=>AFID" expression="">
     <variables name="row2.Order_Id" value="null" talendType="id_Integer" nullable="true"/>
     <variables name="row2.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Order_Status" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Order_Total" value="null" talendType="id_Float" nullable="true"/>
     <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null           " value="null" talendType="id_String"/>
     <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null " value="null" talendType="id_String"/>
     <variables name="(Var.AFFID!=null &amp;&amp; Var.AFFID.length()>0 &amp;&amp; Var.AFFID.indexOf(&quot;*&quot;)>0 )?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null " value="null" talendType="id_String"/>
     <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
+    <variables value="null" talendType="id_String"/>
+    <variables value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Attribute=>AFFID" expression=" ">
+    <variables name="row2.Order_Id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Order_Status" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Order_Total" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null           " value="null" talendType="id_String"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.AFFID!=null &amp;&amp; Var.AFFID.length()>0 &amp;&amp; Var.AFFID.indexOf(&quot;*&quot;)>0 )?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row2.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xD;&#xA;Var.AFID   " value="null" talendType="id_String"/>
+    <variables value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>AFFID_FINAL" expression="StringHandling.LEFT(row2.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;Google*&quot;)?&quot;Google&quot;:&#xD;&#xA;(Var.AFFID!=null &amp;&amp; (Var.AFFID).indexOf(&quot;*&quot;)>0)?&#xD;&#xA;&#xD;&#xA;(Var.AFFID).substring(0,(Var.AFFID).indexOf(&quot;*&quot;)):null  ">
+    <variables name="f(&amp;quot;-&amp;quo" value="ot;)" talendType="=&quot;null&quot; ta" nullable="true"/>
+    <variables name="row2.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Order_Status" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Order_Total" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null           " value="null" talendType="id_String"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.AFFID!=null &amp;&amp; Var.AFFID.length()>0 &amp;&amp; Var.AFFID.indexOf(&quot;*&quot;)>0 )?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row2.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;Google*&quot;)?&quot;Google&quot;:&#xD;&#xA;Var.AFID    " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row2.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xD;&#xA;(Var.AFFID!=null &amp;&amp; (Var.AFFID).indexOf(&quot;*&quot;)>0)?&#xD;&#xA;&#xD;&#xA;(Var.AFFID).substring(0,(Var.AFFID).indexOf(&quot;*&quot;)):null  " value="null" talendType="id_String"/>
+    <variables name="row4.ORDER_ID" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row4.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_status" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_total" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)? row4.OPT.substring(0,row4.OPT.indexOf(&quot;-&quot;)):null            " value="null" talendType="id_String"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row4.OPT.substring(row4.OPT.indexOf(&quot;-&quot;)+1):null  " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;Google*&quot;)?&quot;Google&quot;:&#xD;&#xA;Var.AFID  " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xD;&#xA;(Var.AFFID!=null &amp;&amp; (Var.AFFID).indexOf(&quot;*&quot;)>0)?&#xD;&#xA;(Var.AFFID).substring(0,(Var.AFFID).indexOf(&quot;*&quot;)):null " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row2.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xD;&#xA;Var.AFID   " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;OR&quot;:&#xD;&#xA;Var.AFID " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>time" expression="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):(Var.timestamp!=null &amp;&amp; Var.timestamp.length()>0)?&#xA;(Var.timestamp).substring(0):null    ">
+    <variables name="row4.ORDER_ID" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row4.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_status" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_total" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)? row4.OPT.substring(0,row4.OPT.indexOf(&quot;-&quot;)):null            " value="null" talendType="id_String"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row4.OPT.substring(row4.OPT.indexOf(&quot;-&quot;)+1):null  " value="null" talendType="id_String"/>
+    <variables name="(Var.AFFID!=null &amp;&amp; Var.AFFID.length()>0 &amp;&amp; Var.AFFID.indexOf(&quot;*&quot;)>0 )?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):(Var.timestamp!=null &amp;&amp; Var.timestamp.length()>0)&#xA;(Var.timestamp).substring(0)    " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xD;Var.AFID     " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;Google*&quot;)?&quot;Google&quot;:&#xD;&#xA;(Var.AFFID!=null &amp;&amp; (Var.AFFID).indexOf(&quot;*&quot;)>0)?&#xD;&#xA;(Var.AFFID).substring(0,(Var.AFFID).indexOf(&quot;*&quot;)):null  " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):(Var.timestamp).substring(0)   " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
+    <variables name="row2.Order_Id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null           " value="t;))" talendType="id_String"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null " value="null" talendType="id_String"/>
     <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0 &amp;&amp; Var.timestamp.length()>0)>0?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null " value="null" talendType="id_String"/>
     <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0 &amp;&amp; Var.timestamp.length()>0)?" value="null" talendType="id_String"/>
     <variables name="StringHandling.TRIM(&quot;row2.OPT&quot;) " value="null" talendType="id_String"/>
@@ -159,5 +259,94 @@
     <variables name="Var.AFFID.length()>0?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null   " value="null" talendType="id_String"/>
     <variables name="Var.timestamp.length()>0?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null  " value="null" talendType="id_String"/>
     <variables name="(Var.timestamp).indexOf(&quot;|&quot;)>0?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>AFID_FINAL" expression="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xD;Var.AFID     ">
+    <variables name="row4.ORDER_ID" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row4.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_status" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_total" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)? row4.OPT.substring(0,row4.OPT.indexOf(&quot;-&quot;)):null            " value="null" talendType="id_String"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row4.OPT.substring(row4.OPT.indexOf(&quot;-&quot;)+1):null  " value="null" talendType="id_String"/>
+    <variables name="(Var.AFFID!=null &amp;&amp; Var.AFFID.length()>0 &amp;&amp; Var.AFFID.indexOf(&quot;*&quot;)>0 )?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):(Var.timestamp!=null &amp;&amp; Var.timestamp.length()>0)?&#xA;(Var.timestamp).substring(0):null     " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xD;Var.AFID     " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;Google*&quot;)?&quot;Google&quot;:&#xD;&#xA;(Var.AFFID!=null &amp;&amp; (Var.AFFID).indexOf(&quot;*&quot;)>0)?&#xD;&#xA;(Var.AFFID).substring(0,(Var.AFFID).indexOf(&quot;*&quot;)):null  " value="null" talendType="id_String"/>
+    <variables value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;Google*&quot;)?&quot;Google&quot;:&#xD;&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xD;&#xD;&#xA;Var.AFID    " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;Google*&quot;)?&quot;Google&quot;:&#xD;&#xA;Var.AFID   " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;Google*&quot;)?&quot;Google&quot;:&#xD;&#xA;Var.AFID  " value="null" talendType="id_String"/>
+    <variables name="row2.Order_Id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Order_Status" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Order_Total" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null           " value="null" talendType="id_String"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row2.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xD;&#xA;Var.AFID   " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row2.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xD;&#xA;(Var.AFFID!=null &amp;&amp; (Var.AFFID).indexOf(&quot;*&quot;)>0)?&#xD;&#xA;&#xD;&#xA;(Var.AFFID).substring(0,(Var.AFFID).indexOf(&quot;*&quot;)):null  " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;OR&quot;:&#xD;&#xA;Var.AFID " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xD;&#xA;(Var.AFFID!=null &amp;&amp; (Var.AFFID).indexOf(&quot;*&quot;)>0)?&#xD;&#xA;(Var.AFFID).substring(0,(Var.AFFID).indexOf(&quot;*&quot;)):null " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>var1" expression="(StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)||&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)||&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;))?&#xA;row4.OPT.indexOf(&quot;|&quot;)>0?row4.OPT.substring(2,row4.OPT.indexOf(&quot;|&quot;):&#xA;Var.time">
+    <variables name="row4.ORDER_ID" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row4.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_status" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_total" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)? row4.OPT.substring(0,row4.OPT.indexOf(&quot;-&quot;)):null            " value="null" talendType="id_String"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row4.OPT.substring(row4.OPT.indexOf(&quot;-&quot;)+1):null  " value="null" talendType="id_String"/>
+    <variables name="(Var.AFFID!=null &amp;&amp; Var.AFFID.length()>0 &amp;&amp; Var.AFFID.indexOf(&quot;*&quot;)>0 )?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):(Var.timestamp!=null &amp;&amp; Var.timestamp.length()>0)?&#xA;(Var.timestamp).substring(0):null     " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xD;Var.AFID      " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;Google*&quot;)?&quot;Google&quot;:&#xD;&#xA;(Var.AFFID!=null &amp;&amp; (Var.AFFID).indexOf(&quot;*&quot;)>0)?&#xD;&#xA;(Var.AFFID).substring(0,(Var.AFFID).indexOf(&quot;*&quot;)):null  " value="null" talendType="id_String"/>
+    <variables value="null" talendType="id_String"/>
+    <variables name="row2.Order_Id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null           " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>stackrail_multi=>TIMESTAMP" expression="Var.time==null?Var.TIME_FINAL:Var.time">
+    <variables name="row4.ORDER_ID" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row4.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_status" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_total" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)? row4.OPT.substring(0,row4.OPT.indexOf(&quot;-&quot;)):null            " value="null" talendType="id_String"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row4.OPT.substring(row4.OPT.indexOf(&quot;-&quot;)+1):null  " value="null" talendType="id_String"/>
+    <variables name="(Var.AFFID!=null &amp;&amp; Var.AFFID.length()>0 &amp;&amp; Var.AFFID.indexOf(&quot;*&quot;)>0 )?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):(Var.timestamp!=null &amp;&amp; Var.timestamp.length()>0)?&#xA;(Var.timestamp).substring(0):null     " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xD;Var.AFID      " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;Google*&quot;)?&quot;Google&quot;:&#xD;&#xA;(Var.AFFID!=null &amp;&amp; (Var.AFFID).indexOf(&quot;*&quot;)>0)?&#xD;&#xA;(Var.AFFID).substring(0,(Var.AFFID).indexOf(&quot;*&quot;)):null  " value="null" talendType="id_String"/>
+    <variables name="(StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;) ||&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;) ||&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)) &amp;&amp;&#xD;&#xA;row4.OPT.indexOf(&quot;|&quot;)>0 ?&#xA;row4.OPT.substring(2,row4.OPT.indexOf(&quot;|&quot;)):&#xA;row4.OPT.substring(2)  " value="null" talendType="id_String"/>
+    <variables name="(StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;) ||&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;) ||&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)) &amp;&amp;&#xD;&#xA;row4.OPT.indexOf(&quot;|&quot;)>0 ?&#xA;row4.OPT.substring(2,row4.OPT.indexOf(&quot;|&quot;))?:&#xA;row4.OPT.substring(2) " value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>Var=>TIME_FINAL" expression="(StringHandling.LEFT(row2.OPT,3).equals(&quot;DR*&quot;) ||&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;OR*&quot;) ||&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;WT*&quot;)) &amp;&amp;&#xD;&#xA;row2.OPT.indexOf(&quot;|&quot;)>0 ?&#xD;&#xA;row2.OPT.substring(3,row2.OPT.indexOf(&quot;|&quot;)):&#xD;&#xA;null     ">
+    <variables name="row2.Order_Id" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Order_Status" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Order_Total" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)? row2.OPT.substring(0,row2.OPT.indexOf(&quot;-&quot;)):null           " value="null" talendType="id_String"/>
+    <variables name="(row2.OPT!=null &amp;&amp; row2.OPT.length()>0 &amp;&amp; row2.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row2.OPT.substring(row2.OPT.indexOf(&quot;-&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.AFFID!=null &amp;&amp; Var.AFFID.length()>0 &amp;&amp; Var.AFFID.indexOf(&quot;*&quot;)>0 )?&#xD;&#xA;Var.AFFID.substring(Var.AFFID.indexOf(&quot;*&quot;)+1):null " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;Var.timestamp.substring(Var.timestamp.indexOf(&quot;|&quot;)+1):null   " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):null  " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row2.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;Google*&quot;)?&quot;Google&quot;:&#xD;&#xA;Var.AFID    " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row2.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;Google*&quot;)?&quot;Google&quot;:&#xD;&#xA;(Var.AFFID!=null &amp;&amp; (Var.AFFID).indexOf(&quot;*&quot;)>0)?&#xD;&#xA;&#xD;&#xA;(Var.AFFID).substring(0,(Var.AFFID).indexOf(&quot;*&quot;)):null   " value="null" talendType="id_String"/>
+    <variables name="(StringHandling.LEFT(row2.OPT,3).equals(&quot;DR*&quot;) ||&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;OR*&quot;) ||&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;WT*&quot;)) &amp;&amp;&#xD;&#xA;row2.OPT.indexOf(&quot;|&quot;)>0 ?&#xD;&#xA;row2.OPT.substring(2,row2.OPT.indexOf(&quot;|&quot;)):&#xD;&#xA;null     " value="null" talendType="id_String"/>
+    <variables name="(StringHandling.LEFT(row2.OPT,3).equals(&quot;DR*&quot;) ||&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;OR*&quot;) ||&#xD;&#xA;StringHandling.LEFT(row2.OPT,3).equals(&quot;WT*&quot;)) &amp;&amp;&#xD;&#xA;row2.OPT.indexOf(&quot;|&quot;)>0 ?&#xD;&#xA;row2.OPT.substring(2,row2.OPT.indexOf(&quot;|&quot;)):&#xD;&#xA;row2.OPT.substring(3)    " value="null" talendType="id_String"/>
+    <variables name="row4.ORDER_ID" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row4.OPT" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_status" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.order_total" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)? row4.OPT.substring(0,row4.OPT.indexOf(&quot;-&quot;)):null            " value="null" talendType="id_String"/>
+    <variables name="(row4.OPT!=null &amp;&amp; row4.OPT.length()>0 &amp;&amp; row4.OPT.contains(&quot;-&quot;)== true)?&#xD;&#xA;row4.OPT.substring(row4.OPT.indexOf(&quot;-&quot;)+1):null  " value="null" talendType="id_String"/>
+    <variables name="(Var.timestamp!=null &amp;&amp; Var.timestamp.indexOf(&quot;|&quot;)>0)?&#xD;&#xA;(Var.timestamp).substring(0,(Var.timestamp).indexOf(&quot;|&quot;)):(Var.timestamp!=null &amp;&amp; Var.timestamp.length()>0)?&#xA;(Var.timestamp).substring(0):null     " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xD;Var.AFID      " value="null" talendType="id_String"/>
+    <variables name="StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)?&quot;DR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)?&quot;OR&quot;:&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)?&quot;WT&quot;:&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;Google*&quot;)?&quot;Google&quot;:&#xD;&#xA;(Var.AFFID!=null &amp;&amp; (Var.AFFID).indexOf(&quot;*&quot;)>0)?&#xD;&#xA;(Var.AFFID).substring(0,(Var.AFFID).indexOf(&quot;*&quot;)):null  " value="null" talendType="id_String"/>
+    <variables name="(StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;) ||&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;) ||&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)) &amp;&amp;&#xD;&#xA;row4.OPT.indexOf(&quot;|&quot;)>0 ?&#xA;row4.OPT.substring(2,row4.OPT.indexOf(&quot;|&quot;)):&#xA;row4.OPT.substring(2)  " value="null" talendType="id_String"/>
+    <variables name="(StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;) ||&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;) ||&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)) &amp;&amp;&#xD;&#xA;row4.OPT.indexOf(&quot;|&quot;)>0 ?&#xA;row4.OPT.substring(2,row4.OPT.indexOf(&quot;|&quot;))?:&#xA;row4.OPT.substring(2) " value="null" talendType="id_String"/>
+    <variables name="(StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;) ||&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;) ||&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)) &amp;&amp;&#xD;&#xA;row4.OPT.indexOf(&quot;|&quot;)>0 ?&#xA;row4.OPT.substring(2,row4.OPT.indexOf(&quot;|&quot;)):&#xD;&#xA;Var.time  " value="null" talendType="id_String"/>
+    <variables name="(StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)||&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)||&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;)) &amp;&amp;&#xD;&#xA;row4.OPT.indexOf(&quot;|&quot;)>0?&#xA;row4.OPT.substring(2,row4.OPT.indexOf(&quot;|&quot;):&#xD;&#xA;Var.time " value="null" talendType="id_String"/>
+    <variables name="(StringHandling.LEFT(row4.OPT,3).equals(&quot;DR*&quot;)||&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;OR*&quot;)||&#xD;&#xA;StringHandling.LEFT(row4.OPT,3).equals(&quot;WT*&quot;))?&#xD;&#xA;row4.OPT.indexOf(&quot;|&quot;)>0?row4.OPT.substring(2,row4.OPT.indexOf(&quot;|&quot;):&#xD;&#xA;Var.time " value="null" talendType="id_String"/>
   </expression:EMFExpression>
 </xmi:XMI>
