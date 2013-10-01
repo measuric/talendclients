@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
+  <contextParameter comment="" name="creative_type1" prompt="creative_type1?" promptNeeded="false" type="id_String" value="Image"/>
+  <contextParameter comment="" name="creative_type2" prompt="creative_type2?" promptNeeded="false" type="id_String" value="Flash"/>
+  <contextParameter comment="" name="creative_type3" prompt="creative_type3?" promptNeeded="false" type="id_String" value="Third-party"/>
+  <contextParameter comment="" name="creative_type4" prompt="creative_type4?" promptNeeded="false" type="id_String" value="Custom"/>
+  <contextParameter comment="" name="creative_type5" prompt="creative_type5?" promptNeeded="false" type="id_String" value="DoubleClick tag"/>
+</talendfile:ContextType>
