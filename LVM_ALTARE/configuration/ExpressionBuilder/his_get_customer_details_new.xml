@@ -1,0 +1,38 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
+  <expression:EMFExpression id="null=>test=>date_created" expression="COMMON.getAttribute(&quot;date_created&quot;)">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>test=>newColumn2" expression="COMMON.getAttribute(&quot;first_name&quot;) ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>test=>first_name" expression="COMMON.getAttribute(&quot;first_name&quot;) ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>test=>last_name" expression="COMMON.getAttribute(&quot;last_name&quot;) ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>test=>email" expression="COMMON.getAttribute(&quot;email&quot;) ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>test=>phone" expression="COMMON.getAttribute(&quot;phone&quot;) ">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>customer=>date_created" expression="COMMON.getAttribute(&quot;date_created&quot;).length()>0?&#xA;TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,COMMON.getAttribute(&quot;date_created&quot;)):null&#xA;">
+    <variables name="row8.line" value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;time_stamp&quot;) " value="null" talendType="id_String" nullable="true"/>
+    <variables name="COMMON.getAttribute(&quot;order_confirmed_date&quot;) " value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+</xmi:XMI>

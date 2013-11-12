@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <TalendMetadata:DatabaseConnection xmi:id="_0dwx0CvpEeOZi_P2lOxctQ" name="mysql_prod" id="_menWYCvpEeOZi_P2lOxctQ" label="mysql_prod" dataPackage="_67togCvwEeOZi_P2lOxctQ" DatabaseType="MySQL" DriverClass="org.gjt.mm.mysql.Driver" URL="jdbc:mysql://207.58.184.243:3306/question_altareattribution?noDatetimeStringSync=true" dbVersionString="MYSQL_5" Port="3306" Username="question_track" Password="Mcf87Xn0zY8vW56xKGXaLg==" ServerName="207.58.184.243" DatasourceName="" FileFieldName="" SID="question_altareattribution" SqlSynthax="SQL Syntax" DbmsId="mysql_id" ProductId="MYSQL" AdditionalParams="noDatetimeStringSync=true" StandardSQL="true" SQLMode="false" UiSchema="">
+    <taggedValue xmi:id="_0dwx0SvpEeOZi_P2lOxctQ" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_0fP_kCvpEeOZi_P2lOxctQ" tag="package filter" value=""/>
+    <taggedValue xmi:id="_0f11cCvpEeOZi_P2lOxctQ" tag="Status" value=""/>
+    <taggedValue xmi:id="_0f11cSvpEeOZi_P2lOxctQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_0f11civpEeOZi_P2lOxctQ" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_0f11cyvpEeOZi_P2lOxctQ" tag="Description" value=""/>
+    <taggedValue xmi:id="_0f11dCvpEeOZi_P2lOxctQ" tag="Author" value=""/>
+    <taggedValue xmi:id="_0f11dSvpEeOZi_P2lOxctQ" tag="otherParameter"/>
+    <taggedValue xmi:id="_0f11divpEeOZi_P2lOxctQ" tag="DB ProductName" value="MySQL"/>
+    <taggedValue xmi:id="_0f11dyvpEeOZi_P2lOxctQ" tag="DB ProductVersion" value="5.1.70-cll"/>
+    <taggedValue xmi:id="_0f11eCvpEeOZi_P2lOxctQ" tag="DB IdentifierQuoteString" value="`"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_67togCvwEeOZi_P2lOxctQ" name="question_altareattribution" dataManager="_0dwx0CvpEeOZi_P2lOxctQ">
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_67togSvwEeOZi_P2lOxctQ" name="email_signups" id="_6Nl-QCvwEeOZi_P2lOxctQ" label="email_signups" tableType="TABLE">
+      <taggedValue xmi:id="_67togivwEeOZi_P2lOxctQ" tag="Comment" value=""/>
+      <feature xsi:type="relational:TdColumn" xmi:id="_67togyvwEeOZi_P2lOxctQ" name="recid" label="recid" length="19" sourceType="BIGINT" talendType="id_Long" key="true" nullable="false">
+        <taggedValue xmi:id="_67tohCvwEeOZi_P2lOxctQ" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_67tohSvwEeOZi_P2lOxctQ" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_67tohivwEeOZi_P2lOxctQ" name="BIGINT" numericPrecisionRadix="10" javaDataType="-5"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_67tohyvwEeOZi_P2lOxctQ" name="email" label="email" length="255" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_67toiCvwEeOZi_P2lOxctQ" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_67toiSvwEeOZi_P2lOxctQ" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_67toiivwEeOZi_P2lOxctQ" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_67toiyvwEeOZi_P2lOxctQ" name="cookieval" label="cookieval" length="65535" sourceType="TEXT" talendType="id_String">
+        <taggedValue xmi:id="_67tojCvwEeOZi_P2lOxctQ" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_67tojSvwEeOZi_P2lOxctQ" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_67tojivwEeOZi_P2lOxctQ" name="TEXT" numericPrecisionRadix="10" javaDataType="-1" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_67tojyvwEeOZi_P2lOxctQ" name="signuptime" label="signuptime" length="19" sourceType="DATETIME" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_67tokCvwEeOZi_P2lOxctQ" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_67tokSvwEeOZi_P2lOxctQ" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_67tokivwEeOZi_P2lOxctQ" name="DATETIME" numericPrecisionRadix="10" javaDataType="93" nullable="columnNullable"/>
+      </feature>
+    </ownedElement>
+  </orgomg.cwm.resource.relational:Catalog>
+</xmi:XMI>

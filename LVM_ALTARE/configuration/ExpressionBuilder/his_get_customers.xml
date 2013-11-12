@@ -1,0 +1,13 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<expression:EMFExpression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore" id="null=>qry=>value" expression="&quot;username=&quot;+Var.username+&quot;&amp;password=&quot;+Var.password+&quot;&amp;method=&quot;+Var.method+&quot;&amp;campaign_id=&quot;+Var.campaign_id+&quot;&amp;start_date=&quot;+Var.start_date+&quot;&amp;end_date=&quot;+Var.end_date +&quot;&amp;search_type=all&amp;return_type=customer_view&quot;          ">
+  <variables name="row8.username" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row8.password" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row8.method" value="null" talendType="id_String" nullable="true"/>
+  <variables name="java.net.URLEncoder.encode(row8.username,&quot;UTF-8&quot;)" value="null" talendType="id_String"/>
+  <variables name="java.net.URLEncoder.encode(row8.password,&quot;UTF-8&quot;)" value="null" talendType="id_String"/>
+  <variables name="java.net.URLEncoder.encode(row8.method,&quot;UTF-8&quot;) " value="null" talendType="id_String"/>
+  <variables name="context.CAMPAIGNID" value="null" talendType="id_String"/>
+  <variables name="java.net.URLEncoder.encode(context.START_DATE,&quot;UTF-8&quot;) " value="null" talendType="id_String"/>
+  <variables name="java.net.URLEncoder.encode(context.END_DATE,&quot;UTF-8&quot;) " value="null" talendType="id_String"/>
+  <variables name="&quot;all&quot;" value="null" talendType="id_String"/>
+</expression:EMFExpression>
