@@ -61,6 +61,30 @@
     <elementParameter field="CHECK" name="DISABLE_INFO" value="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_10"/>
+    <elementParameter field="CHECK" name="UPDATE_COMPONENTS" value="false"/>
+    <elementParameter field="CHECK" name="STATS_DEFAULT_PROJECTSETTING" value="true"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:PROPERTY_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:REPOSITORY_PROPERTY_TYPE" value=""/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICT_DEFAULT_PROJECTSETTING" value="true"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value=""/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Users/manas/workspace_new/.metadata&quot;"/>
     <routinesParameter id="_iX6lIAobEeORa-XGJxIL0A" name="DataOperation"/>
     <routinesParameter id="_iYLD0AobEeORa-XGJxIL0A" name="Mathematical"/>
     <routinesParameter id="_iYmhoAobEeORa-XGJxIL0A" name="Numeric"/>
@@ -476,7 +500,7 @@
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
     <elementParameter field="TEXT" name="HOST" value="&quot;dbdev.lvmetrics.com&quot;"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;altare1&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;altare&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="MYSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
     <elementParameter field="TEXT" name="PASS" value="&quot;letmein$wE21&quot;"/>
@@ -564,95 +588,206 @@
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
     <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
-    <metadata connector="FLOW" label="orders_all" name="tMysqlInput_1">
-      <column comment="" key="false" length="10" name="order_id" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+    <metadata comment="" connector="FLOW" label="orders_all" name="orders_all">
+      <column comment="" key="false" length="255" name="order_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="customer_id" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="1" name="is_reccuring" nullable="true" pattern="" precision="0" sourceType="BIT" type="id_Boolean" usefulColumn="true">
+      <column comment="" key="false" length="10" name="is_reccuring" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="19" name="time_stamp" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="10" name="time_stamp" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="main_product_id" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="1000" name="upsell_product_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="400" name="upsell_product_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="order_total" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="255" name="order_total" nullable="true" pattern="" precision="4" sourceType="FLOAT" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="amount_refunded_to_date" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="400" name="amount_refunded_to_date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="50" name="order_confirmed" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="400" name="order_confirmed" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="order_confirmed_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="400" name="order_confirmed_date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="3" name="is_chargeback" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" usefulColumn="true">
+      <column comment="" key="false" length="400" name="is_chargeback" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="3" name="is_fraud" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" usefulColumn="true">
+      <column comment="" key="false" length="400" name="is_fraud" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="3" name="is_rma" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" usefulColumn="true">
+      <column comment="" key="false" length="400" name="is_rma" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="rma_number" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="400" name="rma_number" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="rma_reason" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="400" name="rma_reason" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="20" name="ip_address" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="255" name="decline_reason" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="1000" name="decline_reason" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="campaign_id" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="click_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="0" name="click_id" nullable="true" pattern="" precision="0" sourceType="BINARY" type="id_Boolean" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="email_address" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="400" name="email_address" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="product_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="10" name="product_id" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="product_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="400" name="product_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="product_sku" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="400" name="product_sku" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="product_price" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="255" name="product_price" nullable="true" pattern="" precision="4" sourceType="FLOAT" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="billing_state" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="1000" name="billing_state" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="billing_country" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="400" name="billing_country" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="4000" name="afid" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="400" name="afid" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="4000" name="sub_affiliate" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="400" name="sub_affiliate" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="4000" name="OPT" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="400" name="OPT" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="order_status" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="bill_city" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="billing_cycle" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="bill_first" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="bill_last" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="bill_zip" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="1000" name="bill_state" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="bill_address1" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="bill_address2" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="credit_card_expiration" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="credit_card_number" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="created_by" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="Customer_Number" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="Hold_Date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="Quantity" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Sales_Tax_Factor" nullable="true" pattern="" precision="3" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Sales_Tax_Percent" nullable="true" pattern="" precision="3" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="Parent_Order_Id" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="Prepaid_Match" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="Gateway_Id" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="Gateway_Alias" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="Processor_Id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="Is_Recurring" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="Recurring_Date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="Retry_Date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="Ship_Country" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="Shipped_Date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="Ship_First" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="Ship_Last" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="ship_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="Ship_Method_Name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="Ship_Zip" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="Ship_State" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="Ship_Address1" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="Ship_Address2" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="Ship_City" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="Transaction_Number" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="400" name="Tracking_Number" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="4000" name="notes" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
@@ -789,27 +924,26 @@
         <mapperTableEntries name="OPT" expression="row1.OPT" type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="order_id" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="order_id" type="id_String" nullable="true"/>
         <mapperTableEntries name="customer_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="is_reccuring" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="is_reccuring" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="time_stamp" type="id_Date" nullable="true"/>
         <mapperTableEntries name="main_product_id" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="upsell_product_id" type="id_String" nullable="true"/>
         <mapperTableEntries name="order_total" type="id_Float" nullable="true"/>
-        <mapperTableEntries name="amount_refunded_to_date" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="amount_refunded_to_date" type="id_String" nullable="true"/>
         <mapperTableEntries name="order_confirmed" type="id_String" nullable="true"/>
-        <mapperTableEntries name="order_confirmed_date" type="id_Date" nullable="true"/>
-        <mapperTableEntries name="is_chargeback" type="id_Byte" nullable="true"/>
-        <mapperTableEntries name="is_fraud" type="id_Byte" nullable="true"/>
-        <mapperTableEntries name="is_rma" type="id_Byte" nullable="true"/>
+        <mapperTableEntries name="order_confirmed_date" type="id_String" nullable="true"/>
+        <mapperTableEntries name="is_chargeback" type="id_String" nullable="true"/>
+        <mapperTableEntries name="is_fraud" type="id_String" nullable="true"/>
+        <mapperTableEntries name="is_rma" type="id_String" nullable="true"/>
         <mapperTableEntries name="rma_number" type="id_String" nullable="true"/>
         <mapperTableEntries name="rma_reason" type="id_String" nullable="true"/>
-        <mapperTableEntries name="ip_address" type="id_String" nullable="true"/>
         <mapperTableEntries name="decline_reason" type="id_String" nullable="true"/>
         <mapperTableEntries name="campaign_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="click_id" type="id_String" nullable="true"/>
+        <mapperTableEntries name="click_id" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="email_address" type="id_String" nullable="true"/>
-        <mapperTableEntries name="product_id" type="id_String" nullable="true"/>
+        <mapperTableEntries name="product_id" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="product_name" type="id_String" nullable="true"/>
         <mapperTableEntries name="product_sku" type="id_String" nullable="true"/>
         <mapperTableEntries name="product_price" type="id_Float" nullable="true"/>
@@ -819,6 +953,44 @@
         <mapperTableEntries name="sub_affiliate" type="id_String" nullable="true"/>
         <mapperTableEntries name="OPT" type="id_String" nullable="true"/>
         <mapperTableEntries name="order_status" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="bill_city" type="id_String" nullable="true"/>
+        <mapperTableEntries name="billing_cycle" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="bill_first" type="id_String" nullable="true"/>
+        <mapperTableEntries name="bill_last" type="id_String" nullable="true"/>
+        <mapperTableEntries name="bill_zip" type="id_String" nullable="true"/>
+        <mapperTableEntries name="bill_state" type="id_String" nullable="true"/>
+        <mapperTableEntries name="bill_address1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="bill_address2" type="id_String" nullable="true"/>
+        <mapperTableEntries name="credit_card_expiration" type="id_String" nullable="true"/>
+        <mapperTableEntries name="credit_card_number" type="id_String" nullable="true"/>
+        <mapperTableEntries name="created_by" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Customer_Number" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Hold_Date" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Quantity" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Sales_Tax_Factor" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="Sales_Tax_Percent" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="Parent_Order_Id" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Prepaid_Match" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Gateway_Id" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Gateway_Alias" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Processor_Id" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Is_Recurring" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Recurring_Date" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Retry_Date" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Ship_Country" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Shipped_Date" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Ship_First" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Ship_Last" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ship_id" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Ship_Method_Name" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Ship_Zip" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Ship_State" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Ship_Address1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Ship_Address2" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Ship_City" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Transaction_Number" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Tracking_Number" type="id_String" nullable="true"/>
+        <mapperTableEntries name="notes" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>

@@ -51,6 +51,7 @@
     <elementParameter field="CHECK" name="DISABLE_ERROR" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value=""/>
     <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value=""/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Users/manas/workspace_new/.metadata&quot;"/>
     <routinesParameter id="_7SfY0HNsEeKF0rre3U9ZZQ" name="DataOperation"/>
     <routinesParameter id="_7bQ6UHNsEeKF0rre3U9ZZQ" name="Mathematical"/>
     <routinesParameter id="_7barU3NsEeKF0rre3U9ZZQ" name="Numeric"/>
