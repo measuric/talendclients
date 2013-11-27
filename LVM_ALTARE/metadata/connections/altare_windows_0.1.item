@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <TalendMetadata:DatabaseConnection xmi:id="_dsmEcArqEeO_2OxhMc01vA" name="altare_windows" id="_ViCd0ArqEeO_2OxhMc01vA" label="altare_windows" dataPackage="_0iA9AArqEeO_2OxhMc01vA" DatabaseType="MySQL" DriverClass="org.gjt.mm.mysql.Driver" URL="jdbc:mysql://54.235.222.45:3306/altare?noDatetimeStringSync=true" dbVersionString="MYSQL_5" Port="3306" Username="root" Password="/TicwqiUIVKz1gjq0iGUlA==" ServerName="54.235.222.45" DatasourceName="" FileFieldName="" SID="altare" SqlSynthax="SQL Syntax" DbmsId="mysql_id" ProductId="MYSQL" AdditionalParams="noDatetimeStringSync=true" StandardSQL="true" SQLMode="false" UiSchema="">
-    <taggedValue xmi:id="_dsmEcQrqEeO_2OxhMc01vA" tag="Is Conn Need Reload" value="false"/>
+  <TalendMetadata:DatabaseConnection xmi:id="_dsmEcArqEeO_2OxhMc01vA" name="altare_windows" id="_ViCd0ArqEeO_2OxhMc01vA" label="altare_windows" dataPackage="_cVrhIFcjEeOsroMw4OHWhA _0iA9AArqEeO_2OxhMc01vA" DatabaseType="MySQL" DriverClass="org.gjt.mm.mysql.Driver" URL="jdbc:mysql://dbdev.lvmetrics.com:3306/altare2?noDatetimeStringSync=true" dbVersionString="MYSQL_5" Port="3306" Username="root" Password="GbOdxwMjZETngkJZcwJwBQ==" ServerName="dbdev.lvmetrics.com" DatasourceName="" FileFieldName="" SID="altare2" SqlSynthax="SQL Syntax" DbmsId="mysql_id" ProductId="MYSQL" AdditionalParams="noDatetimeStringSync=true" StandardSQL="true" SQLMode="false" UiSchema="">
+    <taggedValue xmi:id="_dsmEcQrqEeO_2OxhMc01vA" tag="Is Conn Need Reload" value="true"/>
     <taggedValue xmi:id="_dt4d4ArqEeO_2OxhMc01vA" tag="package filter" value=""/>
     <taggedValue xmi:id="_eKCOYArqEeO_2OxhMc01vA" tag="Status" value=""/>
     <taggedValue xmi:id="_eKCOYQrqEeO_2OxhMc01vA" tag="Version" value="0.1"/>
@@ -10,9 +10,10 @@
     <taggedValue xmi:id="_eKCOZArqEeO_2OxhMc01vA" tag="Author" value=""/>
     <taggedValue xmi:id="_eKCOZQrqEeO_2OxhMc01vA" tag="otherParameter"/>
     <taggedValue xmi:id="_eKFRsArqEeO_2OxhMc01vA" tag="DB ProductName" value="MySQL"/>
-    <taggedValue xmi:id="_eKFRsQrqEeO_2OxhMc01vA" tag="DB ProductVersion" value="5.5.27"/>
+    <taggedValue xmi:id="_eKFRsQrqEeO_2OxhMc01vA" tag="DB ProductVersion" value="5.6.13-log"/>
     <taggedValue xmi:id="_eKFRsgrqEeO_2OxhMc01vA" tag="DB IdentifierQuoteString" value="`"/>
   </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_cVrhIFcjEeOsroMw4OHWhA" name="altare2" dataManager="_dsmEcArqEeO_2OxhMc01vA"/>
   <orgomg.cwm.resource.relational:Catalog xmi:id="_0iA9AArqEeO_2OxhMc01vA" name="altare" dataManager="_dsmEcArqEeO_2OxhMc01vA">
     <ownedElement xsi:type="relational:TdTable" xmi:id="_0iA9AQrqEeO_2OxhMc01vA" name="ltv_rr_customers" id="_zyu1IArqEeO_2OxhMc01vA" label="ltv_rr_customers" tableType="TABLE">
       <taggedValue xmi:id="_0iA9AgrqEeO_2OxhMc01vA" tag="Comment" value=""/>

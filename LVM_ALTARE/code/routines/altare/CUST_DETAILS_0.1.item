@@ -1,0 +1,215 @@
+package routines;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class CUST_DETAILS {
+
+	public static String getPrasedValue(String stackTrace,String column){
+		String ft_afid=null;
+		String ft_affid=null;
+		String ft_ts=null;
+		String lt_afid=null;
+		String lt_affid=null;
+		String lt_ts=null;
+		String cookie_id=null;
+
+		if("ft_afid".equals(column) )
+		{
+			System.out.println(stackTrace);
+			String[] splitArray =stackTrace.split("\\|");
+			if(splitArray.length>0)
+			{
+				String[] splitSubArray =splitArray[0].split("\\*");
+				System.out.println(splitSubArray[0]);
+
+				if(splitSubArray[0].contains("-")){
+					ft_afid=splitSubArray[0].split("-")[0];
+					ft_affid=splitSubArray[0].split("-")[1];				
+				}
+				System.out.println(splitSubArray[1]);
+			}
+
+
+
+			return null;
+		}
+		return cookie_id;
+	}
+
+
+
+	public static String get_ft_afid(String stackTrace){
+		String ft_afid=stackTrace;
+
+		if(stackTrace.contains("|")){
+			String[] splitArray =stackTrace.split("\\|");
+			if(splitArray[0].contains("*")){
+				ft_afid=splitArray[0].split("\\*")[0];	
+				if(ft_afid.contains("-")){
+					return ft_afid.substring(0,ft_afid.indexOf("-"));
+				}
+			}
+			else 
+				ft_afid=splitArray[0];
+		}
+		else if(stackTrace.contains("*")){
+			ft_afid=stackTrace.split("\\*")[0];
+			if(ft_afid.contains("-")){
+				return ft_afid.substring(0,ft_afid.indexOf("-"));
+			}			
+		}	
+
+		return ft_afid;
+	}
+
+
+	public static String get_ft_affid(String stackTrace){
+		String ft_afid=stackTrace;
+		if(stackTrace.contains("|")){
+			String[] splitArray =stackTrace.split("\\|");
+			if(splitArray[0].contains("*")){
+				ft_afid=splitArray[0].split("\\*")[0];
+				if(ft_afid.contains("-")){
+					return ft_afid.substring(ft_afid.indexOf("-")+1);
+				}
+			}
+			else 
+				ft_afid=splitArray[0];
+		}
+		else if(stackTrace.contains("*")){
+			ft_afid=stackTrace.split("\\*")[0];
+			if(ft_afid.contains("-")){
+				return ft_afid.substring(ft_afid.indexOf("-")+1);
+			}
+		}
+
+		return ft_afid;
+	}
+
+
+
+	public static String get_ft_ts(String stackTrace){
+		String ft_ts=stackTrace;
+		if(stackTrace.contains("|")){
+
+			String[] splitArray =stackTrace.split("\\|");
+			if(splitArray[0].contains("*")){
+				return	ft_ts=splitArray[0].split("\\*")[1];			
+			}
+		}
+		else if(stackTrace.contains("*")){
+			System.out.println("Else case");
+			return stackTrace.split("\\*")[1];
+		}
+
+		return null;
+	}
+
+	//
+	
+	public static String get_lt_afid(String stackTrace){
+		int index=0;
+		String ft_afid=stackTrace;
+		if(stackTrace.contains("|")){
+			String[] splitArray =stackTrace.split("\\|");
+			index=splitArray.length;
+						
+			if(splitArray[index-2].contains("*")){
+				ft_afid=splitArray[index-2].split("\\*")[0];
+				if(ft_afid.contains("-")){
+					return ft_afid.substring(0,ft_afid.indexOf("-"));
+				}
+			}
+			else 
+				ft_afid=splitArray[index-2];
+		}
+		else if(stackTrace.contains("*")){
+			ft_afid=stackTrace.split("\\*")[0];
+			if(ft_afid.contains("-")){
+				return ft_afid.substring(0,ft_afid.indexOf("-"));
+			}
+		}
+
+		return ft_afid;
+	}
+
+	public static String get_lt_affid(String stackTrace){
+		int index=0;
+		String ft_afid=stackTrace;
+		if(stackTrace.contains("|")){
+			String[] splitArray =stackTrace.split("\\|");
+			index=splitArray.length;
+			
+			
+			if(splitArray[index-2].contains("*")){
+				ft_afid=splitArray[index-2].split("\\*")[0];
+				if(ft_afid.contains("-")){
+					return ft_afid.substring(ft_afid.indexOf("-")+1);
+				}
+			}
+			else 
+				ft_afid=splitArray[index-2];
+		}
+		else if(stackTrace.contains("*")){
+			ft_afid=stackTrace.split("\\*")[0];
+			if(ft_afid.contains("-")){
+				return ft_afid.substring(ft_afid.indexOf("-")+1);
+			}
+		}
+
+		return ft_afid;
+	}
+
+	
+
+	public static String get_lt_ts(String stackTrace){
+		String ft_ts=stackTrace;
+		int index=0;
+		if(stackTrace.contains("|")){
+			
+			String[] splitArray =stackTrace.split("\\|");
+			index=splitArray.length;
+			
+			if(splitArray[index-2].contains("*")){
+				return	ft_ts=splitArray[index-2].split("\\*")[1];			
+			}
+		}
+		else if(stackTrace.contains("*")){
+			System.out.println("Else case");
+			return stackTrace.split("\\*")[1];
+		}
+
+		return null;
+	}
+
+
+	public static String get_cookieVal(String stackTrace){
+		String ft_ts=stackTrace;
+		int index=0;
+		if(stackTrace.contains("|")){
+			
+			String[] splitArray =stackTrace.split("\\|");
+			index=splitArray.length;
+			return splitArray[index-1];
+	}
+		return null;
+	}
+
+
+}

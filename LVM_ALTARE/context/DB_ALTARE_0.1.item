@@ -11,7 +11,7 @@
   </talendfile:ContextType>
   <talendfile:ContextType confirmationNeeded="false" name="test">
     <contextParameter comment="" name="DB_ADDITIONAL_PARAMS" prompt="DB_ADDITIONAL_PARAMS?" promptNeeded="false" type="id_String" value="noDatetimeStringSync=true"/>
-    <contextParameter comment="" name="DB_DBNAME" prompt="DB_DBNAME?" promptNeeded="false" type="id_String" value="altare1"/>
+    <contextParameter comment="" name="DB_DBNAME" prompt="DB_DBNAME?" promptNeeded="false" type="id_String" value="altare"/>
     <contextParameter comment="" name="DB_HOST" prompt="DB_HOST?" promptNeeded="false" type="id_String" value="dbdev.lvmetrics.com"/>
     <contextParameter comment="" name="DB_PASSWORD" prompt="DB_PASSWORD?" promptNeeded="false" type="id_String" value="letmein$wE21"/>
     <contextParameter comment="" name="DB_PORT" prompt="DB_PORT?" promptNeeded="false" type="id_String" value="3306"/>

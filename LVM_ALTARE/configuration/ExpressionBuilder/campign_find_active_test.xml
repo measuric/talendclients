@@ -1,6 +1,0 @@
-<?xml version="1.1" encoding="UTF-8"?>
-<expression:EMFExpression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore" id="null=>qry=>value" expression="&quot;username=&quot;+java.net.URLEncoder.encode(row2.username,&quot;UTF-8&quot;)+&quot;&amp;password=&quot;+java.net.URLEncoder.encode(row2.password,&quot;UTF-8&quot;)+&quot;&amp;method=&quot;+java.net.URLEncoder.encode(row2.method,&quot;UTF-8&quot;)    ">
-  <variables name="row2.username" value="null" talendType="id_String" nullable="true"/>
-  <variables name="row2.password" value="null" talendType="id_String" nullable="true"/>
-  <variables name="row2.method" value="null" talendType="id_String" nullable="true"/>
-</expression:EMFExpression>
