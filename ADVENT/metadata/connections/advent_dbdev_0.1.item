@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_Qp7rkFirEeO5Y_0FdbnFrw" name="advent_dbdev" id="_BS4CAFirEeO5Y_0FdbnFrw" label="advent_dbdev" dataPackage="_QsTqIFirEeO5Y_0FdbnFrw" DatabaseType="MySQL" DriverClass="org.gjt.mm.mysql.Driver" URL="jdbc:mysql://dbdev.lvmetrics.com:3306/advent?noDatetimeStringSync=true" dbVersionString="MYSQL_5" Port="3306" Username="root" Password="GbOdxwMjZETngkJZcwJwBQ==" ServerName="dbdev.lvmetrics.com" DatasourceName="" FileFieldName="" SID="advent" SqlSynthax="SQL Syntax" DbmsId="mysql_id" ProductId="MYSQL" AdditionalParams="noDatetimeStringSync=true" StandardSQL="true" SQLMode="false" UiSchema="">
+    <taggedValue xmi:id="_Qp7rkVirEeO5Y_0FdbnFrw" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_Qra5UFirEeO5Y_0FdbnFrw" tag="package filter" value=""/>
+    <taggedValue xmi:id="_Qr3lQFirEeO5Y_0FdbnFrw" tag="Status" value=""/>
+    <taggedValue xmi:id="_Qr3lQVirEeO5Y_0FdbnFrw" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_Qr3lQlirEeO5Y_0FdbnFrw" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_Qr3lQ1irEeO5Y_0FdbnFrw" tag="Description" value=""/>
+    <taggedValue xmi:id="_Qr3lRFirEeO5Y_0FdbnFrw" tag="Author" value=""/>
+    <taggedValue xmi:id="_Qr3lRVirEeO5Y_0FdbnFrw" tag="otherParameter"/>
+    <taggedValue xmi:id="_Qr3lRlirEeO5Y_0FdbnFrw" tag="DB ProductName" value="MySQL"/>
+    <taggedValue xmi:id="_Qr3lR1irEeO5Y_0FdbnFrw" tag="DB ProductVersion" value="5.6.13-log"/>
+    <taggedValue xmi:id="_Qr3lSFirEeO5Y_0FdbnFrw" tag="DB IdentifierQuoteString" value="`"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_QsTqIFirEeO5Y_0FdbnFrw" name="advent" dataManager="_Qp7rkFirEeO5Y_0FdbnFrw"/>
+</xmi:XMI>

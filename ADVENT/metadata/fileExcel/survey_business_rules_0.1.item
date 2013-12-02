@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:FileExcelConnection xmi:id="_awyC8NTZEeKMian-XtJESg" name="survey_business_rules" dataPackage="_awyC8dTZEeKMian-XtJESg" Server="Localhost 127.0.0.1" FilePath="C:/data/triggerMail/Report Logic.xlsx" Encoding="windows-1252" UseHeader="true" HeaderValue="1" FirstLineCaption="true" SheetName="Report Logic" firstColumn="1" thousandSeparator="','" decimalSeparator="'.'" sheetList="Report Logic:w&#xA;">
+    <sheetColumns>A</sheetColumns>
+    <sheetColumns>B</sheetColumns>
+    <sheetColumns>C</sheetColumns>
+    <sheetColumns>D</sheetColumns>
+    <sheetColumns>E</sheetColumns>
+    <sheetColumns>F</sheetColumns>
+    <sheetColumns>G</sheetColumns>
+    <sheetColumns>H</sheetColumns>
+    <sheetColumns>I</sheetColumns>
+  </TalendMetadata:FileExcelConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_awyC8dTZEeKMian-XtJESg" name="default" dataManager="_awyC8NTZEeKMian-XtJESg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_awyC8tTZEeKMian-XtJESg" name="metadata" id="_rrg7MNTYEeKMian-XtJESg" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_awyC89TZEeKMian-XtJESg" label="Questions" length="31" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_awyC9NTZEeKMian-XtJESg" label="Business_Logic" length="91" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_awyC9dTZEeKMian-XtJESg" label="derivedResRonseId" length="4" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_awyC9tTZEeKMian-XtJESg" label="ParaContent" length="126" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_awyC99TZEeKMian-XtJESg" label="Topic_Ref" length="6" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_awyC-NTZEeKMian-XtJESg" label="Topic" length="68" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_awyC-dTZEeKMian-XtJESg" label="Validation_Option" length="89" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_awyC-tTZEeKMian-XtJESg" label="Ranking_Score" length="65" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_awyC-9TZEeKMian-XtJESg" label="Column8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
